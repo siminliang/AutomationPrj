@@ -45,11 +45,11 @@ public class DatabaseScriptRunnerUtility {
             if( entity instanceof UserEntity) {
                 UserEntity userEntity = (UserEntity) entity;
                 switch(sqlFileName){
-                    case "CheckAlreadyRegisteredUserAddIfNot.sql":
-                        DatabaseRegistrationPreparedStatements.CheckAlreadyRegisteredUserAddIfNot(preparedStatement, userEntity);
+                    case "AddUser.sql":
+                        DatabaseRegistrationPreparedStatements.addUser(preparedStatement, userEntity);
                         break;
-                    case "CheckNoRegisteredUserDeleteIfSo.sql":
-                        DatabaseRegistrationPreparedStatements.CheckNoRegisteredUserDeleteIfSo(preparedStatement, userEntity);
+                    case "DeleteUser.sql":
+                        DatabaseRegistrationPreparedStatements.deleteUser(preparedStatement, userEntity);
                         break;
                 }
             }

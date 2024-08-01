@@ -15,19 +15,17 @@ public class RegistrationSteps {
 
     @Given("Account with username {string} and password {string} already registered")
     public void account_with_username_and_password_already_registered(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        String fileName = "CheckAlreadyRegisteredUserAddIfNot.sql";
+        // add the user with username/password
+        String fileName = "AddUser.sql";
         UserEntity userEntity = new UserEntity(string, string2);
         DatabaseScriptRunnerUtility.runSQLScript(fileName, userEntity);
-        throw new io.cucumber.java.PendingException();
     }
     @Given("No Registered User with username {string}")
     public void no_Registered_User_with_username(String string) {
         // Write code here that turns the phrase above into concrete actions
-        String fileName = "CheckNoRegisteredUserDeleteIfSo.sql";
+        String fileName = "DeleteUser.sql";
         UserEntity userEntity = new UserEntity(string);
         DatabaseScriptRunnerUtility.runSQLScript(fileName, userEntity);
-        throw new io.cucumber.java.PendingException();
     }
 
 
@@ -55,13 +53,13 @@ public class RegistrationSteps {
         // Write code here that turns the phrase above into concrete actions
         TestRunner.planetariumRegistrationHome.clickCreateButton();
     }
-    @Then("The User is redirected back to the Login page")
-    public void the_User_is_redirected_back_to_the_Login_page() {
+    @Then("The User is registered and redirected into the Planetarium Login page")
+    public void the_User_is_registered_and_redirected_into_the_Planetarium() {
         // Write code here that turns the phrase above into concrete actions
         TestRunner.wait.until(ExpectedConditions.alertIsPresent());
         TestRunner.driver.switchTo().alert().accept();
-        TestRunner.wait.until(ExpectedConditions.titleIs("Home"));
-        Assert.assertEquals("Home", TestRunner.driver.getTitle());
+        TestRunner.wait.until(ExpectedConditions.titleIs("Planetarium Login"));
+        Assert.assertEquals("Planetarium Login", TestRunner.driver.getTitle());
 
     }
 
