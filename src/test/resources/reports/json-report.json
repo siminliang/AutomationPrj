@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-01T15:37:55.357Z",
+        "start_timestamp": "2024-08-01T17:22:10.675Z",
         "line": 15,
         "name": "As a User I want to Login to my Account so that I can Enter the Planetarium",
         "description": "\tLogin Functionality Test Positive Scenario",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 48593300,
+              "duration": 49106100,
               "status": "passed"
             },
             "line": 7,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 75675100,
+              "duration": 76556100,
               "status": "passed"
             },
             "line": 8,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 84124200,
+              "duration": 96083400,
               "status": "passed"
             },
             "line": 9,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 39588500,
+              "duration": 44540300,
               "status": "passed"
             },
             "line": 10,
@@ -73,7 +73,7 @@
           },
           {
             "result": {
-              "duration": 41122900,
+              "duration": 42387900,
               "status": "passed"
             },
             "line": 11,
@@ -94,7 +94,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-01T15:37:55.698Z",
+        "start_timestamp": "2024-08-01T17:22:11.034Z",
         "line": 28,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -104,7 +104,7 @@
         "steps": [
           {
             "result": {
-              "duration": 33236100,
+              "duration": 34056700,
               "status": "passed"
             },
             "line": 20,
@@ -116,7 +116,7 @@
           },
           {
             "result": {
-              "duration": 95749400,
+              "duration": 97382900,
               "status": "passed"
             },
             "line": 21,
@@ -134,7 +134,7 @@
           },
           {
             "result": {
-              "duration": 68631900,
+              "duration": 80200300,
               "status": "passed"
             },
             "line": 22,
@@ -152,7 +152,7 @@
           },
           {
             "result": {
-              "duration": 31057500,
+              "duration": 38946800,
               "status": "passed"
             },
             "line": 23,
@@ -164,7 +164,7 @@
           },
           {
             "result": {
-              "duration": 9519500,
+              "duration": 15998800,
               "status": "passed"
             },
             "line": 24,
@@ -185,7 +185,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-01T15:37:55.941Z",
+        "start_timestamp": "2024-08-01T17:22:11.305Z",
         "line": 29,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -195,9 +195,8 @@
         "steps": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : login attempt failed: please try again}\n  (Session info: chrome\u003d127.0.6533.74): login attempt failed: please try again\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [c8bdaab8014845b971dfc01fd77237c3, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.74, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\\Users\\blake\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61303}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61303/devtoo..., se:cdpVersion: 127.0.6533.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: c8bdaab8014845b971dfc01fd77237c3\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.PlanetariumLoginHome.goToPlanetariumLoginHome(PlanetariumLoginHome.java:35)\r\n\tat com.revature.step.LoginSteps.the_User_is_on_the_Login_Page(LoginSteps.java:16)\r\n\tat ✽.The User is on the Login Page(classpath:features/Login.feature:20)\r\n",
-              "duration": 13525700,
-              "status": "failed"
+              "duration": 21001000,
+              "status": "passed"
             },
             "line": 20,
             "name": "The User is on the Login Page",
@@ -208,7 +207,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 57625300,
+              "status": "passed"
             },
             "line": 21,
             "name": "The User enters \"Paul\" into username input bar",
@@ -225,7 +225,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 60266100,
+              "status": "passed"
             },
             "line": 22,
             "name": "The User enters \"al-gaib\" into password input bar",
@@ -242,7 +243,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 33799800,
+              "status": "passed"
             },
             "line": 23,
             "name": "The User clicks on the Login Button",
@@ -253,7 +255,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 538069900,
+              "status": "passed"
             },
             "line": 24,
             "name": "The User is kept at the login page",
@@ -281,6 +284,1110 @@
     "tags": [
       {
         "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-01T17:22:12.019Z",
+        "line": 17,
+        "name": "As a User I want to Register an Account with the Planetarium so that I can Login Securely",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-a-user-i-want-to-register-an-account-with-the-planetarium-so-that-i-can-login-securely;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 19141700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.step.RegistrationSteps.no_Registered_User_with_username(RegistrationSteps.java:30)\r\n\tat ✽.No Registered User with username \"Paul muad\u0027dib atreides!!!!!!!!\"(classpath:features/Registration.feature:8)\r\n",
+              "duration": 12170300,
+              "status": "pending"
+            },
+            "line": 8,
+            "name": "No Registered User with username \"Paul muad\u0027dib atreides!!!!!!!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul muad\u0027dib atreides!!!!!!!!\"",
+                  "offset": 33
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.no_Registered_User_with_username(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "The User clicks on Create an Account Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "The User enters \"Paul muad\u0027dib atreides!!!!!!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul muad\u0027dib atreides!!!!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1133500,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "The User enters \"Air power sea power desert30!!\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Air power sea power desert30!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "The User is redirected back to the Login page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_is_redirected_back_to_the_Login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-19"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T17:22:12.075Z",
+        "line": 32,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 16284800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(RegistrationSteps.java:22)\r\n\tat ✽.Account with username \"Lisan\" and password \"al-gaib\" already registered(classpath:features/Registration.feature:23)\r\n",
+              "status": "pending"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "The User enters \"Lisan\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "The User enters \"atreidies\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"atreidies\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T17:22:12.100Z",
+        "line": 33,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24001900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(RegistrationSteps.java:22)\r\n\tat ✽.Account with username \"Lisan\" and password \"al-gaib\" already registered(classpath:features/Registration.feature:23)\r\n",
+              "duration": 1001400,
+              "status": "pending"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "The User enters \"House Harkonnen owns Arrakis!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"House Harkonnen owns Arrakis!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "The User enters \"Air power sea power desert30!!\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Air power sea power desert30!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T17:22:12.131Z",
+        "line": 34,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20002000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(RegistrationSteps.java:22)\r\n\tat ✽.Account with username \"Lisan\" and password \"al-gaib\" already registered(classpath:features/Registration.feature:23)\r\n",
+              "status": "pending"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "The User enters \"House Harkonnen owns Arrakis!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"House Harkonnen owns Arrakis!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "The User enters \"The Lisan will liberate Arrakis\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The Lisan will liberate Arrakis\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T17:22:12.160Z",
+        "line": 35,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 23512600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(RegistrationSteps.java:22)\r\n\tat ✽.Account with username \"Lisan\" and password \"al-gaib\" already registered(classpath:features/Registration.feature:23)\r\n",
+              "status": "pending"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "The User enters \"\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "The User enters \"Air power sea power desert30!!\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Air power sea power desert30!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T17:22:12.190Z",
+        "line": 36,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24999100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(RegistrationSteps.java:22)\r\n\tat ✽.Account with username \"Lisan\" and password \"al-gaib\" already registered(classpath:features/Registration.feature:23)\r\n",
+              "duration": 1001000,
+              "status": "pending"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "The User enters \"\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "The User enters \"The Lisan will liberate Arrakis\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The Lisan will liberate Arrakis\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T17:22:12.220Z",
+        "line": 37,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 25999600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(RegistrationSteps.java:22)\r\n\tat ✽.Account with username \"Lisan\" and password \"al-gaib\" already registered(classpath:features/Registration.feature:23)\r\n",
+              "duration": 1003400,
+              "status": "pending"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 996200,
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "The User enters \"Paul muad\u0027dib atreides!!!!!!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul muad\u0027dib atreides!!!!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "The User enters \"\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T17:22:12.251Z",
+        "line": 38,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 22276100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(RegistrationSteps.java:22)\r\n\tat ✽.Account with username \"Lisan\" and password \"al-gaib\" already registered(classpath:features/Registration.feature:23)\r\n",
+              "duration": 1001400,
+              "status": "pending"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "The User enters \"House Harkonnen owns Arrakis!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"House Harkonnen owns Arrakis!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "The User enters \"\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T17:22:12.278Z",
+        "line": 39,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 23001500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "io.cucumber.java.PendingException: TODO: implement me\r\n\tat com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(RegistrationSteps.java:22)\r\n\tat ✽.Account with username \"Lisan\" and password \"al-gaib\" already registered(classpath:features/Registration.feature:23)\r\n",
+              "duration": 998900,
+              "status": "pending"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "The User enters \"Paul muad\u0027dib atreides!!!!!!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul muad\u0027dib atreides!!!!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "The User enters \"The Lisan will liberate Arrakis\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The Lisan will liberate Arrakis\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      }
+    ],
+    "name": "Registration",
+    "description": "",
+    "id": "registration",
+    "keyword": "Feature",
+    "uri": "classpath:features/Registration.feature",
+    "tags": [
+      {
+        "name": "@Registration",
         "type": "Tag",
         "location": {
           "line": 1,

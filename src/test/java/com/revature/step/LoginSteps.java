@@ -39,7 +39,9 @@ public class LoginSteps {
     @Then("The User is kept at the login page")
     public void the_User_is_kept_at_the_login_page() {
         // Write code here that turns the phrase above into concrete actions
-        //TestRunner.driver.switchTo().alert().accept();
+        TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+        TestRunner.driver.switchTo().alert().accept();
         Assert.assertEquals("Planetarium Login", TestRunner.driver.getTitle());
+
     }
 }
