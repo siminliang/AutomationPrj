@@ -1,4 +1,4 @@
-package com.revature.pom;
+package com.revature.pom.pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-// This is the pom (page object model) for the Wikipedia homepage, our scenarios will all
+// This is the pom (page object model) for the Planetarium Login page, our scenarios will all
 // make use of this pom
 public class PlanetariumLoginHome {
 
@@ -31,7 +31,7 @@ public class PlanetariumLoginHome {
         PageFactory.initElements(driver, this);
     }
 
-    public void goToWikiHome(){
+    public void goToPlanetariumLoginHome(){
         driver.get(url);
     }
 
