@@ -5,6 +5,7 @@ Feature: Login
 	Scenario Outline: As a User I want to Login to my Account so that I can Enter the Planetarium
 	Login Functionality Test Positive Scenario
 		Given The User is on the Login Page
+		Given Account with username "<username>" and password "<password>" already registered
 		When The User enters "<username>" into username input bar
 		When The User enters "<password>" into password input bar
 		When The User clicks on the Login Button
@@ -18,6 +19,7 @@ Feature: Login
 	Scenario Outline: As the System I don't want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure
 	Login Functionality Test Negative Scenario
 		Given The User is on the Login Page
+		Given Account with username Lisan and password al-gaib already registered
 		When The User enters "<username>" into username input bar
 		When The User enters "<password>" into password input bar
 		When The User clicks on the Login Button
