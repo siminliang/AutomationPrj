@@ -32,6 +32,7 @@ Feature: Registration
 		| Lisan                           | atreidies                       |
 		| House Harkonnen owns Arrakis!!! | Air power sea power desert30!!  |
 		| House Harkonnen owns Arrakis!!! | The Lisan will liberate Arrakis |
+		|                                 |                                 |
 		|                                 | Air power sea power desert30!!  |
 		|                                 | The Lisan will liberate Arrakis |
 		| Paul muad'dib atreides!!!!!!!!  |                                 |
