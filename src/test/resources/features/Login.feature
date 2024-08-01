@@ -47,11 +47,8 @@ Feature: Login
 		| Batman   | I am the night |
 
 	@SCRUM-TC-27
-	Scenario Outline: As the System I don't want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users
+	Scenario: As the System I don't want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users
 	Login Functionality Test Negative Scenario
 		Given The User is on the Login Page
 		When The User enters the Planetarium Main Page URL into the browser URL
 		Then The User is not redirected to the Planetarium
-
-	Examples: 
-		| username | password |
