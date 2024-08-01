@@ -26,6 +26,11 @@ public class PlanetariumLoginHome {
     @FindBy(xpath = "//input[@type='submit' and @value='Login']")
     private WebElement loginButton;
 
+    // Locate the create an account link
+    @FindBy(linkText = "Create an Account")
+    private WebElement createAccountLink;
+
+
     public PlanetariumLoginHome(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -45,6 +50,10 @@ public class PlanetariumLoginHome {
 
     public void clickLoginButton(){
         loginButton.click();
+    }
+
+    public void clickCreateAccountLink(){
+        createAccountLink.click();
     }
 
     /*

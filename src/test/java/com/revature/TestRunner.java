@@ -1,6 +1,7 @@
 package com.revature;
 
 import com.revature.pom.PlanetariumLoginHome;
+import com.revature.pom.PlanetariumRegistrationHome;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -65,6 +66,8 @@ public class TestRunner {
 
     public static PlanetariumLoginHome planetariumLoginHome;
 
+    public static PlanetariumRegistrationHome planetariumRegistrationHome;
+
     /*
         In order to make sure that the objects we need are available
         for testing we can use a setup method to initialize all
@@ -80,6 +83,7 @@ public class TestRunner {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         // initialize any page object models
         planetariumLoginHome = new PlanetariumLoginHome(driver);
+        planetariumRegistrationHome = new PlanetariumRegistrationHome(driver);
         // initialize a wait object for any situations you need to explicitly wait for something
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
