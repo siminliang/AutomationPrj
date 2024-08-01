@@ -1,0 +1,292 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-01T15:37:55.357Z",
+        "line": 15,
+        "name": "As a User I want to Login to my Account so that I can Enter the Planetarium",
+        "description": "\tLogin Functionality Test Positive Scenario",
+        "id": "login;as-a-user-i-want-to-login-to-my-account-so-that-i-can-enter-the-planetarium;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 48593300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 75675100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The User enters \"Batman\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 84124200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The User enters \"I am the night\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"I am the night\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39588500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41122900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The User is redirected to the Planetarium",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_redirected_to_the_Planetarium()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-17"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T15:37:55.698Z",
+        "line": 28,
+        "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
+        "description": "\tLogin Functionality Test Negative Scenario",
+        "id": "login;as-the-system-i-don-t-want-a-user-to-login-to-an-account-using-an-invalid-username-and-password-combo-so-that-i-can-ensure-my-user-accounts-are-secure;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 33236100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 95749400,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The User enters \"Lisan\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 68631900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User enters \"atreidies\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"atreidies\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31057500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9519500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User is kept at the login page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_kept_at_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-18"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-01T15:37:55.941Z",
+        "line": 29,
+        "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
+        "description": "\tLogin Functionality Test Negative Scenario",
+        "id": "login;as-the-system-i-don-t-want-a-user-to-login-to-an-account-using-an-invalid-username-and-password-combo-so-that-i-can-ensure-my-user-accounts-are-secure;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : login attempt failed: please try again}\n  (Session info: chrome\u003d127.0.6533.74): login attempt failed: please try again\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.23\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [c8bdaab8014845b971dfc01fd77237c3, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.74, chrome: {chromedriverVersion: 127.0.6533.88 (a2d0cb026721..., userDataDir: C:\\Users\\blake\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61303}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61303/devtoo..., se:cdpVersion: 127.0.6533.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: c8bdaab8014845b971dfc01fd77237c3\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:302)\r\n\tat com.revature.pom.PlanetariumLoginHome.goToPlanetariumLoginHome(PlanetariumLoginHome.java:35)\r\n\tat com.revature.step.LoginSteps.the_User_is_on_the_Login_Page(LoginSteps.java:16)\r\n\tat ✽.The User is on the Login Page(classpath:features/Login.feature:20)\r\n",
+              "duration": 13525700,
+              "status": "failed"
+            },
+            "line": 20,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "The User enters \"Paul\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "The User enters \"al-gaib\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 23,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "The User is kept at the login page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_kept_at_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-18"
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "classpath:features/Login.feature",
+    "tags": [
+      {
+        "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
