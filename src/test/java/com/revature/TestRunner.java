@@ -1,5 +1,6 @@
 package com.revature;
 
+import com.revature.pom.PlanetariumLoginHome;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -62,7 +63,7 @@ public class TestRunner {
 
     public static WebDriverWait wait;
 
-    //public static WikiHome wikiHome;
+    public static PlanetariumLoginHome planetariumLoginHome;
 
     /*
         In order to make sure that the objects we need are available
@@ -78,7 +79,7 @@ public class TestRunner {
         // set up your implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         // initialize any page object models
-        //wikiHome = new WikiHome(driver);
+        planetariumLoginHome = new PlanetariumLoginHome(driver);
         // initialize a wait object for any situations you need to explicitly wait for something
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
