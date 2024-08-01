@@ -14,6 +14,8 @@ public class PlanetariumLoginHome {
 
     private String url = "http://localhost:8080/";
 
+    private String planetariumUrl = "http://localhost:8080/planetarium";
+
     // Locate the username input field
     @FindBy(id = "usernameInput")
     private WebElement usernameInput;
@@ -40,6 +42,10 @@ public class PlanetariumLoginHome {
         driver.get(url);
     }
 
+    public void goToPlanetariumMainPage(){
+        driver.get(planetariumUrl);
+    }
+
     public void sendToUsernameInput(String username){
         usernameInput.sendKeys(username);
     }
@@ -55,6 +61,8 @@ public class PlanetariumLoginHome {
     public void clickCreateAccountLink(){
         createAccountLink.click();
     }
+
+
 
     /*
         In this example we find the link by providing an id to the method, and then the driver

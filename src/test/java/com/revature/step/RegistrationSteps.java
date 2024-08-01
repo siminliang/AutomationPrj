@@ -71,4 +71,6 @@ public class RegistrationSteps {
         TestRunner.wait.until(ExpectedConditions.titleIs("Account Creation"));
         Assert.assertEquals("Account Creation", TestRunner.driver.getTitle());
     }
+
+
 }

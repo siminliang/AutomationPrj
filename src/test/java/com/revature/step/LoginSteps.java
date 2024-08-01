@@ -1,19 +1,34 @@
 package com.revature.step;
 
 import com.revature.TestRunner;
+import com.revature.entity.UserEntity;
+import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import com.revature.TestRunner;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LoginSteps {
+
+    private static final Logger log = LoggerFactory.getLogger(LoginSteps.class);
 
     @Given("The User is on the Login Page")
     public void the_User_is_on_the_Login_Page() {
         TestRunner.planetariumLoginHome.goToPlanetariumLoginHome();
+    }
+    @Given("Account with username Lisan and password al-gaib already registered")
+    public void accountWithUsernameLisanAndPasswordAlGaibAlreadyRegistered() {
+        // add the user with username/password
+        String fileName = "AddUser.sql";
+        UserEntity userEntity = new UserEntity("Lisan", "al-gaib");
+        DatabaseScriptRunnerUtility.runSQLScript(fileName, userEntity);
     }
 
     @When("The User enters {string} into username input bar")
@@ -43,5 +58,27 @@ public class LoginSteps {
         TestRunner.driver.switchTo().alert().accept();
         Assert.assertEquals("Planetarium Login", TestRunner.driver.getTitle());
 
+    }
+
+    @When("The User clicks on the Logout Button")
+    public void theUserClicksOnTheLogoutButton() {
+        WebElement logoutButton = TestRunner.driver.findElement(By.id("logoutButton"));
+        logoutButton.click();
+    }
+
+    @Then("The User is redirected back to the Login page")
+    public void theUserIsRedirectedBackToTheLoginPage() {
+        TestRunner.wait.until(ExpectedConditions.titleIs("Planetarium Login"));
+        Assert.assertEquals("Planetarium Login", TestRunner.driver.getTitle());
+    }
+
+    @When("The User enters the Planetarium Main Page URL into the browser URL")
+    public void theUserEntersThePlanetariumMainPageURLIntoTheBrowserURL() {
+        TestRunner.planetariumLoginHome.goToPlanetariumMainPage();
+    }
+
+    @Then("The User is not redirected to the Planetarium")
+    public void theUserIsNotRedirectedToThePlanetarium() {
+        Assert.assertNotEquals("Home", TestRunner.driver.getTitle());
     }
 }
