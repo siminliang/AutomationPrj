@@ -1,4 +1,4 @@
-package com.revature.pom.pom;
+package com.revature.pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
