@@ -87,6 +87,7 @@ public class TestRunner {
         // initialize any page object models
         planetariumLoginHome = new PlanetariumLoginHome(driver);
         planetariumRegistrationHome = new PlanetariumRegistrationHome(driver);
+        planetariumHome = new PlanetariumHome(driver);
         // initialize a wait object for any situations you need to explicitly wait for something
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }

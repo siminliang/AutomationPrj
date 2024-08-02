@@ -45,17 +45,17 @@ public class DatabaseScriptRunnerUtility {
 
 
     private static void setParameters(PreparedStatement preparedStatement, String sqlFileName, Object entity) throws SQLException, FileNotFoundException {
-            if( entity instanceof UserEntity) {
-                UserEntity userEntity = (UserEntity) entity;
-                switch(sqlFileName){
-                    case "AddUser.sql":
-                        DatabaseRegistrationPreparedStatements.addUser(preparedStatement, userEntity);
-                        break;
-                    case "DeleteUser.sql":
-                        DatabaseRegistrationPreparedStatements.deleteUser(preparedStatement, userEntity);
-                        break;
-                }
+        if( entity instanceof UserEntity) {
+            UserEntity userEntity = (UserEntity) entity;
+            switch(sqlFileName){
+                case "AddUser.sql":
+                    DatabaseRegistrationPreparedStatements.addUser(preparedStatement, userEntity);
+                    break;
+                case "DeleteUser.sql":
+                    DatabaseRegistrationPreparedStatements.deleteUser(preparedStatement, userEntity);
+                    break;
             }
+        }
 
         if( entity instanceof PlanetEntity) {
             PlanetEntity planetEntity = (PlanetEntity) entity;
