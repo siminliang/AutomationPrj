@@ -22,4 +22,8 @@ public class MoonEntity {
         this.name = name;
         this.owner = owner;
     }
+
+    public MoonEntity(String name){
+        this.name = name;
+    }
 }
