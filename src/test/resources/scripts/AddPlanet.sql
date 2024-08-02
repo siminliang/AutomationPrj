@@ -1,0 +1,1 @@
+INSERT INTO planets (name, ownerId, image) VALUES (?, ?, ?);

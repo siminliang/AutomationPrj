@@ -2,6 +2,7 @@ package com.revature.step;
 
 import com.revature.TestRunner;
 import com.revature.entity.UserEntity;
+import com.revature.repositories.UserRepository;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -28,9 +29,8 @@ public class LoginSteps {
     @Given("Account with username Lisan and password al-gaib already registered")
     public void accountWithUsernameLisanAndPasswordAlGaibAlreadyRegistered() {
         // add the user with username/password
-        String fileName = "AddUser.sql";
         UserEntity userEntity = new UserEntity("Lisan", "al-gaib");
-        DatabaseScriptRunnerUtility.runSQLScript(fileName, userEntity);
+        UserRepository.addUser(userEntity);
     }
 
     @When("The User enters {string} into username input bar")
@@ -64,8 +64,7 @@ public class LoginSteps {
 
     @When("The User clicks on the Logout Button")
     public void theUserClicksOnTheLogoutButton() {
-        WebElement logoutButton = TestRunner.driver.findElement(By.id("logoutButton"));
-        logoutButton.click();
+        TestRunner.planetariumHome.clickLogoutButton();
     }
 
     @Then("The User is redirected back to the Login page")
@@ -76,7 +75,7 @@ public class LoginSteps {
 
     @When("The User enters the Planetarium Main Page URL into the browser URL")
     public void theUserEntersThePlanetariumMainPageURLIntoTheBrowserURL() {
-        TestRunner.planetariumLoginHome.goToPlanetariumMainPage();
+        TestRunner.planetariumHome.goToPlanetariumHomePage();
         TestRunner.wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("Planetarium Login")));
     }
 

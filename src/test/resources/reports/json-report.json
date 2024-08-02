@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-02T17:21:22.758Z",
+        "start_timestamp": "2024-08-02T17:22:22.592Z",
         "line": 16,
         "name": "As a User I want to Login to my Account so that I can Enter the Planetarium",
         "description": "\tLogin Functionality Test Positive Scenario",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 93883600,
+              "duration": 66668900,
               "status": "passed"
             },
             "line": 7,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 210471800,
+              "duration": 198035900,
               "status": "passed"
             },
             "line": 8,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 97803100,
+              "duration": 79207100,
               "status": "passed"
             },
             "line": 9,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 103927000,
+              "duration": 87091700,
               "status": "passed"
             },
             "line": 10,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 39291700,
+              "duration": 46927500,
               "status": "passed"
             },
             "line": 11,
@@ -95,7 +95,7 @@
           },
           {
             "result": {
-              "duration": 43336900,
+              "duration": 40349300,
               "status": "passed"
             },
             "line": 12,
@@ -116,7 +116,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:23.445Z",
+        "start_timestamp": "2024-08-02T17:22:23.171Z",
         "line": 30,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -126,7 +126,7 @@
         "steps": [
           {
             "result": {
-              "duration": 123503700,
+              "duration": 132496900,
               "status": "passed"
             },
             "line": 21,
@@ -138,7 +138,7 @@
           },
           {
             "result": {
-              "duration": 3005900,
+              "duration": 2794900,
               "status": "passed"
             },
             "line": 22,
@@ -160,7 +160,7 @@
           },
           {
             "result": {
-              "duration": 71439300,
+              "duration": 73470700,
               "status": "passed"
             },
             "line": 23,
@@ -178,7 +178,7 @@
           },
           {
             "result": {
-              "duration": 73924400,
+              "duration": 83199400,
               "status": "passed"
             },
             "line": 24,
@@ -196,7 +196,7 @@
           },
           {
             "result": {
-              "duration": 33318400,
+              "duration": 31554400,
               "status": "passed"
             },
             "line": 25,
@@ -208,7 +208,7 @@
           },
           {
             "result": {
-              "duration": 19060000,
+              "duration": 18001400,
               "status": "passed"
             },
             "line": 26,
@@ -229,7 +229,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:23.777Z",
+        "start_timestamp": "2024-08-02T17:22:23.522Z",
         "line": 31,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -239,7 +239,7 @@
         "steps": [
           {
             "result": {
-              "duration": 25021100,
+              "duration": 24128900,
               "status": "passed"
             },
             "line": 21,
@@ -251,7 +251,7 @@
           },
           {
             "result": {
-              "duration": 980700,
+              "duration": 1002300,
               "status": "passed"
             },
             "line": 22,
@@ -273,7 +273,7 @@
           },
           {
             "result": {
-              "duration": 69850300,
+              "duration": 65921600,
               "status": "passed"
             },
             "line": 23,
@@ -291,7 +291,7 @@
           },
           {
             "result": {
-              "duration": 69497500,
+              "duration": 58072300,
               "status": "passed"
             },
             "line": 24,
@@ -309,7 +309,7 @@
           },
           {
             "result": {
-              "duration": 32020300,
+              "duration": 28103500,
               "status": "passed"
             },
             "line": 25,
@@ -321,7 +321,7 @@
           },
           {
             "result": {
-              "duration": 12999800,
+              "duration": 14091300,
               "status": "passed"
             },
             "line": 26,
@@ -342,7 +342,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:23.997Z",
+        "start_timestamp": "2024-08-02T17:22:23.721Z",
         "line": 32,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -352,7 +352,7 @@
         "steps": [
           {
             "result": {
-              "duration": 23258200,
+              "duration": 24899000,
               "status": "passed"
             },
             "line": 21,
@@ -364,7 +364,7 @@
           },
           {
             "result": {
-              "duration": 2029700,
+              "duration": 1003700,
               "status": "passed"
             },
             "line": 22,
@@ -386,7 +386,7 @@
           },
           {
             "result": {
-              "duration": 46211700,
+              "duration": 41656700,
               "status": "passed"
             },
             "line": 23,
@@ -404,7 +404,7 @@
           },
           {
             "result": {
-              "duration": 41731700,
+              "duration": 41402500,
               "status": "passed"
             },
             "line": 24,
@@ -422,7 +422,7 @@
           },
           {
             "result": {
-              "duration": 30265600,
+              "duration": 33848000,
               "status": "passed"
             },
             "line": 25,
@@ -434,7 +434,7 @@
           },
           {
             "result": {
-              "duration": 16006200,
+              "duration": 15209000,
               "status": "passed"
             },
             "line": 26,
@@ -455,7 +455,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:24.161Z",
+        "start_timestamp": "2024-08-02T17:22:23.886Z",
         "line": 33,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -465,7 +465,7 @@
         "steps": [
           {
             "result": {
-              "duration": 23485500,
+              "duration": 23429300,
               "status": "passed"
             },
             "line": 21,
@@ -477,7 +477,7 @@
           },
           {
             "result": {
-              "duration": 1023100,
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 22,
@@ -499,7 +499,7 @@
           },
           {
             "result": {
-              "duration": 59525800,
+              "duration": 73299400,
               "status": "passed"
             },
             "line": 23,
@@ -517,7 +517,7 @@
           },
           {
             "result": {
-              "duration": 38725600,
+              "duration": 47739200,
               "status": "passed"
             },
             "line": 24,
@@ -535,7 +535,7 @@
           },
           {
             "result": {
-              "duration": 30220500,
+              "duration": 39724000,
               "status": "passed"
             },
             "line": 25,
@@ -547,7 +547,7 @@
           },
           {
             "result": {
-              "duration": 15183300,
+              "duration": 19537200,
               "status": "passed"
             },
             "line": 26,
@@ -568,7 +568,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:24.333Z",
+        "start_timestamp": "2024-08-02T17:22:24.095Z",
         "line": 34,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -578,7 +578,7 @@
         "steps": [
           {
             "result": {
-              "duration": 24008500,
+              "duration": 28998100,
               "status": "passed"
             },
             "line": 21,
@@ -590,7 +590,7 @@
           },
           {
             "result": {
-              "duration": 999000,
+              "duration": 1000200,
               "status": "passed"
             },
             "line": 22,
@@ -612,7 +612,7 @@
           },
           {
             "result": {
-              "duration": 39666100,
+              "duration": 49060400,
               "status": "passed"
             },
             "line": 23,
@@ -630,7 +630,7 @@
           },
           {
             "result": {
-              "duration": 54102400,
+              "duration": 56366200,
               "status": "passed"
             },
             "line": 24,
@@ -648,7 +648,7 @@
           },
           {
             "result": {
-              "duration": 27382100,
+              "duration": 26112300,
               "status": "passed"
             },
             "line": 25,
@@ -660,7 +660,7 @@
           },
           {
             "result": {
-              "duration": 12999100,
+              "duration": 11021100,
               "status": "passed"
             },
             "line": 26,
@@ -681,7 +681,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:24.499Z",
+        "start_timestamp": "2024-08-02T17:22:24.274Z",
         "line": 50,
         "name": "As a User I want to Logout of my Account so that I can exit the Planetarium",
         "description": "\tLogin Functionality Test Positive Scenario",
@@ -691,7 +691,7 @@
         "steps": [
           {
             "result": {
-              "duration": 23354800,
+              "duration": 19998100,
               "status": "passed"
             },
             "line": 39,
@@ -703,7 +703,7 @@
           },
           {
             "result": {
-              "duration": 1019600,
+              "duration": 1018100,
               "status": "passed"
             },
             "line": 40,
@@ -725,7 +725,7 @@
           },
           {
             "result": {
-              "duration": 70014900,
+              "duration": 54278900,
               "status": "passed"
             },
             "line": 41,
@@ -743,7 +743,7 @@
           },
           {
             "result": {
-              "duration": 82098200,
+              "duration": 78518000,
               "status": "passed"
             },
             "line": 42,
@@ -761,7 +761,7 @@
           },
           {
             "result": {
-              "duration": 30417800,
+              "duration": 26962500,
               "status": "passed"
             },
             "line": 43,
@@ -773,7 +773,7 @@
           },
           {
             "result": {
-              "duration": 23109200,
+              "duration": 28663600,
               "status": "passed"
             },
             "line": 44,
@@ -785,7 +785,7 @@
           },
           {
             "result": {
-              "duration": 29006600,
+              "duration": 32104300,
               "status": "passed"
             },
             "line": 45,
@@ -797,7 +797,7 @@
           },
           {
             "result": {
-              "duration": 522404900,
+              "duration": 26409300,
               "status": "passed"
             },
             "line": 46,
@@ -818,7 +818,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:25.284Z",
+        "start_timestamp": "2024-08-02T17:22:24.543Z",
         "line": 53,
         "name": "As the System I don\u0027t want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -828,7 +828,7 @@
         "steps": [
           {
             "result": {
-              "duration": 20624500,
+              "duration": 19517800,
               "status": "passed"
             },
             "line": 55,
@@ -840,7 +840,7 @@
           },
           {
             "result": {
-              "duration": 32112700,
+              "duration": 39873300,
               "status": "passed"
             },
             "line": 56,
@@ -852,7 +852,7 @@
           },
           {
             "result": {
-              "duration": 3001900,
+              "duration": 3500700,
               "status": "passed"
             },
             "line": 57,
@@ -893,7 +893,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-02T17:21:25.343Z",
+        "start_timestamp": "2024-08-02T17:22:24.609Z",
         "line": 17,
         "name": "As a User I want to Register an Account with the Planetarium so that I can Login Securely",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -903,7 +903,7 @@
         "steps": [
           {
             "result": {
-              "duration": 32638400,
+              "duration": 29384100,
               "status": "passed"
             },
             "line": 7,
@@ -915,7 +915,7 @@
           },
           {
             "result": {
-              "duration": 5996000,
+              "duration": 5036000,
               "status": "passed"
             },
             "line": 8,
@@ -933,7 +933,7 @@
           },
           {
             "result": {
-              "duration": 98163300,
+              "duration": 95822500,
               "status": "passed"
             },
             "line": 9,
@@ -945,7 +945,7 @@
           },
           {
             "result": {
-              "duration": 143622400,
+              "duration": 149439500,
               "status": "passed"
             },
             "line": 10,
@@ -963,7 +963,7 @@
           },
           {
             "result": {
-              "duration": 152037700,
+              "duration": 151524900,
               "status": "passed"
             },
             "line": 11,
@@ -981,7 +981,7 @@
           },
           {
             "result": {
-              "duration": 30825000,
+              "duration": 31741300,
               "status": "passed"
             },
             "line": 12,
@@ -993,7 +993,7 @@
           },
           {
             "result": {
-              "duration": 550634600,
+              "duration": 557502100,
               "status": "passed"
             },
             "line": 13,
@@ -1014,7 +1014,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:26.364Z",
+        "start_timestamp": "2024-08-02T17:22:25.635Z",
         "line": 32,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -1024,7 +1024,7 @@
         "steps": [
           {
             "result": {
-              "duration": 22594300,
+              "duration": 23132000,
               "status": "passed"
             },
             "line": 22,
@@ -1036,7 +1036,7 @@
           },
           {
             "result": {
-              "duration": 3001200,
+              "duration": 1999600,
               "status": "passed"
             },
             "line": 23,
@@ -1058,7 +1058,7 @@
           },
           {
             "result": {
-              "duration": 87939700,
+              "duration": 87020900,
               "status": "passed"
             },
             "line": 24,
@@ -1070,7 +1070,7 @@
           },
           {
             "result": {
-              "duration": 55330900,
+              "duration": 57171100,
               "status": "passed"
             },
             "line": 25,
@@ -1088,7 +1088,7 @@
           },
           {
             "result": {
-              "duration": 61855300,
+              "duration": 63753500,
               "status": "passed"
             },
             "line": 26,
@@ -1106,7 +1106,7 @@
           },
           {
             "result": {
-              "duration": 26229500,
+              "duration": 27325600,
               "status": "passed"
             },
             "line": 27,
@@ -1118,7 +1118,7 @@
           },
           {
             "result": {
-              "duration": 514959200,
+              "duration": 16533900,
               "status": "passed"
             },
             "line": 28,
@@ -1139,7 +1139,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:27.138Z",
+        "start_timestamp": "2024-08-02T17:22:25.914Z",
         "line": 33,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -1149,7 +1149,7 @@
         "steps": [
           {
             "result": {
-              "duration": 35848300,
+              "duration": 40192000,
               "status": "passed"
             },
             "line": 22,
@@ -1161,6 +1161,7 @@
           },
           {
             "result": {
+              "duration": 999800,
               "status": "passed"
             },
             "line": 23,
@@ -1182,7 +1183,7 @@
           },
           {
             "result": {
-              "duration": 73319400,
+              "duration": 76883700,
               "status": "passed"
             },
             "line": 24,
@@ -1194,7 +1195,7 @@
           },
           {
             "result": {
-              "duration": 124852000,
+              "duration": 136085100,
               "status": "passed"
             },
             "line": 25,
@@ -1212,7 +1213,7 @@
           },
           {
             "result": {
-              "duration": 142066000,
+              "duration": 148122600,
               "status": "passed"
             },
             "line": 26,
@@ -1230,7 +1231,7 @@
           },
           {
             "result": {
-              "duration": 25136700,
+              "duration": 28031500,
               "status": "passed"
             },
             "line": 27,
@@ -1242,7 +1243,7 @@
           },
           {
             "result": {
-              "duration": 16005700,
+              "duration": 15647200,
               "status": "passed"
             },
             "line": 28,
@@ -1263,7 +1264,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:27.559Z",
+        "start_timestamp": "2024-08-02T17:22:26.362Z",
         "line": 34,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -1273,7 +1274,7 @@
         "steps": [
           {
             "result": {
-              "duration": 48604400,
+              "duration": 45632600,
               "status": "passed"
             },
             "line": 22,
@@ -1285,7 +1286,7 @@
           },
           {
             "result": {
-              "duration": 1014800,
+              "duration": 1007000,
               "status": "passed"
             },
             "line": 23,
@@ -1307,7 +1308,7 @@
           },
           {
             "result": {
-              "duration": 86169100,
+              "duration": 94433300,
               "status": "passed"
             },
             "line": 24,
@@ -1319,7 +1320,7 @@
           },
           {
             "result": {
-              "duration": 137263000,
+              "duration": 137456900,
               "status": "passed"
             },
             "line": 25,
@@ -1337,7 +1338,7 @@
           },
           {
             "result": {
-              "duration": 155202200,
+              "duration": 143529300,
               "status": "passed"
             },
             "line": 26,
@@ -1355,7 +1356,7 @@
           },
           {
             "result": {
-              "duration": 25699600,
+              "duration": 26001800,
               "status": "passed"
             },
             "line": 27,
@@ -1367,7 +1368,7 @@
           },
           {
             "result": {
-              "duration": 519427300,
+              "duration": 15013800,
               "status": "passed"
             },
             "line": 28,
@@ -1388,7 +1389,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:28.535Z",
+        "start_timestamp": "2024-08-02T17:22:26.829Z",
         "line": 35,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -1398,7 +1399,7 @@
         "steps": [
           {
             "result": {
-              "duration": 47702400,
+              "duration": 39453100,
               "status": "passed"
             },
             "line": 22,
@@ -1410,7 +1411,7 @@
           },
           {
             "result": {
-              "duration": 990600,
+              "duration": 1005200,
               "status": "passed"
             },
             "line": 23,
@@ -1432,7 +1433,7 @@
           },
           {
             "result": {
-              "duration": 91102600,
+              "duration": 79107600,
               "status": "passed"
             },
             "line": 24,
@@ -1444,7 +1445,7 @@
           },
           {
             "result": {
-              "duration": 33155800,
+              "duration": 33453200,
               "status": "passed"
             },
             "line": 25,
@@ -1462,7 +1463,7 @@
           },
           {
             "result": {
-              "duration": 30940800,
+              "duration": 34084100,
               "status": "passed"
             },
             "line": 26,
@@ -1480,7 +1481,7 @@
           },
           {
             "result": {
-              "duration": 23737300,
+              "duration": 25184900,
               "status": "passed"
             },
             "line": 27,
@@ -1492,7 +1493,7 @@
           },
           {
             "result": {
-              "duration": 13554900,
+              "duration": 13293500,
               "status": "passed"
             },
             "line": 28,
@@ -1513,7 +1514,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:28.780Z",
+        "start_timestamp": "2024-08-02T17:22:27.059Z",
         "line": 36,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -1523,7 +1524,7 @@
         "steps": [
           {
             "result": {
-              "duration": 39969500,
+              "duration": 48897900,
               "status": "passed"
             },
             "line": 22,
@@ -1535,7 +1536,7 @@
           },
           {
             "result": {
-              "duration": 2012400,
+              "duration": 1000700,
               "status": "passed"
             },
             "line": 23,
@@ -1557,7 +1558,7 @@
           },
           {
             "result": {
-              "duration": 73808400,
+              "duration": 96128900,
               "status": "passed"
             },
             "line": 24,
@@ -1569,7 +1570,7 @@
           },
           {
             "result": {
-              "duration": 34423200,
+              "duration": 33771400,
               "status": "passed"
             },
             "line": 25,
@@ -1587,7 +1588,7 @@
           },
           {
             "result": {
-              "duration": 135496400,
+              "duration": 135837900,
               "status": "passed"
             },
             "line": 26,
@@ -1605,7 +1606,7 @@
           },
           {
             "result": {
-              "duration": 30640900,
+              "duration": 26002400,
               "status": "passed"
             },
             "line": 27,
@@ -1617,7 +1618,7 @@
           },
           {
             "result": {
-              "duration": 12539600,
+              "duration": 13999600,
               "status": "passed"
             },
             "line": 28,
@@ -1638,7 +1639,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:29.114Z",
+        "start_timestamp": "2024-08-02T17:22:27.417Z",
         "line": 37,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -1648,7 +1649,7 @@
         "steps": [
           {
             "result": {
-              "duration": 58433800,
+              "duration": 52307000,
               "status": "passed"
             },
             "line": 22,
@@ -1660,7 +1661,7 @@
           },
           {
             "result": {
-              "duration": 1253900,
+              "duration": 998200,
               "status": "passed"
             },
             "line": 23,
@@ -1682,7 +1683,7 @@
           },
           {
             "result": {
-              "duration": 109100800,
+              "duration": 112513600,
               "status": "passed"
             },
             "line": 24,
@@ -1694,7 +1695,7 @@
           },
           {
             "result": {
-              "duration": 40276500,
+              "duration": 45100300,
               "status": "passed"
             },
             "line": 25,
@@ -1712,7 +1713,7 @@
           },
           {
             "result": {
-              "duration": 163661300,
+              "duration": 137431000,
               "status": "passed"
             },
             "line": 26,
@@ -1730,7 +1731,7 @@
           },
           {
             "result": {
-              "duration": 30739900,
+              "duration": 25635100,
               "status": "passed"
             },
             "line": 27,
@@ -1742,7 +1743,7 @@
           },
           {
             "result": {
-              "duration": 15239900,
+              "duration": 14497900,
               "status": "passed"
             },
             "line": 28,
@@ -1763,7 +1764,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:29.537Z",
+        "start_timestamp": "2024-08-02T17:22:27.810Z",
         "line": 38,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -1773,7 +1774,7 @@
         "steps": [
           {
             "result": {
-              "duration": 42923000,
+              "duration": 54534600,
               "status": "passed"
             },
             "line": 22,
@@ -1785,7 +1786,7 @@
           },
           {
             "result": {
-              "duration": 1027600,
+              "duration": 2015800,
               "status": "passed"
             },
             "line": 23,
@@ -1807,7 +1808,7 @@
           },
           {
             "result": {
-              "duration": 84251100,
+              "duration": 87413800,
               "status": "passed"
             },
             "line": 24,
@@ -1819,7 +1820,7 @@
           },
           {
             "result": {
-              "duration": 153724500,
+              "duration": 136580700,
               "status": "passed"
             },
             "line": 25,
@@ -1837,7 +1838,7 @@
           },
           {
             "result": {
-              "duration": 43054400,
+              "duration": 38100600,
               "status": "passed"
             },
             "line": 26,
@@ -1855,7 +1856,7 @@
           },
           {
             "result": {
-              "duration": 30887100,
+              "duration": 32512800,
               "status": "passed"
             },
             "line": 27,
@@ -1867,7 +1868,7 @@
           },
           {
             "result": {
-              "duration": 17149000,
+              "duration": 15503500,
               "status": "passed"
             },
             "line": 28,
@@ -1888,7 +1889,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:29.914Z",
+        "start_timestamp": "2024-08-02T17:22:28.178Z",
         "line": 39,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -1898,7 +1899,7 @@
         "steps": [
           {
             "result": {
-              "duration": 57924800,
+              "duration": 39210100,
               "status": "passed"
             },
             "line": 22,
@@ -1910,7 +1911,7 @@
           },
           {
             "result": {
-              "duration": 1998700,
+              "duration": 2002700,
               "status": "passed"
             },
             "line": 23,
@@ -1932,7 +1933,7 @@
           },
           {
             "result": {
-              "duration": 104283600,
+              "duration": 76605000,
               "status": "passed"
             },
             "line": 24,
@@ -1944,7 +1945,7 @@
           },
           {
             "result": {
-              "duration": 160904200,
+              "duration": 138140100,
               "status": "passed"
             },
             "line": 25,
@@ -1962,7 +1963,7 @@
           },
           {
             "result": {
-              "duration": 47956400,
+              "duration": 41942300,
               "status": "passed"
             },
             "line": 26,
@@ -1980,7 +1981,7 @@
           },
           {
             "result": {
-              "duration": 32076200,
+              "duration": 29026200,
               "status": "passed"
             },
             "line": 27,
@@ -1992,7 +1993,7 @@
           },
           {
             "result": {
-              "duration": 18488600,
+              "duration": 13516100,
               "status": "passed"
             },
             "line": 28,
@@ -2013,7 +2014,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-02T17:21:30.340Z",
+        "start_timestamp": "2024-08-02T17:22:28.521Z",
         "line": 40,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -2023,7 +2024,7 @@
         "steps": [
           {
             "result": {
-              "duration": 55962300,
+              "duration": 36949200,
               "status": "passed"
             },
             "line": 22,
@@ -2035,7 +2036,7 @@
           },
           {
             "result": {
-              "duration": 2002100,
+              "duration": 1001900,
               "status": "passed"
             },
             "line": 23,
@@ -2057,7 +2058,7 @@
           },
           {
             "result": {
-              "duration": 96303300,
+              "duration": 89170600,
               "status": "passed"
             },
             "line": 24,
@@ -2069,7 +2070,7 @@
           },
           {
             "result": {
-              "duration": 169977800,
+              "duration": 145959700,
               "status": "passed"
             },
             "line": 25,
@@ -2087,7 +2088,7 @@
           },
           {
             "result": {
-              "duration": 167554900,
+              "duration": 158695600,
               "status": "passed"
             },
             "line": 26,
@@ -2105,7 +2106,7 @@
           },
           {
             "result": {
-              "duration": 29853700,
+              "duration": 25933000,
               "status": "passed"
             },
             "line": 27,
@@ -2117,7 +2118,7 @@
           },
           {
             "result": {
-              "duration": 15621700,
+              "duration": 13523800,
               "status": "passed"
             },
             "line": 28,

@@ -1,8 +1,11 @@
 package com.revature.utilities;
 
+import com.revature.entity.MoonEntity;
+import com.revature.entity.PlanetEntity;
 import com.revature.entity.UserEntity;
 
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -41,7 +44,7 @@ public class DatabaseScriptRunnerUtility {
 
 
 
-    private static void setParameters(PreparedStatement preparedStatement, String sqlFileName, Object entity) throws SQLException {
+    private static void setParameters(PreparedStatement preparedStatement, String sqlFileName, Object entity) throws SQLException, FileNotFoundException {
             if( entity instanceof UserEntity) {
                 UserEntity userEntity = (UserEntity) entity;
                 switch(sqlFileName){
@@ -53,5 +56,29 @@ public class DatabaseScriptRunnerUtility {
                         break;
                 }
             }
+
+        if( entity instanceof PlanetEntity) {
+            PlanetEntity planetEntity = (PlanetEntity) entity;
+            switch(sqlFileName){
+                case "AddPlanet.sql":
+                    DatabasePlanetPreparedStatements.addPlanet(preparedStatement, planetEntity);
+                    break;
+                case "DeletePlanet.sql":
+                    DatabasePlanetPreparedStatements.deletePlanet(preparedStatement, planetEntity);
+                    break;
+            }
+        }
+
+        if( entity instanceof MoonEntity) {
+            MoonEntity moonEntity = (MoonEntity) entity;
+            switch(sqlFileName){
+                case "AddMoon.sql":
+                    DatabaseMoonPreparedStatements.addMoon(preparedStatement, moonEntity);
+                    break;
+                case "DeleteMoon.sql":
+                    DatabaseMoonPreparedStatements.deleteMoon(preparedStatement, moonEntity);
+                    break;
+            }
+        }
     }
 }

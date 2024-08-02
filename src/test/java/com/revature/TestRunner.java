@@ -1,5 +1,6 @@
 package com.revature;
 
+import com.revature.pom.PlanetariumHome;
 import com.revature.pom.PlanetariumLoginHome;
 import com.revature.pom.PlanetariumRegistrationHome;
 import io.cucumber.junit.Cucumber;
@@ -67,6 +68,8 @@ public class TestRunner {
     public static PlanetariumLoginHome planetariumLoginHome;
 
     public static PlanetariumRegistrationHome planetariumRegistrationHome;
+
+    public static PlanetariumHome planetariumHome;
 
     /*
         In order to make sure that the objects we need are available
