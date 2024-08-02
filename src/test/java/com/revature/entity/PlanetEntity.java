@@ -23,4 +23,8 @@ public class PlanetEntity {
         this.name = name;
         this.owner = owner;
     }
+
+    public PlanetEntity(String name){
+        this.name = name;
+    }
 }
