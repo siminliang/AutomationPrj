@@ -1,8 +1,11 @@
 package com.revature.utilities;
 
+import com.revature.entity.MoonEntity;
+import com.revature.entity.PlanetEntity;
 import com.revature.entity.UserEntity;
 
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -41,27 +44,41 @@ public class DatabaseScriptRunnerUtility {
 
 
 
-    private static void setParameters(PreparedStatement preparedStatement, String sqlFileName, Object entity) throws SQLException {
-            if( entity instanceof UserEntity) {
-                UserEntity userEntity = (UserEntity) entity;
-                switch(sqlFileName){
-                    case "AddUser.sql":
-                        DatabaseRegistrationPreparedStatements.addUser(preparedStatement, userEntity);
-                        break;
-                    case "DeleteUser.sql":
-                        DatabaseRegistrationPreparedStatements.deleteUser(preparedStatement, userEntity);
-                        break;
-                }
+    private static void setParameters(PreparedStatement preparedStatement, String sqlFileName, Object entity) throws SQLException, FileNotFoundException {
+        if( entity instanceof UserEntity) {
+            UserEntity userEntity = (UserEntity) entity;
+            switch(sqlFileName){
+                case "AddUser.sql":
+                    DatabaseRegistrationPreparedStatements.addUser(preparedStatement, userEntity);
+                    break;
+                case "DeleteUser.sql":
+                    DatabaseRegistrationPreparedStatements.deleteUser(preparedStatement, userEntity);
+                    break;
             }
-            if(entity instanceof String){
-                String string = (String) entity;
-                switch(sqlFileName){
-                    case "DeletePlanet.sql":
-                        DatabaseRegistrationPreparedStatements.deletePlanet(preparedStatement,string);
-                        break;
-                    case "AddPlanet.sql":
-                        break;
-                }
+        }
+
+        if( entity instanceof PlanetEntity) {
+            PlanetEntity planetEntity = (PlanetEntity) entity;
+            switch(sqlFileName){
+                case "AddPlanet.sql":
+                    DatabasePlanetPreparedStatements.addPlanet(preparedStatement, planetEntity);
+                    break;
+                case "DeletePlanet.sql":
+                    DatabasePlanetPreparedStatements.deletePlanet(preparedStatement, planetEntity);
+                    break;
             }
+        }
+
+        if( entity instanceof MoonEntity) {
+            MoonEntity moonEntity = (MoonEntity) entity;
+            switch(sqlFileName){
+                case "AddMoon.sql":
+                    DatabaseMoonPreparedStatements.addMoon(preparedStatement, moonEntity);
+                    break;
+                case "DeleteMoon.sql":
+                    DatabaseMoonPreparedStatements.deleteMoon(preparedStatement, moonEntity);
+                    break;
+            }
+        }
     }
 }

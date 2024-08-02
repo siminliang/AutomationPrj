@@ -1,7 +1,9 @@
 package com.revature.step;
 
 import com.revature.TestRunner;
+import com.revature.entity.PlanetEntity;
 import com.revature.entity.UserEntity;
+import com.revature.repositories.PlanetRepository;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,8 +27,8 @@ public class AddPlanetsSteps {
     @Given("No planet with name {string} in planetarium")
     public void no_planet_with_name_in_planetarium(String string) {
         // Deletes planet from the planetarium if it already exists
-        String fileName = "DeletePlanet.sql";
-        DatabaseScriptRunnerUtility.runSQLScript(fileName, string);
+        PlanetEntity planetEntity = new PlanetEntity(string);
+        PlanetRepository.deletePlanet(planetEntity);
     }
 
     @When("The User selects planets from the drop-down menu")

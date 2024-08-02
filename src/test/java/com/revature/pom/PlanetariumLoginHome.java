@@ -42,9 +42,7 @@ public class PlanetariumLoginHome {
         driver.get(url);
     }
 
-    public void goToPlanetariumMainPage(){
-        driver.get(planetariumUrl);
-    }
+
 
     public void sendToUsernameInput(String username){
         usernameInput.sendKeys(username);

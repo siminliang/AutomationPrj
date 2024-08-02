@@ -12,6 +12,11 @@ public class PlanetariumHome {
 
     private String url = "http://localhost:8080/planetarium";
 
+    // Locate the logout button
+    @FindBy(id = "logoutButton")
+    private WebElement logoutButton;
+
+
     //locate the drop-down menu
     @FindBy(id = "locationSelect")
     private WebElement dropDownMenu;
@@ -39,6 +44,10 @@ public class PlanetariumHome {
         PageFactory.initElements(driver, this);
     }
 
+    public void goToPlanetariumHomePage(){
+        driver.get(url);
+    }
+
     public void selectPlanet(){
         Select select = new Select(dropDownMenu);
         select.selectByValue("planet");
@@ -60,6 +69,10 @@ public class PlanetariumHome {
     public String getPlanetName(){
         System.out.println(celestialTable.getText());
         return celestialTable.getText();
+    }
+
+    public void clickLogoutButton(){
+        logoutButton.click();
     }
 
 }
