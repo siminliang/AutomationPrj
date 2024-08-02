@@ -53,5 +53,15 @@ public class DatabaseScriptRunnerUtility {
                         break;
                 }
             }
+            if(entity instanceof String){
+                String string = (String) entity;
+                switch(sqlFileName){
+                    case "DeletePlanet.sql":
+                        DatabaseRegistrationPreparedStatements.deletePlanet(preparedStatement,string);
+                        break;
+                    case "AddPlanet.sql":
+                        break;
+                }
+            }
     }
 }

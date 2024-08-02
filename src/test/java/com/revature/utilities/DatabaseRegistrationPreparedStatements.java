@@ -20,4 +20,9 @@ public class DatabaseRegistrationPreparedStatements {
         return preparedStatement;
     }
 
+    public static PreparedStatement deletePlanet(PreparedStatement preparedStatement, String planetName) throws SQLException {
+        preparedStatement.setString(1, planetName);
+        return preparedStatement;
+    }
+
 }
