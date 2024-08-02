@@ -16,7 +16,7 @@ public class DatabaseConnectorUtility {
             driver to use (sqlite in our case) and to determine where to send our
             sql queries (bank.db in the main resources' directory)
          */
-        return DriverManager.getConnection("jdbc:sqlite:C:\\Users\\blake\\OneDrive\\Desktop\\Jobs\\Revature\\GitHubLectureRepository\\Foundation Project\\setup\\src\\test\\resources\\planetarium-db.db");
+        return DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Thanh\\IdeaProjects\\240701-JWA-Gen-AI\\Foundation Project\\setup\\src\\test\\resources");
     }
 
     // using this main method to confirm we can create a connection to our database
