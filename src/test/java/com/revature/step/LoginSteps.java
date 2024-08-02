@@ -22,6 +22,8 @@ public class LoginSteps {
     @Given("The User is on the Login Page")
     public void the_User_is_on_the_Login_Page() {
         TestRunner.planetariumLoginHome.goToPlanetariumLoginHome();
+        TestRunner.wait.until(ExpectedConditions.titleIs("Planetarium Login"));
+
     }
     @Given("Account with username Lisan and password al-gaib already registered")
     public void accountWithUsernameLisanAndPasswordAlGaibAlreadyRegistered() {

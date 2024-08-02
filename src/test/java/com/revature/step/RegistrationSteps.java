@@ -9,6 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import com.revature.TestRunner;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class RegistrationSteps {
@@ -32,7 +33,9 @@ public class RegistrationSteps {
     @When("The User clicks on Create an Account Button")
     public void the_User_clicks_on_Create_an_Account_Button() {
         // Write code here that turns the phrase above into concrete actions
+        TestRunner.wait.until(ExpectedConditions.elementToBeClickable(TestRunner.driver.findElement(By.linkText("Create an Account"))));
         TestRunner.planetariumLoginHome.clickCreateAccountLink();
+        TestRunner.wait.until(ExpectedConditions.titleIs("Account Creation"));
     }
 
     @When("The User enters {string} into registration username input bar")
@@ -51,6 +54,7 @@ public class RegistrationSteps {
     @When("The User clicks on the Create Button")
     public void the_User_clicks_on_the_Create_Button() {
         // Write code here that turns the phrase above into concrete actions
+        TestRunner.wait.until(ExpectedConditions.elementToBeClickable(TestRunner.driver.findElement(By.xpath("//input[@type='submit' and @value='Create']"))));
         TestRunner.planetariumRegistrationHome.clickCreateButton();
     }
     @Then("The User is registered and redirected into the Planetarium Login page")
