@@ -29,6 +29,9 @@ Feature: Login
 		| username | password  |
 		| Lisan    | atreidies |
 		| Paul     | al-gaib   |
+		|          |           |
+		| Lisan    |           |
+		|          | al-gaib   |
 
 	@SCRUM-TC-26
 	Scenario Outline: As a User I want to Logout of my Account so that I can exit the Planetarium
