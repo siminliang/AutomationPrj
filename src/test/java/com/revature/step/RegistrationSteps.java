@@ -30,8 +30,8 @@ public class RegistrationSteps {
     }
 
 
-    @When("The User clicks on Create an Account Button")
-    public void the_User_clicks_on_Create_an_Account_Button() {
+    @When("The User clicks on Create an Account Link")
+    public void the_User_clicks_on_Create_an_Account_Link() {
         // Write code here that turns the phrase above into concrete actions
         TestRunner.wait.until(ExpectedConditions.elementToBeClickable(TestRunner.driver.findElement(By.linkText("Create an Account"))));
         TestRunner.planetariumLoginHome.clickCreateAccountLink();
@@ -54,7 +54,7 @@ public class RegistrationSteps {
     @When("The User clicks on the Create Button")
     public void the_User_clicks_on_the_Create_Button() {
         // Write code here that turns the phrase above into concrete actions
-        TestRunner.wait.until(ExpectedConditions.elementToBeClickable(TestRunner.driver.findElement(By.xpath("//input[@type='submit' and @value='Create']"))));
+        //TestRunner.wait.until(ExpectedConditions.elementToBeClickable(TestRunner.driver.findElement(By.xpath("//input[@type='submit' and @value='Create']"))));
         TestRunner.planetariumRegistrationHome.clickCreateButton();
     }
     @Then("The User is registered and redirected into the Planetarium Login page")

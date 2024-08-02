@@ -6,7 +6,7 @@ Feature: Registration
 	Registration Feature Testing Positive Scenario
 		Given The User is on the Login Page
 		Given No Registered User with username "<username>"
-		When The User clicks on Create an Account Button
+		When The User clicks on Create an Account Link
 		When The User enters "<username>" into registration username input bar
 		When The User enters "<password>" into registration password input bar
 		When The User clicks on the Create Button
@@ -21,7 +21,7 @@ Feature: Registration
 	Registration Feature Testing Positive Scenario
 		Given The User is on the Login Page
 		Given Account with username "Lisan" and password "al-gaib" already registered
-		When The User clicks on Create an Account Button
+		When The User clicks on Create an Account Link
 		When The User enters "<username>" into registration username input bar
 		When The User enters "<password>" into registration password input bar
 		When The User clicks on the Create Button

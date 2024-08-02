@@ -77,6 +77,7 @@ public class LoginSteps {
     @When("The User enters the Planetarium Main Page URL into the browser URL")
     public void theUserEntersThePlanetariumMainPageURLIntoTheBrowserURL() {
         TestRunner.planetariumLoginHome.goToPlanetariumMainPage();
+        TestRunner.wait.until(ExpectedConditions.not(ExpectedConditions.titleIs("Planetarium Login")));
     }
 
     @Then("The User is not redirected to the Planetarium")
