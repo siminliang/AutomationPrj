@@ -24,6 +24,38 @@ public class PlanetEntity {
         this.owner = owner;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public File getImage() {
+        return image;
+    }
+
+    public void setImage(File image) {
+        this.image = image;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public PlanetEntity(String name){
         this.name = name;
     }

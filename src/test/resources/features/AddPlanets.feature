@@ -35,4 +35,4 @@ Add Planets Test Positive Scenario
 		| this planet name is 31 chars!!! | true  |
 		| nonunique                       | true  |
 		| this planet name is 31 chars!!! | false |
-		| nonunique                       | false |
+		| nonunique                       | false|
