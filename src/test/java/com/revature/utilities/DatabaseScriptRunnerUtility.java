@@ -13,9 +13,40 @@ import java.nio.file.Paths;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class DatabaseScriptRunnerUtility {
+
+    public static List<Integer> runSQLScript(String sqlFileName){
+        Path sqlPath = Paths.get("src/test/resources/scripts/" + sqlFileName);
+        List<Integer> resultIds = new ArrayList<>();
+        try {
+
+            try (
+                    Connection connection = DatabaseConnectorUtility.createConnection();
+                    Stream<String> lines = Files.lines(sqlPath)
+            ) {
+                String sql = lines.collect(Collectors.joining("\n"));
+                Statement statement = connection.createStatement();
+
+                ResultSet resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+                        resultIds.add(Integer.parseInt(resultSet.getString("id")));
+
+                }
+
+
+                connection.commit();
+            }
+
+        } catch (SQLException | IOException exception) {
+            System.out.println(exception.getMessage());
+        }
+        return resultIds;
+    }
+
 
     public static void runSQLScript(String sqlFileName, Object entity) {
         Path sqlPath = Paths.get("src/test/resources/scripts/" + sqlFileName);

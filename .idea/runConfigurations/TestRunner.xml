@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TestRunner" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="AutomationProject" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.revature.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="com.revature" />
+    <option name="MAIN_CLASS_NAME" value="com.revature.TestRunner" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <envs>
+      <env name="PLANETARIUM_DB" value="jdbc:sqlite:D:\\revature\\Foundation Project\\planetarium.db" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class PlanetariumHome {
     private WebDriver driver;
 
@@ -62,12 +65,14 @@ public class PlanetariumHome {
     }
 
     public void uploadImage(){
+        Path relativePath = Paths.get("src/test/resources/images/planet-1.jpg");
+        String absolutePath = relativePath.toAbsolutePath().toString();
         //change to location on your local system
-        planetImageInput.sendKeys("C:/Users/isaia/IdeaProjects/240701-JWA-Gen-AI/Foundation Project/setup/src/test/resources/Celestial-Images/planet-1.jpg");
+        planetImageInput.sendKeys(absolutePath);
     }
 
     public String getPlanetName(){
-        System.out.println(celestialTable.getText());
+
         return celestialTable.getText();
     }
 
