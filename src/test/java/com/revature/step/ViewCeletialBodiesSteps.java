@@ -43,7 +43,7 @@ public class ViewCeletialBodiesSteps {
         }
     @Then("User see all the available celestial Bodies.")
         public void user_sees_all_the_bodies(){
-        Map<String, List<Integer>> tableData  = TestRunner.viewCelestialBodies.viewAllData();
+        Map<String, List<Integer>> tableData  = TestRunner.planetariumHome.viewAllData();
 
 //        Select id from planets and moons and compare them with table with the data from table
 
