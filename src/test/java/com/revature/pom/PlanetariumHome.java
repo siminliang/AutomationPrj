@@ -26,6 +26,13 @@ public class PlanetariumHome {
     @FindBy(id = "logoutButton")
     private WebElement logoutButton;
 
+    //locate delete input field
+    @FindBy(id = "deleteInput")
+    private WebElement deleteInput;
+
+    //locate delete button
+    @FindBy(id = "deleteButton")
+    private WebElement deleteButton;
 
     //locate the drop-down menu
     @FindBy(id = "locationSelect")
@@ -58,6 +65,14 @@ public class PlanetariumHome {
         driver.get(url);
     }
 
+    public void sendToDeleteInput(String input){
+        deleteInput.sendKeys(input);
+    }
+
+    public void clickDeleteButton(){
+        deleteButton.click();
+    }
+
     public void selectPlanet(){
         Select select = new Select(dropDownMenu);
         select.selectByValue("planet");
@@ -86,6 +101,7 @@ public class PlanetariumHome {
     public void clickLogoutButton(){
         logoutButton.click();
     }
+
     public Map<String, List<Integer>> viewAllData(){
 
 

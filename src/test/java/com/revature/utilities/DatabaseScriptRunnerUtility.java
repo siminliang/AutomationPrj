@@ -112,4 +112,39 @@ public class DatabaseScriptRunnerUtility {
             }
         }
     }
+
+    public static void addTempPlanet(PlanetEntity planetEntity) {
+        String sql = "INSERT INTO planets (name, ownerId) VALUES (?,?)";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setString(1, planetEntity.getName());
+            preparedStatement.setInt(2, 1);
+
+            preparedStatement.executeUpdate();
+        }catch (SQLException exception){
+            System.out.println(exception.getMessage());
+        }
+    }
+
+    public static List<PlanetEntity> getAllPlanetInfo(){
+        String sql = "SELECT * FROM planets";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()){
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            List<PlanetEntity> entities = new ArrayList<>();
+            while(resultSet.next()){
+                PlanetEntity planetEntity = new PlanetEntity();
+                //getString(column number) or (column name)
+                planetEntity.setId(resultSet.getString("id"));
+                planetEntity.setName(resultSet.getString("name"));
+                planetEntity.setOwner(resultSet.getString("ownerId"));
+                entities.add(planetEntity);
+            }
+            return entities;
+        }catch (SQLException exception){
+            System.out.println(exception.getMessage());
+        }
+        return null;
+    }
 }
