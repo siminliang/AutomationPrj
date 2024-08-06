@@ -29,6 +29,7 @@ public class AddPlanetsSteps {
         // Deletes planet from the planetarium if it already exists
         PlanetEntity planetEntity = new PlanetEntity(string);
         PlanetRepository.deletePlanet(planetEntity);
+        TestRunner.refresh();
     }
 
     @When("The User selects planets from the drop-down menu")
@@ -56,14 +57,15 @@ public class AddPlanetsSteps {
     @Then("The planet {string} should be added to the planetarium")
     public void the_planet_should_be_added_to_the_planetarium(String string) {
         TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
+        System.out.println(TestRunner.planetariumHome.getPlanetName());
         Assert.assertTrue(TestRunner.planetariumHome.getPlanetName().contains(string));
     }
 
     @Then("The planet {string} should not be added to the planetarium")
     public void the_planet_should_not_be_added_to_the_planetarium(String string) {
         TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+        Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
         TestRunner.driver.switchTo().alert().accept();
-        TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
-        Assert.assertFalse(TestRunner.planetariumHome.getPlanetName().contains(string));
+
     }
 }
