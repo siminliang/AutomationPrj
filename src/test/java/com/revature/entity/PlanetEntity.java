@@ -24,6 +24,8 @@ public class PlanetEntity {
         this.owner = owner;
     }
 
+    public PlanetEntity(){}
+
     public String getName() {
         return name;
     }
