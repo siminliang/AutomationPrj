@@ -56,8 +56,7 @@ public class AddPlanetsSteps {
 
     @Then("The planet {string} should be added to the planetarium")
     public void the_planet_should_be_added_to_the_planetarium(String string) {
-        TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
-        System.out.println(TestRunner.planetariumHome.getPlanetName());
+        TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));;
         Assert.assertTrue(TestRunner.planetariumHome.getPlanetName().contains(string));
     }
 
