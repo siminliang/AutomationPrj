@@ -16,8 +16,7 @@ public class DatabaseConnectorUtility {
             driver to use (sqlite in our case) and to determine where to send our
             sql queries (bank.db in the main resources' directory)
          */
-        String url = System.getenv("PLANETARIUM");
-        return DriverManager.getConnection(url);
+        return DriverManager.getConnection(System.getenv("PLANETARIUM"));
     }
 
     // using this main method to confirm we can create a connection to our database

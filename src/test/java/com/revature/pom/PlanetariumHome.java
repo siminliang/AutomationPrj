@@ -5,7 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import static com.revature.TestRunner.wait;
 
 public class PlanetariumHome {
     private WebDriver driver;
@@ -16,6 +26,13 @@ public class PlanetariumHome {
     @FindBy(id = "logoutButton")
     private WebElement logoutButton;
 
+    //locate delete input field
+    @FindBy(id = "deleteInput")
+    private WebElement deleteInput;
+
+    //locate delete button
+    @FindBy(id = "deleteButton")
+    private WebElement deleteButton;
 
     //locate the drop-down menu
     @FindBy(id = "locationSelect")
@@ -48,6 +65,14 @@ public class PlanetariumHome {
         driver.get(url);
     }
 
+    public void sendToDeleteInput(String input){
+        deleteInput.sendKeys(input);
+    }
+
+    public void clickDeleteButton(){
+        deleteButton.click();
+    }
+
     public void selectPlanet(){
         Select select = new Select(dropDownMenu);
         select.selectByValue("planet");
@@ -62,12 +87,14 @@ public class PlanetariumHome {
     }
 
     public void uploadImage(){
+        Path relativePath = Paths.get("src/test/resources/images/planet-1.jpg");
+        String absolutePath = relativePath.toAbsolutePath().toString();
         //change to location on your local system
-        planetImageInput.sendKeys("C:/Users/isaia/IdeaProjects/240701-JWA-Gen-AI/Foundation Project/setup/src/test/resources/Celestial-Images/planet-1.jpg");
+        planetImageInput.sendKeys(absolutePath);
     }
 
     public String getPlanetName(){
-        System.out.println(celestialTable.getText());
+
         return celestialTable.getText();
     }
 
@@ -75,4 +102,29 @@ public class PlanetariumHome {
         logoutButton.click();
     }
 
+    public Map<String, List<Integer>> viewAllData(){
+
+
+//      here we need to wait until all elements of "td" tag is not located no other tag can give the desired results
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("td")));
+
+        List<WebElement> tableRows = celestialTable.findElements(By.tagName("tr"));
+        Map<String, List<Integer>> tableData = new HashMap<>();
+
+        for(WebElement row: tableRows){
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+
+
+            if (cells.size() >= 2) {
+                // Get the first and second cell data
+                String firstCell = cells.get(0).getText();
+                Integer secondCell = Integer.parseInt(cells.get(1).getText());
+
+                // Add the second cell data to the map, grouped by the first cell data
+                tableData.computeIfAbsent(firstCell, k -> new ArrayList<>()).add(secondCell);
+            }
+        }
+
+        return tableData;
+    }
 }

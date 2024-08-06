@@ -13,9 +13,40 @@ import java.nio.file.Paths;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class DatabaseScriptRunnerUtility {
+
+    public static List<Integer> runSQLScript(String sqlFileName){
+        Path sqlPath = Paths.get("src/test/resources/scripts/" + sqlFileName);
+        List<Integer> resultIds = new ArrayList<>();
+        try {
+
+            try (
+                    Connection connection = DatabaseConnectorUtility.createConnection();
+                    Stream<String> lines = Files.lines(sqlPath)
+            ) {
+                String sql = lines.collect(Collectors.joining("\n"));
+                Statement statement = connection.createStatement();
+
+                ResultSet resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+                        resultIds.add(Integer.parseInt(resultSet.getString("id")));
+
+                }
+
+
+                connection.commit();
+            }
+
+        } catch (SQLException | IOException exception) {
+            System.out.println(exception.getMessage());
+        }
+        return resultIds;
+    }
+
 
     public static void runSQLScript(String sqlFileName, Object entity) {
         Path sqlPath = Paths.get("src/test/resources/scripts/" + sqlFileName);
@@ -80,5 +111,40 @@ public class DatabaseScriptRunnerUtility {
                     break;
             }
         }
+    }
+
+    public static void addTempPlanet(PlanetEntity planetEntity) {
+        String sql = "INSERT INTO planets (name, ownerId) VALUES (?,?)";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setString(1, planetEntity.getName());
+            preparedStatement.setInt(2, 1);
+
+            preparedStatement.executeUpdate();
+        }catch (SQLException exception){
+            System.out.println(exception.getMessage());
+        }
+    }
+
+    public static List<PlanetEntity> getAllPlanetInfo(){
+        String sql = "SELECT * FROM planets";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()){
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            List<PlanetEntity> entities = new ArrayList<>();
+            while(resultSet.next()){
+                PlanetEntity planetEntity = new PlanetEntity();
+                //getString(column number) or (column name)
+                planetEntity.setId(resultSet.getString("id"));
+                planetEntity.setName(resultSet.getString("name"));
+                planetEntity.setOwner(resultSet.getString("ownerId"));
+                entities.add(planetEntity);
+            }
+            return entities;
+        }catch (SQLException exception){
+            System.out.println(exception.getMessage());
+        }
+        return null;
     }
 }

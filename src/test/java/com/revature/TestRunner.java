@@ -3,6 +3,7 @@ package com.revature;
 import com.revature.pom.PlanetariumHome;
 import com.revature.pom.PlanetariumLoginHome;
 import com.revature.pom.PlanetariumRegistrationHome;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -54,6 +55,7 @@ import java.time.Duration;
                 "html:src/test/resources/reports/html-report.html",
                 "json:src/test/resources/reports/json-report.json"
         }
+
 )
 public class TestRunner {
     /*
@@ -70,6 +72,8 @@ public class TestRunner {
     public static PlanetariumRegistrationHome planetariumRegistrationHome;
 
     public static PlanetariumHome planetariumHome;
+
+
 
     /*
         In order to make sure that the objects we need are available
@@ -88,8 +92,13 @@ public class TestRunner {
         planetariumLoginHome = new PlanetariumLoginHome(driver);
         planetariumRegistrationHome = new PlanetariumRegistrationHome(driver);
         planetariumHome = new PlanetariumHome(driver);
+
         // initialize a wait object for any situations you need to explicitly wait for something
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    }
+
+    public static void refresh(){
+        driver.navigate().refresh();
     }
 
     @AfterClass
