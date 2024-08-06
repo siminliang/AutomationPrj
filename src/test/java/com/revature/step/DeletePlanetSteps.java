@@ -31,6 +31,7 @@ public class DeletePlanetSteps {
         DatabaseScriptRunnerUtility.addTempPlanet(planetEntity);
         TestRunner.refresh();
         TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
+        TestRunner.wait.until(driver -> TestRunner.planetariumHome.getPlanetName().contains(string));
         Assert.assertTrue(TestRunner.planetariumHome.getPlanetName().contains(string));
     }
 
