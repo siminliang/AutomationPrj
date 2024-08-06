@@ -98,6 +98,10 @@ public class TestRunner {
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
+    public static void refresh(){
+        driver.navigate().refresh();
+    }
+
     @AfterClass
     public static void teardown(){
         driver.quit();
