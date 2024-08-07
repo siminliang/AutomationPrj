@@ -25,7 +25,7 @@ Feature: AddMoons
     Given The User is already log on.
     Given The ID of the Planet "<OrbitedPlanetID>" does not exist in the Planetarium
     When The User selects planets from the drop-down menu
-    When The Use select moon from the drop-down menu
+    When The User selects moon from the drop-down menu
     When The User enters "<MoonName>" for moon name
     When The User enters "<OrbitedPlanetID>" for the planet that the moon is orbiting
     When "<image>" The User selects an image from file explorer for moon image

@@ -62,7 +62,7 @@ public class AddMoonSteps {
         TestRunner.planetariumHome.sendToOrbitedPlanetInput(string);
     }
 
-    @When("{string} The User selects an image from filesystem for moon image")
+    @When("{string} The User selects an image from file explorer for moon image")
     public void the_User_selects_an_image_from_filesystem_for_moon_image(String string) {
         if(string.equals("true")){
             TestRunner.planetariumHome.uploadImage();
@@ -70,7 +70,7 @@ public class AddMoonSteps {
     }
 
 
-    @Then("The Moon {string} should be added to planetarium ")
+    @Then("The Moon {string} should be added to planetarium")
     public void the_moon_should_be_added_to_the_planetarium(String string) {
         TestRunner.wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("celestialTable")));
         WebElement myElement = new WebDriverWait(TestRunner.driver, Duration.ofSeconds(5))
@@ -78,7 +78,7 @@ public class AddMoonSteps {
         Assert.assertTrue(TestRunner.planetariumHome.getPlanetName().contains(string));
     }
 
-    @Then("The Moon {string} should not be added to planetarium ")
+    @Then("The Moon {string} should not be added to planetarium")
     public void the_moon_should_not_be_added_to_the_planetarium(String string) {
         try{
             TestRunner.wait.until(ExpectedConditions.alertIsPresent());
