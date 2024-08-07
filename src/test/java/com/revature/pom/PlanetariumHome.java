@@ -98,6 +98,11 @@ public class PlanetariumHome {
         return celestialTable.getText();
     }
 
+    public void selectMoon() {
+        Select select = new Select(dropDownMenu);
+        select.selectByValue("moon");
+    }
+    
     public void clickLogoutButton(){
         logoutButton.click();
     }
