@@ -23,6 +23,8 @@ public class MoonEntity {
         this.owner = owner;
     }
 
+    public MoonEntity(){}
+
     public String getName() {
         return name;
     }

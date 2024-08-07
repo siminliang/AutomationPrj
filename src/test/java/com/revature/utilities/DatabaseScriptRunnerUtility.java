@@ -135,7 +135,6 @@ public class DatabaseScriptRunnerUtility {
             List<PlanetEntity> entities = new ArrayList<>();
             while(resultSet.next()){
                 PlanetEntity planetEntity = new PlanetEntity();
-                //getString(column number) or (column name)
                 planetEntity.setId(resultSet.getString("id"));
                 planetEntity.setName(resultSet.getString("name"));
                 planetEntity.setOwner(resultSet.getString("ownerId"));
@@ -144,6 +143,50 @@ public class DatabaseScriptRunnerUtility {
             return entities;
         }catch (SQLException exception){
             System.out.println(exception.getMessage());
+        }
+        return null;
+    }
+
+    //add temp moon and returns its id
+    public static int addTempMoon(MoonEntity moonEntity){
+        String sql = "INSERT INTO moons (name, myPlanetId) VALUES (?,?)";
+        int generatedId = -1;
+        try(Connection connection = DatabaseConnectorUtility.createConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setString(1, moonEntity.getName());
+            preparedStatement.setInt(2, 0);
+
+            preparedStatement.executeUpdate();
+
+            try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    generatedId = generatedKeys.getInt(1);
+                }
+            }
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return generatedId;
+    }
+
+    public static List<MoonEntity> getAllMoonInfo(){
+        String sql = "SELECT * FROM moons";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()) {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            List<MoonEntity> entities = new ArrayList<>();
+            while (resultSet.next()) {
+                MoonEntity moonEntity = new MoonEntity();
+                //getString(column number) or (column name)
+                moonEntity.setId(resultSet.getString("id"));
+                moonEntity.setName(resultSet.getString("name"));
+                moonEntity.setOwner(resultSet.getString("myPlanetId"));
+                entities.add(moonEntity);
+            }
+            return entities;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
         return null;
     }
