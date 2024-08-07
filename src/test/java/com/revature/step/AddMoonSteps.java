@@ -22,15 +22,6 @@ import java.time.Duration;
 
 public class AddMoonSteps {
 
-    @Given("The User is already log on.")
-    public void the_User_is_already_log_on() {
-        // All the steps required to log the user in
-        TestRunner.planetariumLoginHome.goToPlanetariumLoginHome();
-        TestRunner.planetariumLoginHome.sendToUsernameInput("thanh");
-        TestRunner.planetariumLoginHome.sendToPasswordInput("123");
-        TestRunner.planetariumLoginHome.clickLoginButton();
-        TestRunner.wait.until(ExpectedConditions.titleIs("Home"));
-    }
 
     @Given("No Planet or Moon with name {string} in planetarium")
     public void no_planet_or_moon_with_name_in_planetarium(String string) {
@@ -54,10 +45,7 @@ public class AddMoonSteps {
         Assert.assertFalse("Planet with ID " + string + " should exist.", exists);
     }
 
-    @When("The User selects planets from the drop-down menu")
-    public void the_User_selects_planets_from_the_drop_down_menu() {
-        TestRunner.planetariumHome.selectPlanet();
-    }
+
 
     @When("The User selects moon from the drop-down menu")
     public void the_User_selects_moon_from_the_drop_down_menu() {
@@ -81,10 +69,6 @@ public class AddMoonSteps {
         }
     }
 
-    @When("The User clicks on the submit button")
-    public void the_User_clicks_on_the_submit_button() {
-        TestRunner.planetariumHome.clickSubmitButton();
-    }
 
     @Then("The Moon {string} should be added to planetarium ")
     public void the_moon_should_be_added_to_the_planetarium(String string) {
