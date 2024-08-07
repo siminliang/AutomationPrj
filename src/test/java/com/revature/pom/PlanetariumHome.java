@@ -1,6 +1,7 @@
 package com.revature.pom;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -89,7 +90,6 @@ public class PlanetariumHome {
     public void uploadImage(){
         Path relativePath = Paths.get("src/test/resources/images/planet-1.jpg");
         String absolutePath = relativePath.toAbsolutePath().toString();
-        //change to location on your local system
         planetImageInput.sendKeys(absolutePath);
     }
 
@@ -100,6 +100,19 @@ public class PlanetariumHome {
 
     public void clickLogoutButton(){
         logoutButton.click();
+    }
+
+    public boolean isAlertPresent()
+    {
+        try
+        {
+            driver.switchTo().alert();
+            return true;
+        }
+        catch (NoAlertPresentException Ex)
+        {
+            return false;
+        }
     }
 
     public Map<String, List<Integer>> viewAllData(){
