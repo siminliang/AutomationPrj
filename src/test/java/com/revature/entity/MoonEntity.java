@@ -24,6 +24,7 @@ public class MoonEntity {
     }
 
 
+    public MoonEntity(){}
 
     public String getName() {
         return name;
