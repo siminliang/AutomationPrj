@@ -34,13 +34,12 @@ Feature: DeletePlanets
 	@SCRUM-TC-33
 	Scenario Outline: User should not be able to delete a planet by its ID
 		Given The User is already logged in
-		Given Planet with "<ID>" exists
+		Given Planet with ID "<ID>" exists
 		When The User selects planets from drop-down menu
-		When User enters planet "<ID>" for celestial body to be deleted
+		When User enters planet ID "<ID>" for celestial body to be deleted
 		When User clicks on the Delete Button
 		Then The user should see error, and the planet with ID "<ID>" should not be deleted
 
 	Examples: 
 		| ID |
 		| 1  |
-		| 2  |

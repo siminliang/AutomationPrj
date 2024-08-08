@@ -85,6 +85,7 @@ public class TestRunner {
     @BeforeClass
     public static void setup(){
         // set up the driver
+        // System.setProperty("webdriver.chrome.driver", path/to/chromedriver);
         driver = new ChromeDriver();
         // set up your implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
