@@ -154,3 +154,6 @@ buildNumber.properties
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,intellij+all,java,maven
+
+#ignore reports
+src/test/resources/reports/
