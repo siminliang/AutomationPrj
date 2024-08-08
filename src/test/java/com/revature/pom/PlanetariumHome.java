@@ -51,6 +51,10 @@ public class PlanetariumHome {
     @FindBy(id = "moonNameInput")
     private WebElement moonNameInput;
 
+    //locate choose file button for moon
+    @FindBy(id = "moonImageInput")
+    private WebElement moonImageInput;
+
     //located the orbited planet id field
     @FindBy(id = "orbitedPlanetInput")
     private  WebElement orbitedPlanetInput;
@@ -97,13 +101,21 @@ public class PlanetariumHome {
     }
 
     public void uploadImage(){
-        Path relativePath = Paths.get("src/test/resources/images/moon-1.jpg");
+        Path relativePath = Paths.get("src/test/resources/images/planet-1.jpg");
         String absolutePath = relativePath.toAbsolutePath().toString();
         planetImageInput.sendKeys(absolutePath);
     }
 
+    public void uploadMoonImage() {
+        Path relativePath = Paths.get("src/test/resources/images/moon-1.jpg");
+        String absolutePath = relativePath.toAbsolutePath().toString();
+        moonImageInput.sendKeys(absolutePath);
+
+    }
+
     public String getPlanetName(){
 
+        wait.until(ExpectedConditions.visibilityOf(celestialTable));
         return celestialTable.getText();
     }
 
