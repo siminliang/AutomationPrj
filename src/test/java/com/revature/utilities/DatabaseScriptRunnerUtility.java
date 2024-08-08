@@ -171,9 +171,9 @@ public class DatabaseScriptRunnerUtility {
         return generatedId;
     }
 
-    public static List<MoonEntity> getAllMoonInfo(){
+    public static List<MoonEntity> getAllMoonInfo() {
         String sql = "SELECT * FROM moons";
-        try(Connection connection = DatabaseConnectorUtility.createConnection()) {
+        try (Connection connection = DatabaseConnectorUtility.createConnection()) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             List<MoonEntity> entities = new ArrayList<>();
@@ -188,6 +188,9 @@ public class DatabaseScriptRunnerUtility {
             return entities;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+        }
+        return null;
+    }
 
     public static List<PlanetEntity> getAllPlanetId(){
         String sql = "SELECT id FROM planets";
