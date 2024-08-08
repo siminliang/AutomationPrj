@@ -7,7 +7,7 @@ Feature: AddMoons
     Given No Planet or Moon with name "<MoonName>" in planetarium
     Given The ID of the Planet "<OrbitedPlanetID>" that the moon orbiting does exist in Planetarium
     When The User selects planets from the drop-down menu
-    When The User select moon from the drop-down menu
+    When The User selects moon from the drop-down menu
     When The User enters "<MoonName>" for moon name
     When The User enters "<OrbitedPlanetID>" for the planet that the moon is orbiting
     When "<image>" The User selects an image from file explorer for moon image
