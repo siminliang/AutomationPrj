@@ -35,8 +35,8 @@ Feature: AddMoons
   Examples:
       | MoonName                                            | OrbitedPlanetID | image       |
       | Titan                                               | 3               | moon-1.jpg  |
-      | Titan                                              | 3               |             |
+      | Titan                                               | 3               |             |
       | SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose  | 3               | moon-1.jpg  |
-      | SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose | 3               |             |
+      | SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose  | 3               |             |
       | Normal                                              | 10              | moon-1.jpg  |
-      | Normal                                            | 10              |             |
+      | Normal                                              | 10              |             |
