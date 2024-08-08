@@ -147,4 +147,24 @@ public class DatabaseScriptRunnerUtility {
         }
         return null;
     }
+
+    public static List<PlanetEntity> getAllPlanetId(){
+        String sql = "SELECT id FROM planets";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()){
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            List<PlanetEntity> entities = new ArrayList<>();
+            while(resultSet.next()){
+                PlanetEntity planetEntity = new PlanetEntity();
+                //getString(column number) or (column name)
+                planetEntity.setId(resultSet.getString("id"));
+
+                entities.add(planetEntity);
+            }
+            return entities;
+        }catch (SQLException exception){
+            System.out.println(exception.getMessage());
+        }
+        return null;
+    }
 }
