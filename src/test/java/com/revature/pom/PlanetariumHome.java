@@ -1,6 +1,7 @@
 package com.revature.pom;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -46,6 +47,15 @@ public class PlanetariumHome {
     @FindBy(id = "planetImageInput")
     private WebElement planetImageInput;
 
+    //locate moon name input field
+    @FindBy(id = "moonNameInput")
+    private WebElement moonNameInput;
+
+    //located the orbited planet id field
+    @FindBy(id = "orbitedPlanetInput")
+    private  WebElement orbitedPlanetInput;
+
+
     //locate submit button
     @FindBy(className = "submit-button")
     private WebElement submitButton;
@@ -87,9 +97,8 @@ public class PlanetariumHome {
     }
 
     public void uploadImage(){
-        Path relativePath = Paths.get("src/test/resources/images/planet-1.jpg");
+        Path relativePath = Paths.get("src/test/resources/images/moon-1.jpg");
         String absolutePath = relativePath.toAbsolutePath().toString();
-        //change to location on your local system
         planetImageInput.sendKeys(absolutePath);
     }
 
@@ -102,9 +111,36 @@ public class PlanetariumHome {
         Select select = new Select(dropDownMenu);
         select.selectByValue("moon");
     }
-    
+
+    public boolean doesPlanetExist(String planetId) {
+            WebElement planetElement = driver.findElement(By.xpath("//tr[td/text()='" + planetId + "']"));
+            return planetElement.isDisplayed();
+
+    }
+
+    public void sendToMoonNameInput(String moonName) {
+        moonNameInput.sendKeys(moonName);
+    }
+
+    public void sendToOrbitedPlanetInput(String orbitedPlanet) {
+        orbitedPlanetInput.sendKeys(orbitedPlanet);
+    }
+  
     public void clickLogoutButton(){
         logoutButton.click();
+    }
+
+    public boolean isAlertPresent()
+    {
+        try
+        {
+            driver.switchTo().alert();
+            return true;
+        }
+        catch (NoAlertPresentException Ex)
+        {
+            return false;
+        }
     }
 
     public Map<String, List<Integer>> viewAllData(){
