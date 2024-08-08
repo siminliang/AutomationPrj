@@ -51,7 +51,7 @@ public class DeletePlanetSteps {
     }
 
     @Then("The planet {string} should be deleted from the Planetarium")
-    public void thePlanetPlanetNameShouldBeDeletedFromThePlanetarium(String string) throws InterruptedException {
+    public void the_planet_should_be_deleted_from_the_Planetarium(String string) {
         TestRunner.wait.withTimeout(Duration.ofSeconds(1));
         Assert.assertFalse(TestRunner.planetariumHome.getPlanetName().contains(string));
     }
@@ -73,8 +73,8 @@ public class DeletePlanetSteps {
         TestRunner.driver.switchTo().alert().accept();
     }
 
-    @Given("Planet with {string} exists")
-    public void planet_with_exists(String string) {
+    @Given("Planet with ID {string} exists")
+    public void planet_with_ID_exists(String string) {
         boolean existID = false;
         List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
         for(PlanetEntity planetEntity : planetEntityList){
@@ -84,7 +84,7 @@ public class DeletePlanetSteps {
         Assert.assertTrue(existID);
     }
 
-    @When("User enters planet {string} for celestial body to be deleted")
+    @When("User enters planet ID {string} for celestial body to be deleted")
     public void user_enters_planet_for_celestial_body_to_be_deleted(String string) {
         TestRunner.planetariumHome.sendToDeleteInput(string);
     }

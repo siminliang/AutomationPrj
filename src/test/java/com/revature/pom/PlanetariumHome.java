@@ -107,7 +107,6 @@ public class PlanetariumHome {
         return celestialTable.getText();
     }
 
-
     public void selectMoon() {
         Select select = new Select(dropDownMenu);
         select.selectByValue("moon");
@@ -119,9 +118,6 @@ public class PlanetariumHome {
 
     }
 
-
-
-
     public void sendToMoonNameInput(String moonName) {
         moonNameInput.sendKeys(moonName);
     }
@@ -129,8 +125,7 @@ public class PlanetariumHome {
     public void sendToOrbitedPlanetInput(String orbitedPlanet) {
         orbitedPlanetInput.sendKeys(orbitedPlanet);
     }
-
-
+  
     public void clickLogoutButton(){
         logoutButton.click();
     }
