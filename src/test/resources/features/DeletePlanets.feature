@@ -15,6 +15,11 @@ Feature: DeletePlanets
 		| PlanetName |
 		| Namke      |
 		| Vegeta     |
+		|1           |
+		|2           |
+
+
+
 
 	@SCRUM-TC-30
 	Scenario Outline: As a user I want to be able to remove Planets from the Planetarium, Negative Scenario
