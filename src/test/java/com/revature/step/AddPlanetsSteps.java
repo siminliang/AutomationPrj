@@ -63,7 +63,7 @@ public class AddPlanetsSteps {
     public void the_planet_should_be_added_to_the_planetarium(String string) {
         TestRunner.wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("celestialTable")));
         WebElement myElement = new WebDriverWait(TestRunner.driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.id("celestialTable")));
+                .until(ExpectedConditions.visibilityOfElementLocated(By.tagName("td")));
         Assert.assertTrue(TestRunner.planetariumHome.getPlanetName().contains(string));
     }
 
