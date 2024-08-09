@@ -12,8 +12,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
@@ -75,13 +77,13 @@ public class DeletePlanetSteps {
 
     @Given("Planet with ID {string} exists")
     public void planet_with_ID_exists(String string) {
-        boolean existID = false;
-        List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
-        for(PlanetEntity planetEntity : planetEntityList){
-            if(planetEntity.getId().equals(string))
-                existID = true;
+        boolean existsID = DatabaseScriptRunnerUtility.existCelestialBodyID("planets", string);
+        while(!existsID){
+            int id = Integer.parseInt(string);
+            String name = "PlanetWithId" + string;
+            int owner = 1;
+            existsID = DatabaseScriptRunnerUtility.addMockCelestialBody("planets", id, name, owner);
         }
-        Assert.assertTrue(existID);
     }
 
     @When("User enters planet ID {string} for celestial body to be deleted")
@@ -91,12 +93,13 @@ public class DeletePlanetSteps {
 
     @Then("The user should see error, and the planet with ID {string} should not be deleted")
     public void the_user_should_see_error_and_the_planet_with_ID_should_not_be_deleted(String string) {
-        boolean existID = false;
-        List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
-        for(PlanetEntity planetEntity : planetEntityList){
-            if(planetEntity.getId().equals(string))
-                existID = true;
+        WebDriverWait wait = new WebDriverWait(TestRunner.driver, Duration.ofMillis(30));
+        try {
+            wait.until(ExpectedConditions.alertIsPresent());
+            Alert alert = TestRunner.driver.switchTo().alert();
+            alert.accept(); // Clicks the OK button
+        } catch (Exception e) {
+            // No alert present, continue with normal flow
         }
-        Assert.assertTrue(existID);
-    }
+        Assert.assertTrue(DatabaseScriptRunnerUtility.existCelestialBodyID("planets", string));    }
 }

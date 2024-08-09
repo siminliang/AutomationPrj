@@ -6,6 +6,7 @@ import com.revature.entity.PlanetEntity;
 import com.revature.entity.UserEntity;
 import com.revature.repositories.MoonRepository;
 import com.revature.repositories.PlanetRepository;
+import com.revature.repositories.UserRepository;
 import com.revature.services.LoginService;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
@@ -26,6 +27,8 @@ public class AddMoonSteps {
     @Given("The User is already log on")
     public void the_User_is_already_log_on_with_thanh_username() {
         // All the steps required to log the user in
+        UserEntity userEntity = new UserEntity("thanh", "123");
+        UserRepository.addUser(userEntity);
         TestRunner.planetariumLoginHome.goToPlanetariumLoginHome();
         TestRunner.planetariumLoginHome.sendToUsernameInput("thanh");
         TestRunner.planetariumLoginHome.sendToPasswordInput("123");

@@ -3,19 +3,21 @@ package com.revature.step;
 import com.revature.TestRunner;
 import com.revature.entity.MoonEntity;
 import com.revature.repositories.MoonRepository;
+import com.revature.utilities.DatabaseConnectorUtility;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
 
 public class DeleteMoonSteps {
-    private int moonId = -1;
 
     @Given("Moon name {string} exist")
     public void moon_name_exist(String string) {
@@ -58,13 +60,13 @@ public class DeleteMoonSteps {
 
     @Given("Moon with ID {string} exists")
     public void moon_with_ID_exists(String string) {
-        boolean existID = false;
-        List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
-        for(MoonEntity moonEntity : moonEntityList){
-            if(moonEntity.getId().equals(string))
-                existID = true;
+        boolean existsID = DatabaseScriptRunnerUtility.existCelestialBodyID("planets", string);
+        while(!existsID){
+            int id = Integer.parseInt(string);
+            String name = "PlanetWithId" + string;
+            int owner = 1;
+            existsID = DatabaseScriptRunnerUtility.addMockCelestialBody("planets", id, name, owner);
         }
-        Assert.assertTrue(existID);
     }
 
     @When("User enters moon id {string} for celestial body to be deleted")
@@ -74,12 +76,14 @@ public class DeleteMoonSteps {
 
     @Then("The user should see error, and the moon with ID {string} should not be deleted")
     public void the_user_should_see_error_and_the_moon_with_ID_should_not_be_deleted(String string) {
-        boolean existID = false;
-        List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
-        for(MoonEntity moonEntity : moonEntityList){
-            if(moonEntity.getId().equals(string))
-                existID = true;
+        WebDriverWait wait = new WebDriverWait(TestRunner.driver, Duration.ofMillis(30));
+        try {
+            wait.until(ExpectedConditions.alertIsPresent());
+            Alert alert = TestRunner.driver.switchTo().alert();
+            alert.accept(); // Clicks the OK button
+        } catch (Exception e) {
+            // No alert present, continue with normal flow
         }
-        Assert.assertTrue(existID);
+        Assert.assertTrue(DatabaseScriptRunnerUtility.existCelestialBodyID("moons", string));
     }
 }

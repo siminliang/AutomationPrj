@@ -13,6 +13,11 @@ public class PlanetEntity {
 
     public String id;
 
+    public PlanetEntity (String id, String name, String owner){
+        this.id = id;
+        this.name = name;
+        this.owner = owner;
+    }
     public PlanetEntity(String name, String owner, File image){
         this.name = name;
         this.owner = owner;

@@ -15,6 +15,8 @@ Feature: DeleteMoons
 		| MoonName |
 		| Moon     |
 		| MoonMoon |
+		| 2        |
+		| 66       |
 
 	@SCRUM-TC-32
 	Scenario Outline: As a user I should not be able to remove Moon from the Planetarium when given invalid names
@@ -22,7 +24,7 @@ Feature: DeleteMoons
 		Given The User is already logged in
 		Given There is no Moon named "<invalidMoonNames>" in planetarium
 		When The User selects moon from drop-down menu
-		When User enters invalid "<InvalidMoonNames>"
+		When User enters invalid "<invalidMoonNames>"
 		When User clicks on the Delete Button
 		Then The user should see error message pop-up
 
@@ -32,7 +34,7 @@ Feature: DeleteMoons
 		| Hoshi no Narby     |
 
 	@SCRUM-TC-34
-	Scenario: User should not be able to delete a moon by  its ID
+	Scenario Outline: User should not be able to delete a moon by  its ID
 		Given The User is already logged in
 		Given Moon with ID "<ID>" exists
 		When The User selects moon from drop-down menu
@@ -40,6 +42,6 @@ Feature: DeleteMoons
 		When User clicks on the Delete Button
 		Then The user should see error, and the moon with ID "<ID>" should not be deleted
 
-	Examples:
-		| ID |
-		| 1  |
+		Examples:
+			| ID |
+			| 1  |

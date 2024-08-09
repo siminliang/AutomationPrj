@@ -35,6 +35,7 @@ import java.time.Duration;
             example of multiple feature file locations:
             features = {"file/one.feature","another/file/here.feature", etc.}
          */
+        tags = "@DeletePlanets or @DeleteMoons",
         features = "classpath:features",
         /*
             The glue option is used to tell Cucumber where the associated code

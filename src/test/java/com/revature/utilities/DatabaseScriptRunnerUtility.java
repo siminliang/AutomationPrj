@@ -211,4 +211,47 @@ public class DatabaseScriptRunnerUtility {
         }
         return null;
     }
+
+    public static boolean existCelestialBodyName(String type, String name){
+        String sql = "SELECT name FROM " + type + " WHERE name = ?";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, name);
+            ResultSet rs = preparedStatement.executeQuery();
+            return rs.next();
+
+        }catch (SQLException exception){
+            System.out.println(exception.getMessage());
+        }
+        return false;
+    }
+
+    public static boolean existCelestialBodyID(String type, String id){
+        String sql = "SELECT name FROM " + type + " WHERE id = ?";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()){
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, Integer.parseInt(id));
+            ResultSet rs = preparedStatement.executeQuery();
+            return rs.next();
+
+        }catch (SQLException exception){
+            System.out.println(exception.getMessage());
+        }
+        return false;
+    }
+
+    public static boolean addMockCelestialBody(String type, int id, String name, int owner){
+        String sql = "INSERT INTO planets (id, name , ownerId) VAlUES (?,?,?)";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,id);
+            preparedStatement.setString(2, name);
+            preparedStatement.setInt(3, owner);
+            int rowsAffected = preparedStatement.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
 }
