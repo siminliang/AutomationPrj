@@ -38,7 +38,8 @@ Feature: DeleteMoons
 		When The User selects moon from drop-down menu
 		When User enters moon id "<ID>" for celestial body to be deleted
 		When User clicks on the Delete Button
-		Then The user should see error, and the moon with ID "<ID>" should not be deleted
+		Then The user should see error
+		And The moon with ID "<ID>" should not be deleted
 
 	Examples:
 		| ID |

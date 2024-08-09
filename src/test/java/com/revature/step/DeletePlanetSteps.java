@@ -5,6 +5,7 @@ import com.revature.entity.PlanetEntity;
 import com.revature.repositories.PlanetRepository;
 import com.revature.services.LoginService;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -108,25 +109,16 @@ public class DeletePlanetSteps {
         TestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
-    @Then("The user should see error, and the planet with ID {string} should not be deleted")
-    public void the_user_should_see_error_and_the_planet_with_ID_should_not_be_deleted(String string) {
-        try{
-            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
-            TestRunner.driver.switchTo().alert().accept();
-        }
-        catch (TimeoutException e){
-            //Assert.fail();
-            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-            boolean existID = false;
-            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
-            for(PlanetEntity planetEntity : planetEntityList){
-                if(planetEntity.getId().equals(string))
-                    existID = true;
-            }
-            Assert.assertTrue(existID);
-        }
 
+
+    @And("The planet with ID {string} should not be deleted")
+    public void thePlanetWithIDShouldNotBeDeleted(String string) {
+        boolean existID = false;
+        List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+        for(PlanetEntity planetEntity : planetEntityList){
+            if(planetEntity.getId().equals(string))
+                existID = true;
+        }
+        Assert.assertTrue(existID);
     }
 }

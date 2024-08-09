@@ -38,7 +38,8 @@ Feature: DeletePlanets
 		When The User selects planets from drop-down menu
 		When User enters planet ID "<ID>" for celestial body to be deleted
 		When User clicks on the Delete Button
-		Then The user should see error, and the planet with ID "<ID>" should not be deleted
+		Then The user should see error
+		And The planet with ID "<ID>" should not be deleted
 
 	Examples: 
 		| ID |

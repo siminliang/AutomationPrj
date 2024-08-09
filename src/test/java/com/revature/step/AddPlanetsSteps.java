@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class AddPlanetsSteps {
 
@@ -77,8 +78,15 @@ public class AddPlanetsSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
-            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = false;
+            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+            for(PlanetEntity planetEntity : planetEntityList){
+                if(planetEntity.getName().equals(string))
+                    existID = true;
+            }
+            Assert.assertTrue(existID);
         }
 
     }
@@ -94,6 +102,13 @@ public class AddPlanetsSteps {
             //Assert.fail();
             TestRunner.wait.withTimeout(Duration.ofSeconds(1));
             Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = true;
+            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+            for(PlanetEntity planetEntity : planetEntityList){
+                if(planetEntity.getName().equals(string))
+                    existID = false;
+            }
+            Assert.assertTrue(existID);
         }
 
 

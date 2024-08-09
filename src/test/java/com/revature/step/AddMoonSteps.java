@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class AddMoonSteps {
 
@@ -92,8 +93,15 @@ public class AddMoonSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
-            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = false;
+            List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
+            for(MoonEntity moonEntity : moonEntityList){
+                if(moonEntity.getName().equals(string))
+                    existID = true;
+            }
+            Assert.assertTrue(existID);
         }
     }
 
@@ -106,8 +114,15 @@ public class AddMoonSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
-            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = true;
+            List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
+            for(MoonEntity moonEntity : moonEntityList){
+                if(moonEntity.getName().equals(string))
+                    existID = false;
+            }
+            Assert.assertTrue(existID);
         }
 
     }
