@@ -5,6 +5,8 @@ import com.revature.entity.MoonEntity;
 import com.revature.entity.PlanetEntity;
 import com.revature.repositories.MoonRepository;
 import com.revature.repositories.PlanetRepository;
+import com.revature.services.LoginService;
+import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -69,9 +71,9 @@ public class AddMoonSteps {
     }
 
     @When("{string} The User selects an image from file explorer for moon image")
-    public void the_User_selects_an_image_from_filesystem_for_moon_image(String string) {
-        if(string.equals("true")){
-            TestRunner.planetariumHome.uploadImage();
+    public void the_User_selects_an_image_from_filesystem_for_moon_image(String image) {
+        if (!image.isEmpty()) {
+            TestRunner.planetariumHome.uploadMoonImage();
         }
     }
 
@@ -100,6 +102,4 @@ public class AddMoonSteps {
         TestRunner.wait.withTimeout(Duration.ofSeconds(1));
         Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
     }
-
-
 }

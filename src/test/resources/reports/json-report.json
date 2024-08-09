@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-09T16:39:14.996Z",
+        "start_timestamp": "2024-08-09T16:52:10.025Z",
         "line": 19,
         "name": "As a User I should be able to add Moon (Positive Scenario)",
         "description": "",
@@ -13,11 +13,11 @@
         "steps": [
           {
             "result": {
-              "duration": 281689500,
+              "duration": 890250600,
               "status": "passed"
             },
             "line": 6,
-            "name": "The User is already log on.",
+            "name": "The User is already log on",
             "match": {
               "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
             },
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 307323200,
+              "duration": 54137000,
               "status": "passed"
             },
             "line": 7,
@@ -43,15 +43,15 @@
           },
           {
             "result": {
-              "duration": 62068900,
+              "duration": 36520800,
               "status": "passed"
             },
             "line": 8,
-            "name": "The ID of the Planet \"1\" that the moon orbiting does exist in Planetarium",
+            "name": "The ID of the Planet \"3\" that the moon orbiting does exist in Planetarium",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 21
                 }
               ],
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 101833100,
+              "duration": 195288200,
               "status": "passed"
             },
             "line": 9,
@@ -73,7 +73,7 @@
           },
           {
             "result": {
-              "duration": 194630300,
+              "duration": 622338600,
               "status": "passed"
             },
             "line": 10,
@@ -85,7 +85,7 @@
           },
           {
             "result": {
-              "duration": 157986800,
+              "duration": 211791900,
               "status": "passed"
             },
             "line": 11,
@@ -103,15 +103,15 @@
           },
           {
             "result": {
-              "duration": 66646300,
+              "duration": 104087700,
               "status": "passed"
             },
             "line": 12,
-            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "name": "The User enters \"3\" for the planet that the moon is orbiting",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 16
                 }
               ],
@@ -121,6 +121,7 @@
           },
           {
             "result": {
+              "duration": 57497100,
               "status": "passed"
             },
             "line": 13,
@@ -138,7 +139,7 @@
           },
           {
             "result": {
-              "duration": 41843700,
+              "duration": 91290700,
               "status": "passed"
             },
             "line": 14,
@@ -150,8 +151,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_be_added_to_the_planetarium(AddMoonSteps.java:87)\r\n\tat ✽.The Moon \"Noom\" should be added to planetarium(classpath:features/AddMoons.feature:15)\r\n",
-              "duration": 33240100,
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_be_added_to_the_planetarium(AddMoonSteps.java:89)\r\n\tat ✽.The Moon \"Noom\" should be added to planetarium(classpath:features/AddMoons.feature:15)\r\n",
+              "duration": 85111500,
               "status": "failed"
             },
             "line": 15,
@@ -178,7 +179,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:16.316Z",
+        "start_timestamp": "2024-08-09T16:52:12.511Z",
         "line": 20,
         "name": "As a User I should be able to add Moon (Positive Scenario)",
         "description": "",
@@ -188,11 +189,11 @@
         "steps": [
           {
             "result": {
-              "duration": 256582800,
+              "duration": 379360800,
               "status": "passed"
             },
             "line": 6,
-            "name": "The User is already log on.",
+            "name": "The User is already log on",
             "match": {
               "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
             },
@@ -200,15 +201,15 @@
           },
           {
             "result": {
-              "duration": 35314100,
+              "duration": 59673500,
               "status": "passed"
             },
             "line": 7,
-            "name": "No Planet or Moon with name \"Noom\" in planetarium",
+            "name": "No Planet or Moon with name \"Noom2\" in planetarium",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Noom\"",
+                  "val": "\"Noom2\"",
                   "offset": 28
                 }
               ],
@@ -218,15 +219,15 @@
           },
           {
             "result": {
-              "duration": 29683800,
+              "duration": 65008900,
               "status": "passed"
             },
             "line": 8,
-            "name": "The ID of the Planet \"1\" that the moon orbiting does exist in Planetarium",
+            "name": "The ID of the Planet \"3\" that the moon orbiting does exist in Planetarium",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 21
                 }
               ],
@@ -236,7 +237,7 @@
           },
           {
             "result": {
-              "duration": 83202100,
+              "duration": 167048900,
               "status": "passed"
             },
             "line": 9,
@@ -248,7 +249,7 @@
           },
           {
             "result": {
-              "duration": 79379100,
+              "duration": 444951700,
               "status": "passed"
             },
             "line": 10,
@@ -260,15 +261,15 @@
           },
           {
             "result": {
-              "duration": 182813900,
+              "duration": 133007600,
               "status": "passed"
             },
             "line": 11,
-            "name": "The User enters \"Noom\" for moon name",
+            "name": "The User enters \"Noom2\" for moon name",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Noom\"",
+                  "val": "\"Noom2\"",
                   "offset": 16
                 }
               ],
@@ -278,15 +279,15 @@
           },
           {
             "result": {
-              "duration": 121165900,
+              "duration": 180915200,
               "status": "passed"
             },
             "line": 12,
-            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "name": "The User enters \"3\" for the planet that the moon is orbiting",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 16
                 }
               ],
@@ -313,7 +314,7 @@
           },
           {
             "result": {
-              "duration": 30880900,
+              "duration": 67147500,
               "status": "passed"
             },
             "line": 14,
@@ -325,16 +326,16 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_be_added_to_the_planetarium(AddMoonSteps.java:87)\r\n\tat ✽.The Moon \"Noom\" should be added to planetarium(classpath:features/AddMoons.feature:15)\r\n",
-              "duration": 22696400,
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_be_added_to_the_planetarium(AddMoonSteps.java:89)\r\n\tat ✽.The Moon \"Noom2\" should be added to planetarium(classpath:features/AddMoons.feature:15)\r\n",
+              "duration": 69264300,
               "status": "failed"
             },
             "line": 15,
-            "name": "The Moon \"Noom\" should be added to planetarium",
+            "name": "The Moon \"Noom2\" should be added to planetarium",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Noom\"",
+                  "val": "\"Noom2\"",
                   "offset": 9
                 }
               ],
@@ -353,7 +354,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:17.160Z",
+        "start_timestamp": "2024-08-09T16:52:14.091Z",
         "line": 38,
         "name": "As a User I should be able to add Moon (Negative Scenario)",
         "description": "",
@@ -363,11 +364,11 @@
         "steps": [
           {
             "result": {
-              "duration": 232913500,
+              "duration": 431080000,
               "status": "passed"
             },
             "line": 25,
-            "name": "The User is already log on.",
+            "name": "The User is already log on",
             "match": {
               "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
             },
@@ -375,15 +376,15 @@
           },
           {
             "result": {
-              "duration": 36784300,
+              "duration": 42363700,
               "status": "passed"
             },
             "line": 26,
-            "name": "The ID of the Planet \"1\" does not exist in the Planetarium",
+            "name": "The ID of the Planet \"3\" does not exist in the Planetarium",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 21
                 }
               ],
@@ -393,6 +394,7 @@
           },
           {
             "result": {
+              "duration": 1993600,
               "status": "passed"
             },
             "line": 27,
@@ -410,7 +412,7 @@
           },
           {
             "result": {
-              "duration": 71656400,
+              "duration": 163264800,
               "status": "passed"
             },
             "line": 28,
@@ -422,7 +424,7 @@
           },
           {
             "result": {
-              "duration": 69190000,
+              "duration": 484965600,
               "status": "passed"
             },
             "line": 29,
@@ -434,7 +436,7 @@
           },
           {
             "result": {
-              "duration": 163449900,
+              "duration": 78745400,
               "status": "passed"
             },
             "line": 30,
@@ -452,15 +454,15 @@
           },
           {
             "result": {
-              "duration": 116923500,
+              "duration": 110527200,
               "status": "passed"
             },
             "line": 31,
-            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "name": "The User enters \"3\" for the planet that the moon is orbiting",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 16
                 }
               ],
@@ -470,6 +472,7 @@
           },
           {
             "result": {
+              "duration": 86106300,
               "status": "passed"
             },
             "line": 32,
@@ -487,7 +490,7 @@
           },
           {
             "result": {
-              "duration": 32750300,
+              "duration": 135473700,
               "status": "passed"
             },
             "line": 33,
@@ -499,8 +502,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(AddMoonSteps.java:101)\r\n\tat ✽.The Moon \"Titan\" should not be added to planetarium(classpath:features/AddMoons.feature:34)\r\n",
-              "duration": 1040883600,
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(AddMoonSteps.java:103)\r\n\tat ✽.The Moon \"Titan\" should not be added to planetarium(classpath:features/AddMoons.feature:34)\r\n",
+              "duration": 601394900,
               "status": "failed"
             },
             "line": 34,
@@ -527,7 +530,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:18.942Z",
+        "start_timestamp": "2024-08-09T16:52:16.236Z",
         "line": 39,
         "name": "As a User I should be able to add Moon (Negative Scenario)",
         "description": "",
@@ -537,11 +540,11 @@
         "steps": [
           {
             "result": {
-              "duration": 211011400,
+              "duration": 560627900,
               "status": "passed"
             },
             "line": 25,
-            "name": "The User is already log on.",
+            "name": "The User is already log on",
             "match": {
               "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
             },
@@ -549,15 +552,15 @@
           },
           {
             "result": {
-              "duration": 31491400,
+              "duration": 70557500,
               "status": "passed"
             },
             "line": 26,
-            "name": "The ID of the Planet \"1\" does not exist in the Planetarium",
+            "name": "The ID of the Planet \"3\" does not exist in the Planetarium",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 21
                 }
               ],
@@ -567,6 +570,7 @@
           },
           {
             "result": {
+              "duration": 1987000,
               "status": "passed"
             },
             "line": 27,
@@ -584,7 +588,7 @@
           },
           {
             "result": {
-              "duration": 67459100,
+              "duration": 160059800,
               "status": "passed"
             },
             "line": 28,
@@ -596,7 +600,7 @@
           },
           {
             "result": {
-              "duration": 65888600,
+              "duration": 621130400,
               "status": "passed"
             },
             "line": 29,
@@ -608,7 +612,7 @@
           },
           {
             "result": {
-              "duration": 177754500,
+              "duration": 275050500,
               "status": "passed"
             },
             "line": 30,
@@ -626,15 +630,15 @@
           },
           {
             "result": {
-              "duration": 121457200,
+              "duration": 116391800,
               "status": "passed"
             },
             "line": 31,
-            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "name": "The User enters \"3\" for the planet that the moon is orbiting",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 16
                 }
               ],
@@ -661,7 +665,7 @@
           },
           {
             "result": {
-              "duration": 33866900,
+              "duration": 116872100,
               "status": "passed"
             },
             "line": 33,
@@ -673,8 +677,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(AddMoonSteps.java:101)\r\n\tat ✽.The Moon \"Titan\" should not be added to planetarium(classpath:features/AddMoons.feature:34)\r\n",
-              "duration": 1049648800,
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(AddMoonSteps.java:103)\r\n\tat ✽.The Moon \"Titan\" should not be added to planetarium(classpath:features/AddMoons.feature:34)\r\n",
+              "duration": 1116517100,
               "status": "failed"
             },
             "line": 34,
@@ -701,7 +705,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:20.705Z",
+        "start_timestamp": "2024-08-09T16:52:19.289Z",
         "line": 40,
         "name": "As a User I should be able to add Moon (Negative Scenario)",
         "description": "",
@@ -711,11 +715,11 @@
         "steps": [
           {
             "result": {
-              "duration": 244270500,
+              "duration": 594433100,
               "status": "passed"
             },
             "line": 25,
-            "name": "The User is already log on.",
+            "name": "The User is already log on",
             "match": {
               "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
             },
@@ -723,15 +727,15 @@
           },
           {
             "result": {
-              "duration": 50031600,
+              "duration": 76220500,
               "status": "passed"
             },
             "line": 26,
-            "name": "The ID of the Planet \"1\" does not exist in the Planetarium",
+            "name": "The ID of the Planet \"3\" does not exist in the Planetarium",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 21
                 }
               ],
@@ -741,7 +745,7 @@
           },
           {
             "result": {
-              "duration": 2008000,
+              "duration": 2142400,
               "status": "passed"
             },
             "line": 27,
@@ -759,7 +763,7 @@
           },
           {
             "result": {
-              "duration": 73718600,
+              "duration": 187367500,
               "status": "passed"
             },
             "line": 28,
@@ -771,7 +775,7 @@
           },
           {
             "result": {
-              "duration": 58612900,
+              "duration": 620862600,
               "status": "passed"
             },
             "line": 29,
@@ -783,7 +787,7 @@
           },
           {
             "result": {
-              "duration": 323567700,
+              "duration": 512249100,
               "status": "passed"
             },
             "line": 30,
@@ -801,15 +805,15 @@
           },
           {
             "result": {
-              "duration": 49791300,
+              "duration": 86324500,
               "status": "passed"
             },
             "line": 31,
-            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "name": "The User enters \"3\" for the planet that the moon is orbiting",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 16
                 }
               ],
@@ -819,6 +823,7 @@
           },
           {
             "result": {
+              "duration": 33065500,
               "status": "passed"
             },
             "line": 32,
@@ -836,7 +841,7 @@
           },
           {
             "result": {
-              "duration": 24977500,
+              "duration": 67221400,
               "status": "passed"
             },
             "line": 33,
@@ -848,7 +853,7 @@
           },
           {
             "result": {
-              "duration": 1041776600,
+              "duration": 586737700,
               "status": "passed"
             },
             "line": 34,
@@ -875,7 +880,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:22.584Z",
+        "start_timestamp": "2024-08-09T16:52:22.061Z",
         "line": 41,
         "name": "As a User I should be able to add Moon (Negative Scenario)",
         "description": "",
@@ -885,11 +890,11 @@
         "steps": [
           {
             "result": {
-              "duration": 232920600,
+              "duration": 458408600,
               "status": "passed"
             },
             "line": 25,
-            "name": "The User is already log on.",
+            "name": "The User is already log on",
             "match": {
               "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
             },
@@ -897,15 +902,15 @@
           },
           {
             "result": {
-              "duration": 27585800,
+              "duration": 66835300,
               "status": "passed"
             },
             "line": 26,
-            "name": "The ID of the Planet \"1\" does not exist in the Planetarium",
+            "name": "The ID of the Planet \"3\" does not exist in the Planetarium",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 21
                 }
               ],
@@ -932,7 +937,7 @@
           },
           {
             "result": {
-              "duration": 77074600,
+              "duration": 201708300,
               "status": "passed"
             },
             "line": 28,
@@ -944,7 +949,7 @@
           },
           {
             "result": {
-              "duration": 187574700,
+              "duration": 675281000,
               "status": "passed"
             },
             "line": 29,
@@ -956,7 +961,7 @@
           },
           {
             "result": {
-              "duration": 316965500,
+              "duration": 306231400,
               "status": "passed"
             },
             "line": 30,
@@ -974,15 +979,15 @@
           },
           {
             "result": {
-              "duration": 72530000,
+              "duration": 107846200,
               "status": "passed"
             },
             "line": 31,
-            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "name": "The User enters \"3\" for the planet that the moon is orbiting",
             "match": {
               "arguments": [
                 {
-                  "val": "\"1\"",
+                  "val": "\"3\"",
                   "offset": 16
                 }
               ],
@@ -1009,7 +1014,7 @@
           },
           {
             "result": {
-              "duration": 35561000,
+              "duration": 63689100,
               "status": "passed"
             },
             "line": 33,
@@ -1021,7 +1026,7 @@
           },
           {
             "result": {
-              "duration": 1058287900,
+              "duration": 1084471000,
               "status": "passed"
             },
             "line": 34,
@@ -1048,7 +1053,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:24.612Z",
+        "start_timestamp": "2024-08-09T16:52:25.028Z",
         "line": 42,
         "name": "As a User I should be able to add Moon (Negative Scenario)",
         "description": "",
@@ -1058,11 +1063,11 @@
         "steps": [
           {
             "result": {
-              "duration": 213682600,
+              "duration": 401556100,
               "status": "passed"
             },
             "line": 25,
-            "name": "The User is already log on.",
+            "name": "The User is already log on",
             "match": {
               "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
             },
@@ -1070,7 +1075,7 @@
           },
           {
             "result": {
-              "duration": 55153000,
+              "duration": 89762900,
               "status": "passed"
             },
             "line": 26,
@@ -1088,7 +1093,7 @@
           },
           {
             "result": {
-              "duration": 3649000,
+              "duration": 3443200,
               "status": "passed"
             },
             "line": 27,
@@ -1106,7 +1111,7 @@
           },
           {
             "result": {
-              "duration": 86488200,
+              "duration": 313913500,
               "status": "passed"
             },
             "line": 28,
@@ -1118,7 +1123,7 @@
           },
           {
             "result": {
-              "duration": 77018600,
+              "duration": 381064200,
               "status": "passed"
             },
             "line": 29,
@@ -1130,7 +1135,7 @@
           },
           {
             "result": {
-              "duration": 167839800,
+              "duration": 216931800,
               "status": "passed"
             },
             "line": 30,
@@ -1148,7 +1153,7 @@
           },
           {
             "result": {
-              "duration": 111541400,
+              "duration": 93788800,
               "status": "passed"
             },
             "line": 31,
@@ -1166,6 +1171,7 @@
           },
           {
             "result": {
+              "duration": 24932800,
               "status": "passed"
             },
             "line": 32,
@@ -1183,7 +1189,7 @@
           },
           {
             "result": {
-              "duration": 30339000,
+              "duration": 83451100,
               "status": "passed"
             },
             "line": 33,
@@ -1195,7 +1201,7 @@
           },
           {
             "result": {
-              "duration": 1033644900,
+              "duration": 607210200,
               "status": "passed"
             },
             "line": 34,
@@ -1222,7 +1228,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:26.392Z",
+        "start_timestamp": "2024-08-09T16:52:27.253Z",
         "line": 43,
         "name": "As a User I should be able to add Moon (Negative Scenario)",
         "description": "",
@@ -1232,11 +1238,11 @@
         "steps": [
           {
             "result": {
-              "duration": 191576700,
+              "duration": 474522100,
               "status": "passed"
             },
             "line": 25,
-            "name": "The User is already log on.",
+            "name": "The User is already log on",
             "match": {
               "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
             },
@@ -1244,7 +1250,7 @@
           },
           {
             "result": {
-              "duration": 31448300,
+              "duration": 66843700,
               "status": "passed"
             },
             "line": 26,
@@ -1262,7 +1268,6 @@
           },
           {
             "result": {
-              "duration": 1802200,
               "status": "passed"
             },
             "line": 27,
@@ -1280,7 +1285,7 @@
           },
           {
             "result": {
-              "duration": 79076800,
+              "duration": 169643800,
               "status": "passed"
             },
             "line": 28,
@@ -1292,7 +1297,7 @@
           },
           {
             "result": {
-              "duration": 64236300,
+              "duration": 599970600,
               "status": "passed"
             },
             "line": 29,
@@ -1304,7 +1309,7 @@
           },
           {
             "result": {
-              "duration": 181661700,
+              "duration": 171167900,
               "status": "passed"
             },
             "line": 30,
@@ -1322,7 +1327,7 @@
           },
           {
             "result": {
-              "duration": 117218700,
+              "duration": 116570900,
               "status": "passed"
             },
             "line": 31,
@@ -1357,7 +1362,7 @@
           },
           {
             "result": {
-              "duration": 35143400,
+              "duration": 64803100,
               "status": "passed"
             },
             "line": 33,
@@ -1369,7 +1374,7 @@
           },
           {
             "result": {
-              "duration": 1047551300,
+              "duration": 1128428800,
               "status": "passed"
             },
             "line": 34,
@@ -1416,7 +1421,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-09T16:39:28.152Z",
+        "start_timestamp": "2024-08-09T16:52:30.076Z",
         "line": 18,
         "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
         "description": "Add Planets Test Positive Scenario",
@@ -1426,20 +1431,16 @@
         "steps": [
           {
             "result": {
-              "duration": 260256100,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 8,
             "name": "The User is already log on.",
-            "match": {
-              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
-            },
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 42099800,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "No planet with name \"this planet name is 30 chars!!\" in planetarium",
@@ -1456,8 +1457,7 @@
           },
           {
             "result": {
-              "duration": 100294900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
             "name": "The User selects planets from the drop-down menu",
@@ -1468,8 +1468,7 @@
           },
           {
             "result": {
-              "duration": 213910500,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 11,
             "name": "The User enters \"this planet name is 30 chars!!\" for planet name",
@@ -1486,8 +1485,7 @@
           },
           {
             "result": {
-              "duration": 99427300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 12,
             "name": "\"true\" The User selects an image from filesystem for planet image",
@@ -1504,8 +1502,7 @@
           },
           {
             "result": {
-              "duration": 49198000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 13,
             "name": "The User clicks on the submit button",
@@ -1516,8 +1513,7 @@
           },
           {
             "result": {
-              "duration": 1041930600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 14,
             "name": "The planet \"this planet name is 30 chars!!\" should be added to the planetarium",
@@ -1543,7 +1539,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:29.977Z",
+        "start_timestamp": "2024-08-09T16:52:30.088Z",
         "line": 19,
         "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
         "description": "Add Planets Test Positive Scenario",
@@ -1553,20 +1549,16 @@
         "steps": [
           {
             "result": {
-              "duration": 289444700,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 8,
             "name": "The User is already log on.",
-            "match": {
-              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
-            },
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 42247400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "No planet with name \"Terra\" in planetarium",
@@ -1583,8 +1575,7 @@
           },
           {
             "result": {
-              "duration": 93615300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
             "name": "The User selects planets from the drop-down menu",
@@ -1595,8 +1586,7 @@
           },
           {
             "result": {
-              "duration": 153862100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 11,
             "name": "The User enters \"Terra\" for planet name",
@@ -1613,8 +1603,7 @@
           },
           {
             "result": {
-              "duration": 35749200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 12,
             "name": "\"true\" The User selects an image from filesystem for planet image",
@@ -1631,8 +1620,7 @@
           },
           {
             "result": {
-              "duration": 37600200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 13,
             "name": "The User clicks on the submit button",
@@ -1643,8 +1631,7 @@
           },
           {
             "result": {
-              "duration": 1048567300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 14,
             "name": "The planet \"Terra\" should be added to the planetarium",
@@ -1670,7 +1657,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:31.684Z",
+        "start_timestamp": "2024-08-09T16:52:30.097Z",
         "line": 20,
         "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
         "description": "Add Planets Test Positive Scenario",
@@ -1680,20 +1667,16 @@
         "steps": [
           {
             "result": {
-              "duration": 241532800,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 8,
             "name": "The User is already log on.",
-            "match": {
-              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
-            },
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 47944300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "No planet with name \"this planet name is 30 chars!!\" in planetarium",
@@ -1710,8 +1693,8 @@
           },
           {
             "result": {
-              "duration": 67963000,
-              "status": "passed"
+              "duration": 1186000,
+              "status": "skipped"
             },
             "line": 10,
             "name": "The User selects planets from the drop-down menu",
@@ -1722,8 +1705,7 @@
           },
           {
             "result": {
-              "duration": 225799600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 11,
             "name": "The User enters \"this planet name is 30 chars!!\" for planet name",
@@ -1740,7 +1722,7 @@
           },
           {
             "result": {
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 12,
             "name": "\"false\" The User selects an image from filesystem for planet image",
@@ -1757,8 +1739,7 @@
           },
           {
             "result": {
-              "duration": 112398600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 13,
             "name": "The User clicks on the submit button",
@@ -1769,9 +1750,7 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddPlanetsSteps.the_planet_should_be_added_to_the_planetarium(AddPlanetsSteps.java:76)\r\n\tat ✽.The planet \"this planet name is 30 chars!!\" should be added to the planetarium(classpath:features/AddPlanets.feature:14)\r\n",
-              "duration": 1062503100,
-              "status": "failed"
+              "status": "skipped"
             },
             "line": 14,
             "name": "The planet \"this planet name is 30 chars!!\" should be added to the planetarium",
@@ -1797,7 +1776,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:33.442Z",
+        "start_timestamp": "2024-08-09T16:52:30.106Z",
         "line": 21,
         "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
         "description": "Add Planets Test Positive Scenario",
@@ -1807,20 +1786,16 @@
         "steps": [
           {
             "result": {
-              "duration": 209560900,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 8,
             "name": "The User is already log on.",
-            "match": {
-              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
-            },
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 63536400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "No planet with name \"Terra\" in planetarium",
@@ -1837,8 +1812,7 @@
           },
           {
             "result": {
-              "duration": 70176400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
             "name": "The User selects planets from the drop-down menu",
@@ -1849,8 +1823,8 @@
           },
           {
             "result": {
-              "duration": 67793800,
-              "status": "passed"
+              "duration": 6503600,
+              "status": "skipped"
             },
             "line": 11,
             "name": "The User enters \"Terra\" for planet name",
@@ -1867,7 +1841,7 @@
           },
           {
             "result": {
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 12,
             "name": "\"false\" The User selects an image from filesystem for planet image",
@@ -1884,8 +1858,7 @@
           },
           {
             "result": {
-              "duration": 137437800,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 13,
             "name": "The User clicks on the submit button",
@@ -1896,9 +1869,7 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddPlanetsSteps.the_planet_should_be_added_to_the_planetarium(AddPlanetsSteps.java:76)\r\n\tat ✽.The planet \"Terra\" should be added to the planetarium(classpath:features/AddPlanets.feature:14)\r\n",
-              "duration": 1043454200,
-              "status": "failed"
+              "status": "skipped"
             },
             "line": 14,
             "name": "The planet \"Terra\" should be added to the planetarium",
@@ -1924,7 +1895,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:35.040Z",
+        "start_timestamp": "2024-08-09T16:52:30.118Z",
         "line": 35,
         "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
         "description": "\tAdd Planets Test Negative Scenario",
@@ -1934,20 +1905,16 @@
         "steps": [
           {
             "result": {
-              "duration": 234683300,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 26,
             "name": "The User is already log on.",
-            "match": {
-              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
-            },
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 78567200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 27,
             "name": "The User selects planets from the drop-down menu",
@@ -1958,8 +1925,7 @@
           },
           {
             "result": {
-              "duration": 229111600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 28,
             "name": "The User enters \"this planet name is 31 chars!!!\" for planet name",
@@ -1976,8 +1942,7 @@
           },
           {
             "result": {
-              "duration": 91438100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 29,
             "name": "\"true\" The User selects an image from filesystem for planet image",
@@ -1994,8 +1959,7 @@
           },
           {
             "result": {
-              "duration": 43087000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 30,
             "name": "The User clicks on the submit button",
@@ -2006,8 +1970,7 @@
           },
           {
             "result": {
-              "duration": 598358300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 31,
             "name": "The planet \"this planet name is 31 chars!!!\" should not be added to the planetarium",
@@ -2033,7 +1996,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:36.317Z",
+        "start_timestamp": "2024-08-09T16:52:30.126Z",
         "line": 36,
         "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
         "description": "\tAdd Planets Test Negative Scenario",
@@ -2043,20 +2006,16 @@
         "steps": [
           {
             "result": {
-              "duration": 248252200,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 26,
             "name": "The User is already log on.",
-            "match": {
-              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
-            },
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 62701500,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 27,
             "name": "The User selects planets from the drop-down menu",
@@ -2067,8 +2026,7 @@
           },
           {
             "result": {
-              "duration": 87515900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 28,
             "name": "The User enters \"nonunique\" for planet name",
@@ -2085,8 +2043,7 @@
           },
           {
             "result": {
-              "duration": 143072200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 29,
             "name": "\"true\" The User selects an image from filesystem for planet image",
@@ -2103,8 +2060,7 @@
           },
           {
             "result": {
-              "duration": 108536900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 30,
             "name": "The User clicks on the submit button",
@@ -2115,9 +2071,7 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddPlanetsSteps.the_planet_should_not_be_added_to_the_planetarium(AddPlanetsSteps.java:90)\r\n\tat ✽.The planet \"nonunique\" should not be added to the planetarium(classpath:features/AddPlanets.feature:31)\r\n",
-              "duration": 558434300,
-              "status": "failed"
+              "status": "skipped"
             },
             "line": 31,
             "name": "The planet \"nonunique\" should not be added to the planetarium",
@@ -2143,7 +2097,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:37.526Z",
+        "start_timestamp": "2024-08-09T16:52:30.133Z",
         "line": 37,
         "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
         "description": "\tAdd Planets Test Negative Scenario",
@@ -2153,20 +2107,16 @@
         "steps": [
           {
             "result": {
-              "duration": 252634000,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 26,
             "name": "The User is already log on.",
-            "match": {
-              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
-            },
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 76016600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 27,
             "name": "The User selects planets from the drop-down menu",
@@ -2177,8 +2127,7 @@
           },
           {
             "result": {
-              "duration": 233318300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 28,
             "name": "The User enters \"this planet name is 31 chars!!!\" for planet name",
@@ -2195,7 +2144,7 @@
           },
           {
             "result": {
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 29,
             "name": "\"false\" The User selects an image from filesystem for planet image",
@@ -2212,8 +2161,7 @@
           },
           {
             "result": {
-              "duration": 104731300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 30,
             "name": "The User clicks on the submit button",
@@ -2224,8 +2172,7 @@
           },
           {
             "result": {
-              "duration": 1039315200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 31,
             "name": "The planet \"this planet name is 31 chars!!!\" should not be added to the planetarium",
@@ -2251,7 +2198,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:39.236Z",
+        "start_timestamp": "2024-08-09T16:52:30.139Z",
         "line": 38,
         "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
         "description": "\tAdd Planets Test Negative Scenario",
@@ -2261,20 +2208,16 @@
         "steps": [
           {
             "result": {
-              "duration": 208974100,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 26,
             "name": "The User is already log on.",
-            "match": {
-              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
-            },
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 67917600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 27,
             "name": "The User selects planets from the drop-down menu",
@@ -2285,8 +2228,7 @@
           },
           {
             "result": {
-              "duration": 87449900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 28,
             "name": "The User enters \"nonunique\" for planet name",
@@ -2303,7 +2245,7 @@
           },
           {
             "result": {
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 29,
             "name": "\"false\" The User selects an image from filesystem for planet image",
@@ -2320,8 +2262,7 @@
           },
           {
             "result": {
-              "duration": 151427900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 30,
             "name": "The User clicks on the submit button",
@@ -2332,9 +2273,7 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddPlanetsSteps.the_planet_should_not_be_added_to_the_planetarium(AddPlanetsSteps.java:90)\r\n\tat ✽.The planet \"nonunique\" should not be added to the planetarium(classpath:features/AddPlanets.feature:31)\r\n",
-              "duration": 1037803300,
-              "status": "failed"
+              "status": "skipped"
             },
             "line": 31,
             "name": "The planet \"nonunique\" should not be added to the planetarium",
@@ -2380,7 +2319,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-09T16:39:40.793Z",
+        "start_timestamp": "2024-08-09T16:52:30.158Z",
         "line": 16,
         "name": "As a user I want to be able to remove Planets from the Planetarium",
         "description": "\tDelete Planet Positive Scenario",
@@ -2390,6 +2329,7 @@
         "steps": [
           {
             "result": {
+              "duration": 2023500,
               "status": "passed"
             },
             "line": 7,
@@ -2407,7 +2347,7 @@
           },
           {
             "result": {
-              "duration": 265302500,
+              "duration": 515374500,
               "status": "passed"
             },
             "line": 8,
@@ -2419,7 +2359,7 @@
           },
           {
             "result": {
-              "duration": 57386600,
+              "duration": 116330900,
               "status": "passed"
             },
             "line": 9,
@@ -2431,7 +2371,7 @@
           },
           {
             "result": {
-              "duration": 54908100,
+              "duration": 688041800,
               "status": "passed"
             },
             "line": 10,
@@ -2449,7 +2389,7 @@
           },
           {
             "result": {
-              "duration": 129505300,
+              "duration": 118278000,
               "status": "passed"
             },
             "line": 11,
@@ -2461,8 +2401,9 @@
           },
           {
             "result": {
-              "duration": 35159700,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.DeleteMoonSteps.the_moon_should_be_deleted_from_the_planetarium(DeleteMoonSteps.java:65)\r\n\tat ✽.The moon \"Moon\" should be deleted from the planetarium(classpath:features/DeleteMoons.feature:12)\r\n",
+              "duration": 93352200,
+              "status": "failed"
             },
             "line": 12,
             "name": "The moon \"Moon\" should be deleted from the planetarium",
@@ -2488,7 +2429,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:41.343Z",
+        "start_timestamp": "2024-08-09T16:52:31.696Z",
         "line": 17,
         "name": "As a user I want to be able to remove Planets from the Planetarium",
         "description": "\tDelete Planet Positive Scenario",
@@ -2498,6 +2439,7 @@
         "steps": [
           {
             "result": {
+              "duration": 959000,
               "status": "passed"
             },
             "line": 7,
@@ -2515,7 +2457,7 @@
           },
           {
             "result": {
-              "duration": 308214400,
+              "duration": 492910300,
               "status": "passed"
             },
             "line": 8,
@@ -2527,7 +2469,7 @@
           },
           {
             "result": {
-              "duration": 40840300,
+              "duration": 114355900,
               "status": "passed"
             },
             "line": 9,
@@ -2539,7 +2481,7 @@
           },
           {
             "result": {
-              "duration": 72643500,
+              "duration": 625696400,
               "status": "passed"
             },
             "line": 10,
@@ -2557,7 +2499,7 @@
           },
           {
             "result": {
-              "duration": 27973900,
+              "duration": 155643500,
               "status": "passed"
             },
             "line": 11,
@@ -2569,7 +2511,7 @@
           },
           {
             "result": {
-              "duration": 672907400,
+              "duration": 68151700,
               "status": "passed"
             },
             "line": 12,
@@ -2596,7 +2538,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:42.469Z",
+        "start_timestamp": "2024-08-09T16:52:33.179Z",
         "line": 31,
         "name": "As a user I should not be able to remove Moon from the Planetarium when given invalid names",
         "description": "\tDelete Moon Negative Scenario",
@@ -2606,7 +2548,7 @@
         "steps": [
           {
             "result": {
-              "duration": 287478800,
+              "duration": 516542100,
               "status": "passed"
             },
             "line": 22,
@@ -2618,7 +2560,6 @@
           },
           {
             "result": {
-              "duration": 971400,
               "status": "passed"
             },
             "line": 23,
@@ -2636,7 +2577,7 @@
           },
           {
             "result": {
-              "duration": 49190000,
+              "duration": 114412900,
               "status": "passed"
             },
             "line": 24,
@@ -2648,7 +2589,7 @@
           },
           {
             "result": {
-              "duration": 203147500,
+              "duration": 585823600,
               "status": "passed"
             },
             "line": 25,
@@ -2666,7 +2607,7 @@
           },
           {
             "result": {
-              "duration": 49065500,
+              "duration": 99197500,
               "status": "passed"
             },
             "line": 26,
@@ -2678,7 +2619,7 @@
           },
           {
             "result": {
-              "duration": 12753500,
+              "duration": 59748300,
               "status": "passed"
             },
             "line": 27,
@@ -2699,7 +2640,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:43.072Z",
+        "start_timestamp": "2024-08-09T16:52:34.572Z",
         "line": 32,
         "name": "As a user I should not be able to remove Moon from the Planetarium when given invalid names",
         "description": "\tDelete Moon Negative Scenario",
@@ -2709,7 +2650,7 @@
         "steps": [
           {
             "result": {
-              "duration": 284006100,
+              "duration": 488930900,
               "status": "passed"
             },
             "line": 22,
@@ -2721,7 +2662,6 @@
           },
           {
             "result": {
-              "duration": 998200,
               "status": "passed"
             },
             "line": 23,
@@ -2739,7 +2679,7 @@
           },
           {
             "result": {
-              "duration": 51092300,
+              "duration": 110211300,
               "status": "passed"
             },
             "line": 24,
@@ -2751,7 +2691,7 @@
           },
           {
             "result": {
-              "duration": 101913000,
+              "duration": 656907700,
               "status": "passed"
             },
             "line": 25,
@@ -2769,7 +2709,7 @@
           },
           {
             "result": {
-              "duration": 148038700,
+              "duration": 88423400,
               "status": "passed"
             },
             "line": 26,
@@ -2781,7 +2721,7 @@
           },
           {
             "result": {
-              "duration": 526220900,
+              "duration": 19200300,
               "status": "passed"
             },
             "line": 27,
@@ -2802,7 +2742,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:44.186Z",
+        "start_timestamp": "2024-08-09T16:52:35.942Z",
         "line": 45,
         "name": "User should not be able to delete a moon by  its ID",
         "description": "",
@@ -2812,7 +2752,7 @@
         "steps": [
           {
             "result": {
-              "duration": 443484200,
+              "duration": 603148200,
               "status": "passed"
             },
             "line": 36,
@@ -2824,7 +2764,7 @@
           },
           {
             "result": {
-              "duration": 574306000,
+              "duration": 725554800,
               "status": "passed"
             },
             "line": 37,
@@ -2842,7 +2782,7 @@
           },
           {
             "result": {
-              "duration": 114501700,
+              "duration": 240861100,
               "status": "passed"
             },
             "line": 38,
@@ -2854,7 +2794,7 @@
           },
           {
             "result": {
-              "duration": 116098600,
+              "duration": 267726400,
               "status": "passed"
             },
             "line": 39,
@@ -2872,7 +2812,7 @@
           },
           {
             "result": {
-              "duration": 36029800,
+              "duration": 73065400,
               "status": "passed"
             },
             "line": 40,
@@ -2884,7 +2824,7 @@
           },
           {
             "result": {
-              "duration": 39702400,
+              "duration": 92372700,
               "status": "passed"
             },
             "line": 41,
@@ -2931,7 +2871,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-09T16:39:45.512Z",
+        "start_timestamp": "2024-08-09T16:52:37.944Z",
         "line": 16,
         "name": "As a user I want to be able to remove Planets from the Planetarium",
         "description": "\tDelete Planet Positive Scenario",
@@ -2941,7 +2881,7 @@
         "steps": [
           {
             "result": {
-              "duration": 343742200,
+              "duration": 475324200,
               "status": "passed"
             },
             "line": 7,
@@ -2953,7 +2893,7 @@
           },
           {
             "result": {
-              "duration": 600884600,
+              "duration": 791196600,
               "status": "passed"
             },
             "line": 8,
@@ -2971,7 +2911,7 @@
           },
           {
             "result": {
-              "duration": 122328100,
+              "duration": 291698200,
               "status": "passed"
             },
             "line": 9,
@@ -2983,7 +2923,7 @@
           },
           {
             "result": {
-              "duration": 76729200,
+              "duration": 144791900,
               "status": "passed"
             },
             "line": 10,
@@ -3001,7 +2941,7 @@
           },
           {
             "result": {
-              "duration": 36565600,
+              "duration": 63434000,
               "status": "passed"
             },
             "line": 11,
@@ -3013,7 +2953,7 @@
           },
           {
             "result": {
-              "duration": 1049840600,
+              "duration": 1141867300,
               "status": "passed"
             },
             "line": 12,
@@ -3040,7 +2980,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:47.752Z",
+        "start_timestamp": "2024-08-09T16:52:40.870Z",
         "line": 17,
         "name": "As a user I want to be able to remove Planets from the Planetarium",
         "description": "\tDelete Planet Positive Scenario",
@@ -3050,7 +2990,7 @@
         "steps": [
           {
             "result": {
-              "duration": 288520000,
+              "duration": 475111600,
               "status": "passed"
             },
             "line": 7,
@@ -3062,7 +3002,7 @@
           },
           {
             "result": {
-              "duration": 602059300,
+              "duration": 839056600,
               "status": "passed"
             },
             "line": 8,
@@ -3080,7 +3020,7 @@
           },
           {
             "result": {
-              "duration": 74769500,
+              "duration": 294303800,
               "status": "passed"
             },
             "line": 9,
@@ -3092,7 +3032,7 @@
           },
           {
             "result": {
-              "duration": 108152700,
+              "duration": 142294200,
               "status": "passed"
             },
             "line": 10,
@@ -3110,7 +3050,7 @@
           },
           {
             "result": {
-              "duration": 33314100,
+              "duration": 81238800,
               "status": "passed"
             },
             "line": 11,
@@ -3122,7 +3062,7 @@
           },
           {
             "result": {
-              "duration": 1058414200,
+              "duration": 1094767700,
               "status": "passed"
             },
             "line": 12,
@@ -3149,7 +3089,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:49.917Z",
+        "start_timestamp": "2024-08-09T16:52:43.814Z",
         "line": 31,
         "name": "As a user I want to be able to remove Planets from the Planetarium, Negative Scenario",
         "description": "\tDelete Planet Negative Scenario",
@@ -3159,7 +3099,7 @@
         "steps": [
           {
             "result": {
-              "duration": 250639100,
+              "duration": 480009000,
               "status": "passed"
             },
             "line": 22,
@@ -3171,7 +3111,7 @@
           },
           {
             "result": {
-              "duration": 1998100,
+              "duration": 1461300,
               "status": "passed"
             },
             "line": 23,
@@ -3189,7 +3129,7 @@
           },
           {
             "result": {
-              "duration": 70502400,
+              "duration": 167748800,
               "status": "passed"
             },
             "line": 24,
@@ -3201,7 +3141,7 @@
           },
           {
             "result": {
-              "duration": 178856000,
+              "duration": 544470900,
               "status": "passed"
             },
             "line": 25,
@@ -3219,7 +3159,7 @@
           },
           {
             "result": {
-              "duration": 174110800,
+              "duration": 85497100,
               "status": "passed"
             },
             "line": 26,
@@ -3231,7 +3171,7 @@
           },
           {
             "result": {
-              "duration": 14763900,
+              "duration": 14663500,
               "status": "passed"
             },
             "line": 27,
@@ -3252,7 +3192,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:50.613Z",
+        "start_timestamp": "2024-08-09T16:52:45.114Z",
         "line": 32,
         "name": "As a user I want to be able to remove Planets from the Planetarium, Negative Scenario",
         "description": "\tDelete Planet Negative Scenario",
@@ -3262,7 +3202,7 @@
         "steps": [
           {
             "result": {
-              "duration": 289064000,
+              "duration": 553921100,
               "status": "passed"
             },
             "line": 22,
@@ -3274,7 +3214,7 @@
           },
           {
             "result": {
-              "duration": 1440300,
+              "duration": 2107400,
               "status": "passed"
             },
             "line": 23,
@@ -3292,7 +3232,7 @@
           },
           {
             "result": {
-              "duration": 71997600,
+              "duration": 135130600,
               "status": "passed"
             },
             "line": 24,
@@ -3304,7 +3244,7 @@
           },
           {
             "result": {
-              "duration": 193567800,
+              "duration": 594379300,
               "status": "passed"
             },
             "line": 25,
@@ -3322,7 +3262,7 @@
           },
           {
             "result": {
-              "duration": 39931200,
+              "duration": 161260300,
               "status": "passed"
             },
             "line": 26,
@@ -3334,7 +3274,7 @@
           },
           {
             "result": {
-              "duration": 8755900,
+              "duration": 16682000,
               "status": "passed"
             },
             "line": 27,
@@ -3355,7 +3295,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:51.222Z",
+        "start_timestamp": "2024-08-09T16:52:46.581Z",
         "line": 45,
         "name": "User should not be able to delete a planet by its ID",
         "description": "",
@@ -3365,7 +3305,7 @@
         "steps": [
           {
             "result": {
-              "duration": 302881500,
+              "duration": 623483900,
               "status": "passed"
             },
             "line": 36,
@@ -3377,7 +3317,7 @@
           },
           {
             "result": {
-              "duration": 7046700,
+              "duration": 17142200,
               "status": "passed"
             },
             "line": 37,
@@ -3395,7 +3335,7 @@
           },
           {
             "result": {
-              "duration": 70231200,
+              "duration": 861555800,
               "status": "passed"
             },
             "line": 38,
@@ -3407,7 +3347,7 @@
           },
           {
             "result": {
-              "duration": 50401600,
+              "duration": 392984800,
               "status": "passed"
             },
             "line": 39,
@@ -3425,7 +3365,7 @@
           },
           {
             "result": {
-              "duration": 31786800,
+              "duration": 288472600,
               "status": "passed"
             },
             "line": 40,
@@ -3437,7 +3377,7 @@
           },
           {
             "result": {
-              "duration": 1141470000,
+              "duration": 1139557000,
               "status": "passed"
             },
             "line": 41,
@@ -3484,7 +3424,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-09T16:39:52.826Z",
+        "start_timestamp": "2024-08-09T16:52:49.914Z",
         "line": 16,
         "name": "As a User I want to Login to my Account so that I can Enter the Planetarium",
         "description": "\tLogin Functionality Test Positive Scenario",
@@ -3494,7 +3434,7 @@
         "steps": [
           {
             "result": {
-              "duration": 74156800,
+              "duration": 178907500,
               "status": "passed"
             },
             "line": 7,
@@ -3506,7 +3446,7 @@
           },
           {
             "result": {
-              "duration": 4016800,
+              "duration": 2688400,
               "status": "passed"
             },
             "line": 8,
@@ -3528,7 +3468,7 @@
           },
           {
             "result": {
-              "duration": 85602200,
+              "duration": 189737000,
               "status": "passed"
             },
             "line": 9,
@@ -3546,7 +3486,7 @@
           },
           {
             "result": {
-              "duration": 127208100,
+              "duration": 243329600,
               "status": "passed"
             },
             "line": 10,
@@ -3564,7 +3504,7 @@
           },
           {
             "result": {
-              "duration": 38399300,
+              "duration": 213929300,
               "status": "passed"
             },
             "line": 11,
@@ -3576,7 +3516,7 @@
           },
           {
             "result": {
-              "duration": 58380500,
+              "duration": 48205700,
               "status": "passed"
             },
             "line": 12,
@@ -3597,7 +3537,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:53.226Z",
+        "start_timestamp": "2024-08-09T16:52:50.795Z",
         "line": 30,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -3607,7 +3547,7 @@
         "steps": [
           {
             "result": {
-              "duration": 46390800,
+              "duration": 151858000,
               "status": "passed"
             },
             "line": 21,
@@ -3619,7 +3559,7 @@
           },
           {
             "result": {
-              "duration": 2373500,
+              "duration": 2016500,
               "status": "passed"
             },
             "line": 22,
@@ -3641,7 +3581,7 @@
           },
           {
             "result": {
-              "duration": 55771300,
+              "duration": 153076800,
               "status": "passed"
             },
             "line": 23,
@@ -3659,7 +3599,7 @@
           },
           {
             "result": {
-              "duration": 42754200,
+              "duration": 218094800,
               "status": "passed"
             },
             "line": 24,
@@ -3677,7 +3617,7 @@
           },
           {
             "result": {
-              "duration": 39443800,
+              "duration": 107759500,
               "status": "passed"
             },
             "line": 25,
@@ -3689,7 +3629,7 @@
           },
           {
             "result": {
-              "duration": 22816400,
+              "duration": 25961600,
               "status": "passed"
             },
             "line": 26,
@@ -3710,7 +3650,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:53.437Z",
+        "start_timestamp": "2024-08-09T16:52:51.463Z",
         "line": 31,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -3720,7 +3660,7 @@
         "steps": [
           {
             "result": {
-              "duration": 41706600,
+              "duration": 84154200,
               "status": "passed"
             },
             "line": 21,
@@ -3732,7 +3672,6 @@
           },
           {
             "result": {
-              "duration": 2055400,
               "status": "passed"
             },
             "line": 22,
@@ -3754,7 +3693,7 @@
           },
           {
             "result": {
-              "duration": 101231000,
+              "duration": 198902100,
               "status": "passed"
             },
             "line": 23,
@@ -3772,7 +3711,7 @@
           },
           {
             "result": {
-              "duration": 94013100,
+              "duration": 216442900,
               "status": "passed"
             },
             "line": 24,
@@ -3790,7 +3729,7 @@
           },
           {
             "result": {
-              "duration": 55581100,
+              "duration": 158720200,
               "status": "passed"
             },
             "line": 25,
@@ -3802,7 +3741,7 @@
           },
           {
             "result": {
-              "duration": 17382300,
+              "duration": 33163400,
               "status": "passed"
             },
             "line": 26,
@@ -3823,7 +3762,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:53.759Z",
+        "start_timestamp": "2024-08-09T16:52:52.162Z",
         "line": 32,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -3833,7 +3772,7 @@
         "steps": [
           {
             "result": {
-              "duration": 35813600,
+              "duration": 152699400,
               "status": "passed"
             },
             "line": 21,
@@ -3845,7 +3784,6 @@
           },
           {
             "result": {
-              "duration": 2014200,
               "status": "passed"
             },
             "line": 22,
@@ -3867,7 +3805,7 @@
           },
           {
             "result": {
-              "duration": 50943700,
+              "duration": 157975900,
               "status": "passed"
             },
             "line": 23,
@@ -3885,7 +3823,7 @@
           },
           {
             "result": {
-              "duration": 77122400,
+              "duration": 125617900,
               "status": "passed"
             },
             "line": 24,
@@ -3903,7 +3841,7 @@
           },
           {
             "result": {
-              "duration": 69735300,
+              "duration": 136260300,
               "status": "passed"
             },
             "line": 25,
@@ -3915,7 +3853,7 @@
           },
           {
             "result": {
-              "duration": 32710000,
+              "duration": 31191400,
               "status": "passed"
             },
             "line": 26,
@@ -3936,7 +3874,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:54.035Z",
+        "start_timestamp": "2024-08-09T16:52:52.772Z",
         "line": 33,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -3946,7 +3884,7 @@
         "steps": [
           {
             "result": {
-              "duration": 61867600,
+              "duration": 92645200,
               "status": "passed"
             },
             "line": 21,
@@ -3958,7 +3896,6 @@
           },
           {
             "result": {
-              "duration": 3006700,
               "status": "passed"
             },
             "line": 22,
@@ -3980,7 +3917,7 @@
           },
           {
             "result": {
-              "duration": 92077500,
+              "duration": 172648000,
               "status": "passed"
             },
             "line": 23,
@@ -3998,7 +3935,7 @@
           },
           {
             "result": {
-              "duration": 51951800,
+              "duration": 138179800,
               "status": "passed"
             },
             "line": 24,
@@ -4016,7 +3953,7 @@
           },
           {
             "result": {
-              "duration": 40598600,
+              "duration": 103266800,
               "status": "passed"
             },
             "line": 25,
@@ -4028,7 +3965,7 @@
           },
           {
             "result": {
-              "duration": 13698700,
+              "duration": 47708100,
               "status": "passed"
             },
             "line": 26,
@@ -4049,7 +3986,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:54.304Z",
+        "start_timestamp": "2024-08-09T16:52:53.329Z",
         "line": 34,
         "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -4059,7 +3996,7 @@
         "steps": [
           {
             "result": {
-              "duration": 35553000,
+              "duration": 92713200,
               "status": "passed"
             },
             "line": 21,
@@ -4071,7 +4008,7 @@
           },
           {
             "result": {
-              "duration": 2003500,
+              "duration": 2999200,
               "status": "passed"
             },
             "line": 22,
@@ -4093,7 +4030,7 @@
           },
           {
             "result": {
-              "duration": 43437900,
+              "duration": 111964600,
               "status": "passed"
             },
             "line": 23,
@@ -4111,7 +4048,7 @@
           },
           {
             "result": {
-              "duration": 57189900,
+              "duration": 175274000,
               "status": "passed"
             },
             "line": 24,
@@ -4129,7 +4066,7 @@
           },
           {
             "result": {
-              "duration": 35144300,
+              "duration": 122893300,
               "status": "passed"
             },
             "line": 25,
@@ -4141,7 +4078,7 @@
           },
           {
             "result": {
-              "duration": 13662200,
+              "duration": 28183900,
               "status": "passed"
             },
             "line": 26,
@@ -4162,7 +4099,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:54.495Z",
+        "start_timestamp": "2024-08-09T16:52:53.882Z",
         "line": 50,
         "name": "As a User I want to Logout of my Account so that I can exit the Planetarium",
         "description": "\tLogin Functionality Test Positive Scenario",
@@ -4172,7 +4109,7 @@
         "steps": [
           {
             "result": {
-              "duration": 25415800,
+              "duration": 125167600,
               "status": "passed"
             },
             "line": 39,
@@ -4184,7 +4121,7 @@
           },
           {
             "result": {
-              "duration": 1000400,
+              "duration": 1991000,
               "status": "passed"
             },
             "line": 40,
@@ -4206,7 +4143,7 @@
           },
           {
             "result": {
-              "duration": 45649400,
+              "duration": 214480100,
               "status": "passed"
             },
             "line": 41,
@@ -4224,7 +4161,7 @@
           },
           {
             "result": {
-              "duration": 67031200,
+              "duration": 279754300,
               "status": "passed"
             },
             "line": 42,
@@ -4242,7 +4179,7 @@
           },
           {
             "result": {
-              "duration": 32271000,
+              "duration": 220744300,
               "status": "passed"
             },
             "line": 43,
@@ -4254,7 +4191,7 @@
           },
           {
             "result": {
-              "duration": 35494400,
+              "duration": 42009700,
               "status": "passed"
             },
             "line": 44,
@@ -4266,7 +4203,7 @@
           },
           {
             "result": {
-              "duration": 34272000,
+              "duration": 234986200,
               "status": "passed"
             },
             "line": 45,
@@ -4278,7 +4215,7 @@
           },
           {
             "result": {
-              "duration": 33325500,
+              "duration": 41880400,
               "status": "passed"
             },
             "line": 46,
@@ -4299,7 +4236,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:54.774Z",
+        "start_timestamp": "2024-08-09T16:52:55.046Z",
         "line": 53,
         "name": "As the System I don\u0027t want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users",
         "description": "\tLogin Functionality Test Negative Scenario",
@@ -4309,7 +4246,7 @@
         "steps": [
           {
             "result": {
-              "duration": 30212100,
+              "duration": 125122500,
               "status": "passed"
             },
             "line": 55,
@@ -4321,7 +4258,7 @@
           },
           {
             "result": {
-              "duration": 50960400,
+              "duration": 166261700,
               "status": "passed"
             },
             "line": 56,
@@ -4333,7 +4270,7 @@
           },
           {
             "result": {
-              "duration": 4023600,
+              "duration": 18406100,
               "status": "passed"
             },
             "line": 57,
@@ -4374,7 +4311,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-09T16:39:54.862Z",
+        "start_timestamp": "2024-08-09T16:52:55.360Z",
         "line": 17,
         "name": "As a User I want to Register an Account with the Planetarium so that I can Login Securely",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -4384,7 +4321,7 @@
         "steps": [
           {
             "result": {
-              "duration": 38453600,
+              "duration": 109269100,
               "status": "passed"
             },
             "line": 7,
@@ -4396,7 +4333,7 @@
           },
           {
             "result": {
-              "duration": 7201100,
+              "duration": 22560400,
               "status": "passed"
             },
             "line": 8,
@@ -4414,7 +4351,7 @@
           },
           {
             "result": {
-              "duration": 122014100,
+              "duration": 427090300,
               "status": "passed"
             },
             "line": 9,
@@ -4426,7 +4363,7 @@
           },
           {
             "result": {
-              "duration": 95661800,
+              "duration": 360676800,
               "status": "passed"
             },
             "line": 10,
@@ -4444,7 +4381,7 @@
           },
           {
             "result": {
-              "duration": 106077700,
+              "duration": 334856400,
               "status": "passed"
             },
             "line": 11,
@@ -4462,7 +4399,7 @@
           },
           {
             "result": {
-              "duration": 41682600,
+              "duration": 92250600,
               "status": "passed"
             },
             "line": 12,
@@ -4474,7 +4411,7 @@
           },
           {
             "result": {
-              "duration": 560561100,
+              "duration": 609893500,
               "status": "passed"
             },
             "line": 13,
@@ -4495,7 +4432,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:55.839Z",
+        "start_timestamp": "2024-08-09T16:52:57.323Z",
         "line": 32,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -4505,7 +4442,7 @@
         "steps": [
           {
             "result": {
-              "duration": 26933200,
+              "duration": 72819600,
               "status": "passed"
             },
             "line": 22,
@@ -4517,7 +4454,7 @@
           },
           {
             "result": {
-              "duration": 2009000,
+              "duration": 3001100,
               "status": "passed"
             },
             "line": 23,
@@ -4539,7 +4476,7 @@
           },
           {
             "result": {
-              "duration": 111823300,
+              "duration": 322668600,
               "status": "passed"
             },
             "line": 24,
@@ -4551,7 +4488,7 @@
           },
           {
             "result": {
-              "duration": 55732600,
+              "duration": 181422900,
               "status": "passed"
             },
             "line": 25,
@@ -4569,7 +4506,7 @@
           },
           {
             "result": {
-              "duration": 86848700,
+              "duration": 148393400,
               "status": "passed"
             },
             "line": 26,
@@ -4587,7 +4524,7 @@
           },
           {
             "result": {
-              "duration": 41177000,
+              "duration": 97980100,
               "status": "passed"
             },
             "line": 27,
@@ -4599,7 +4536,7 @@
           },
           {
             "result": {
-              "duration": 531738400,
+              "duration": 11483400,
               "status": "passed"
             },
             "line": 28,
@@ -4620,7 +4557,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:56.699Z",
+        "start_timestamp": "2024-08-09T16:52:58.177Z",
         "line": 33,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -4630,7 +4567,7 @@
         "steps": [
           {
             "result": {
-              "duration": 39829000,
+              "duration": 123398800,
               "status": "passed"
             },
             "line": 22,
@@ -4642,7 +4579,7 @@
           },
           {
             "result": {
-              "duration": 1134400,
+              "duration": 1267100,
               "status": "passed"
             },
             "line": 23,
@@ -4664,7 +4601,7 @@
           },
           {
             "result": {
-              "duration": 96286100,
+              "duration": 299000500,
               "status": "passed"
             },
             "line": 24,
@@ -4676,7 +4613,7 @@
           },
           {
             "result": {
-              "duration": 88466900,
+              "duration": 325580000,
               "status": "passed"
             },
             "line": 25,
@@ -4694,7 +4631,7 @@
           },
           {
             "result": {
-              "duration": 101326400,
+              "duration": 334503000,
               "status": "passed"
             },
             "line": 26,
@@ -4712,7 +4649,7 @@
           },
           {
             "result": {
-              "duration": 35616600,
+              "duration": 99129600,
               "status": "passed"
             },
             "line": 27,
@@ -4724,7 +4661,7 @@
           },
           {
             "result": {
-              "duration": 17245800,
+              "duration": 53480100,
               "status": "passed"
             },
             "line": 28,
@@ -4745,7 +4682,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:57.084Z",
+        "start_timestamp": "2024-08-09T16:52:59.420Z",
         "line": 34,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -4755,7 +4692,7 @@
         "steps": [
           {
             "result": {
-              "duration": 40054900,
+              "duration": 111101600,
               "status": "passed"
             },
             "line": 22,
@@ -4767,7 +4704,6 @@
           },
           {
             "result": {
-              "duration": 2006800,
               "status": "passed"
             },
             "line": 23,
@@ -4789,7 +4725,7 @@
           },
           {
             "result": {
-              "duration": 98630500,
+              "duration": 398762400,
               "status": "passed"
             },
             "line": 24,
@@ -4801,7 +4737,7 @@
           },
           {
             "result": {
-              "duration": 128577200,
+              "duration": 346168500,
               "status": "passed"
             },
             "line": 25,
@@ -4819,7 +4755,7 @@
           },
           {
             "result": {
-              "duration": 109506900,
+              "duration": 264406000,
               "status": "passed"
             },
             "line": 26,
@@ -4837,7 +4773,7 @@
           },
           {
             "result": {
-              "duration": 41770700,
+              "duration": 129524300,
               "status": "passed"
             },
             "line": 27,
@@ -4849,7 +4785,7 @@
           },
           {
             "result": {
-              "duration": 13255000,
+              "duration": 36820700,
               "status": "passed"
             },
             "line": 28,
@@ -4870,7 +4806,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:57.522Z",
+        "start_timestamp": "2024-08-09T16:53:00.728Z",
         "line": 35,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -4880,7 +4816,7 @@
         "steps": [
           {
             "result": {
-              "duration": 47074300,
+              "duration": 104866600,
               "status": "passed"
             },
             "line": 22,
@@ -4892,7 +4828,7 @@
           },
           {
             "result": {
-              "duration": 1493200,
+              "duration": 1998800,
               "status": "passed"
             },
             "line": 23,
@@ -4914,7 +4850,7 @@
           },
           {
             "result": {
-              "duration": 113124000,
+              "duration": 241739800,
               "status": "passed"
             },
             "line": 24,
@@ -4926,7 +4862,7 @@
           },
           {
             "result": {
-              "duration": 44147100,
+              "duration": 84562500,
               "status": "passed"
             },
             "line": 25,
@@ -4944,7 +4880,7 @@
           },
           {
             "result": {
-              "duration": 39021000,
+              "duration": 107031200,
               "status": "passed"
             },
             "line": 26,
@@ -4962,7 +4898,7 @@
           },
           {
             "result": {
-              "duration": 33405600,
+              "duration": 82276900,
               "status": "passed"
             },
             "line": 27,
@@ -4974,7 +4910,7 @@
           },
           {
             "result": {
-              "duration": 14205400,
+              "duration": 28019000,
               "status": "passed"
             },
             "line": 28,
@@ -4995,7 +4931,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:57.820Z",
+        "start_timestamp": "2024-08-09T16:53:01.382Z",
         "line": 36,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -5005,7 +4941,7 @@
         "steps": [
           {
             "result": {
-              "duration": 48504900,
+              "duration": 93982400,
               "status": "passed"
             },
             "line": 22,
@@ -5017,7 +4953,7 @@
           },
           {
             "result": {
-              "duration": 1031300,
+              "duration": 2167300,
               "status": "passed"
             },
             "line": 23,
@@ -5039,7 +4975,7 @@
           },
           {
             "result": {
-              "duration": 101195300,
+              "duration": 224575400,
               "status": "passed"
             },
             "line": 24,
@@ -5051,7 +4987,7 @@
           },
           {
             "result": {
-              "duration": 59982400,
+              "duration": 100289700,
               "status": "passed"
             },
             "line": 25,
@@ -5069,7 +5005,7 @@
           },
           {
             "result": {
-              "duration": 155986000,
+              "duration": 256154900,
               "status": "passed"
             },
             "line": 26,
@@ -5087,7 +5023,7 @@
           },
           {
             "result": {
-              "duration": 35426800,
+              "duration": 96704900,
               "status": "passed"
             },
             "line": 27,
@@ -5099,7 +5035,7 @@
           },
           {
             "result": {
-              "duration": 18655600,
+              "duration": 28084100,
               "status": "passed"
             },
             "line": 28,
@@ -5120,7 +5056,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:58.244Z",
+        "start_timestamp": "2024-08-09T16:53:02.189Z",
         "line": 37,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -5130,7 +5066,7 @@
         "steps": [
           {
             "result": {
-              "duration": 41231700,
+              "duration": 100251600,
               "status": "passed"
             },
             "line": 22,
@@ -5142,7 +5078,7 @@
           },
           {
             "result": {
-              "duration": 977000,
+              "duration": 998300,
               "status": "passed"
             },
             "line": 23,
@@ -5164,7 +5100,7 @@
           },
           {
             "result": {
-              "duration": 89790300,
+              "duration": 233082300,
               "status": "passed"
             },
             "line": 24,
@@ -5176,7 +5112,7 @@
           },
           {
             "result": {
-              "duration": 38235400,
+              "duration": 97197300,
               "status": "passed"
             },
             "line": 25,
@@ -5194,7 +5130,7 @@
           },
           {
             "result": {
-              "duration": 110190400,
+              "duration": 256413200,
               "status": "passed"
             },
             "line": 26,
@@ -5212,7 +5148,7 @@
           },
           {
             "result": {
-              "duration": 36772500,
+              "duration": 97092700,
               "status": "passed"
             },
             "line": 27,
@@ -5224,7 +5160,7 @@
           },
           {
             "result": {
-              "duration": 16700100,
+              "duration": 40382500,
               "status": "passed"
             },
             "line": 28,
@@ -5245,7 +5181,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:58.581Z",
+        "start_timestamp": "2024-08-09T16:53:03.019Z",
         "line": 38,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -5255,7 +5191,7 @@
         "steps": [
           {
             "result": {
-              "duration": 49092000,
+              "duration": 122370400,
               "status": "passed"
             },
             "line": 22,
@@ -5267,7 +5203,7 @@
           },
           {
             "result": {
-              "duration": 1241900,
+              "duration": 997500,
               "status": "passed"
             },
             "line": 23,
@@ -5289,7 +5225,7 @@
           },
           {
             "result": {
-              "duration": 108403300,
+              "duration": 305967500,
               "status": "passed"
             },
             "line": 24,
@@ -5301,7 +5237,7 @@
           },
           {
             "result": {
-              "duration": 96477700,
+              "duration": 246009300,
               "status": "passed"
             },
             "line": 25,
@@ -5319,7 +5255,7 @@
           },
           {
             "result": {
-              "duration": 45857400,
+              "duration": 94540100,
               "status": "passed"
             },
             "line": 26,
@@ -5337,7 +5273,7 @@
           },
           {
             "result": {
-              "duration": 50316900,
+              "duration": 79665500,
               "status": "passed"
             },
             "line": 27,
@@ -5349,7 +5285,7 @@
           },
           {
             "result": {
-              "duration": 14711600,
+              "duration": 25725200,
               "status": "passed"
             },
             "line": 28,
@@ -5370,7 +5306,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:58.951Z",
+        "start_timestamp": "2024-08-09T16:53:03.898Z",
         "line": 39,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -5380,7 +5316,7 @@
         "steps": [
           {
             "result": {
-              "duration": 43785600,
+              "duration": 104176500,
               "status": "passed"
             },
             "line": 22,
@@ -5392,7 +5328,7 @@
           },
           {
             "result": {
-              "duration": 1019200,
+              "duration": 2924700,
               "status": "passed"
             },
             "line": 23,
@@ -5414,7 +5350,7 @@
           },
           {
             "result": {
-              "duration": 94195600,
+              "duration": 207748500,
               "status": "passed"
             },
             "line": 24,
@@ -5426,7 +5362,7 @@
           },
           {
             "result": {
-              "duration": 100369300,
+              "duration": 249413400,
               "status": "passed"
             },
             "line": 25,
@@ -5444,7 +5380,7 @@
           },
           {
             "result": {
-              "duration": 48470000,
+              "duration": 120683700,
               "status": "passed"
             },
             "line": 26,
@@ -5462,7 +5398,7 @@
           },
           {
             "result": {
-              "duration": 36951200,
+              "duration": 98117600,
               "status": "passed"
             },
             "line": 27,
@@ -5474,7 +5410,7 @@
           },
           {
             "result": {
-              "duration": 17164400,
+              "duration": 30022300,
               "status": "passed"
             },
             "line": 28,
@@ -5495,7 +5431,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-08-09T16:39:59.297Z",
+        "start_timestamp": "2024-08-09T16:53:04.715Z",
         "line": 40,
         "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
         "description": "\tRegistration Feature Testing Positive Scenario",
@@ -5505,7 +5441,7 @@
         "steps": [
           {
             "result": {
-              "duration": 44336700,
+              "duration": 180403500,
               "status": "passed"
             },
             "line": 22,
@@ -5517,7 +5453,7 @@
           },
           {
             "result": {
-              "duration": 2205900,
+              "duration": 16347000,
               "status": "passed"
             },
             "line": 23,
@@ -5539,7 +5475,7 @@
           },
           {
             "result": {
-              "duration": 100551300,
+              "duration": 216236500,
               "status": "passed"
             },
             "line": 24,
@@ -5551,7 +5487,7 @@
           },
           {
             "result": {
-              "duration": 102520700,
+              "duration": 221378200,
               "status": "passed"
             },
             "line": 25,
@@ -5569,7 +5505,7 @@
           },
           {
             "result": {
-              "duration": 103549800,
+              "duration": 224830200,
               "status": "passed"
             },
             "line": 26,
@@ -5587,7 +5523,7 @@
           },
           {
             "result": {
-              "duration": 46724200,
+              "duration": 72089600,
               "status": "passed"
             },
             "line": 27,
@@ -5599,7 +5535,7 @@
           },
           {
             "result": {
-              "duration": 16070600,
+              "duration": 32718300,
               "status": "passed"
             },
             "line": 28,
@@ -5640,7 +5576,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2024-08-09T16:39:59.716Z",
+        "start_timestamp": "2024-08-09T16:53:05.680Z",
         "line": 10,
         "name": "User wants to see all the available celestial bodies in planetarium",
         "description": "",
@@ -5650,7 +5586,7 @@
         "steps": [
           {
             "result": {
-              "duration": 269956100,
+              "duration": 582864400,
               "status": "passed"
             },
             "line": 4,
@@ -5672,7 +5608,7 @@
           },
           {
             "result": {
-              "duration": 7192400,
+              "duration": 17458600,
               "status": "passed"
             },
             "line": 5,
@@ -5685,7 +5621,7 @@
           {
             "result": {
               "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.ViewCeletialBodiesSteps.user_sees_all_the_bodies(ViewCeletialBodiesSteps.java:57)\r\n\tat ✽.User see all the available celestial Bodies.(classpath:features/ViewCeletialBodies.feature:6)\r\n",
-              "duration": 1656636000,
+              "duration": 2168056800,
               "status": "failed"
             },
             "line": 6,

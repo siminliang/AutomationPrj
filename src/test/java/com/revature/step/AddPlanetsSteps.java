@@ -2,7 +2,10 @@ package com.revature.step;
 
 import com.revature.TestRunner;
 import com.revature.entity.PlanetEntity;
+import com.revature.entity.UserEntity;
 import com.revature.repositories.PlanetRepository;
+import com.revature.repositories.UserRepository;
+import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,9 +20,11 @@ import java.time.Duration;
 
 public class AddPlanetsSteps {
 
-    @Given("The User is already log on.")
+    @Given("The User is already log on")
     public void the_User_is_already_log_on() {
         // All the steps required to log the user in
+        UserEntity userEntity = new UserEntity("Lisan", "al-gaib");
+        UserRepository.addUser(userEntity);
         TestRunner.planetariumLoginHome.goToPlanetariumLoginHome();
         TestRunner.planetariumLoginHome.sendToUsernameInput("Lisan");
         TestRunner.planetariumLoginHome.sendToPasswordInput("al-gaib");
@@ -64,6 +69,7 @@ public class AddPlanetsSteps {
         //TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
         //getPlanetName returns all text in celestialTable, so it should contain moon name as well
         //TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        //TestRunner.wait..until(ExpectedConditions.visibilityOfElementLocated(By.tagName("td")));
         try{
             TestRunner.wait.until(ExpectedConditions.alertIsPresent());
             //Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
