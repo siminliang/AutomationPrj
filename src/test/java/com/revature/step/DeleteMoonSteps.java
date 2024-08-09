@@ -55,14 +55,15 @@ public class DeleteMoonSteps {
     public void the_moon_should_be_deleted_from_the_planetarium(String string) {
         try{
             TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            //Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
+            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
             TestRunner.driver.switchTo().alert().accept();
         }
         catch (TimeoutException e){
             //Assert.fail();
+            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
         }
-        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-        Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+
     }
 
     @Given("There is no Moon named {string} in planetarium")
@@ -112,9 +113,10 @@ public class DeleteMoonSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
+            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
         }
-        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-        Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+
         /*
         boolean existID = false;
         List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();

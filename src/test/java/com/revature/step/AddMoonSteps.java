@@ -85,8 +85,16 @@ public class AddMoonSteps {
         //TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
         //getPlanetName returns all text in celestialTable, so it should contain moon name as well
         //TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-        Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        try{
+            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
+        }
+        catch (TimeoutException e){
+            //Assert.fail();
+            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        }
     }
 
     @Then("The Moon {string} should not be added to planetarium")
@@ -98,8 +106,9 @@ public class AddMoonSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
+            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
         }
-        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-        Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+
     }
 }

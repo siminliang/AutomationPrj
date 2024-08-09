@@ -72,14 +72,15 @@ public class AddPlanetsSteps {
         //TestRunner.wait..until(ExpectedConditions.visibilityOfElementLocated(By.tagName("td")));
         try{
             TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            //Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
+            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
             TestRunner.driver.switchTo().alert().accept();
         }
         catch (TimeoutException e){
             //Assert.fail();
+            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
         }
-        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-        Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+
     }
 
     @Then("The planet {string} should not be added to the planetarium")
@@ -91,9 +92,10 @@ public class AddPlanetsSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
+            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
         }
-        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-        Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+
 
     }
 }

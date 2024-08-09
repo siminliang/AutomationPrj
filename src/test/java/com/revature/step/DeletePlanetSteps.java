@@ -58,9 +58,10 @@ public class DeletePlanetSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
+            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
         }
-        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-        Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+
     }
 
     @Given("No planet with name {string} exist")
@@ -109,9 +110,10 @@ public class DeletePlanetSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
+            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
         }
-        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-        Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+
         /*
         boolean existID = false;
         List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
