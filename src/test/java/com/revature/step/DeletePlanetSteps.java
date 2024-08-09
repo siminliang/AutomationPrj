@@ -58,8 +58,15 @@ public class DeletePlanetSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
-            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = true;
+            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+            for(PlanetEntity planetEntity : planetEntityList){
+                if(planetEntity.getName().equals(string))
+                    existID = false;
+            }
+            Assert.assertTrue(existID);
         }
 
     }
@@ -110,19 +117,16 @@ public class DeletePlanetSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
-            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = false;
+            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+            for(PlanetEntity planetEntity : planetEntityList){
+                if(planetEntity.getId().equals(string))
+                    existID = true;
+            }
+            Assert.assertTrue(existID);
         }
 
-        /*
-        boolean existID = false;
-        List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
-        for(PlanetEntity planetEntity : planetEntityList){
-            if(planetEntity.getId().equals(string))
-                existID = true;
-        }
-        Assert.assertTrue(existID);
-
-         */
     }
 }

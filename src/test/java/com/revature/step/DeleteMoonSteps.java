@@ -2,6 +2,7 @@ package com.revature.step;
 
 import com.revature.TestRunner;
 import com.revature.entity.MoonEntity;
+import com.revature.entity.PlanetEntity;
 import com.revature.repositories.MoonRepository;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
@@ -60,8 +61,15 @@ public class DeleteMoonSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
-            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = true;
+            List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
+            for(MoonEntity moonEntity : moonEntityList){
+                if(moonEntity.getName().equals(string))
+                    existID = false;
+            }
+            Assert.assertTrue(existID);
         }
 
     }
@@ -113,19 +121,17 @@ public class DeleteMoonSteps {
         }
         catch (TimeoutException e){
             //Assert.fail();
-            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = false;
+            List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
+            for(MoonEntity moonEntity : moonEntityList){
+                if(moonEntity.getId().equals(string))
+                    existID = true;
+            }
+            Assert.assertTrue(existID);
         }
 
-        /*
-        boolean existID = false;
-        List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
-        for(MoonEntity moonEntity : moonEntityList){
-            if(moonEntity.getId().equals(string))
-                existID = true;
-        }
-        Assert.assertTrue(existID);
 
-         */
     }
 }
