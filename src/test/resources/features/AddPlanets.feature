@@ -5,7 +5,7 @@ Feature: AddPlanets
 	Scenario Outline: As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
 	
 Add Planets Test Positive Scenario
-		Given The User is already log on.
+		Given The User is already log on
 		Given No planet with name "<PlanetName>" in planetarium
 		When The User selects planets from the drop-down menu
 		When The User enters "<PlanetName>" for planet name
@@ -23,7 +23,7 @@ Add Planets Test Positive Scenario
 	@SCRUM-TC-25
 	Scenario Outline: As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
 	Add Planets Test Negative Scenario
-		Given The User is already log on.
+		Given The User is already log on
 		When The User selects planets from the drop-down menu
 		When The User enters "<PlanetName>" for planet name
 		When "<image>" The User selects an image from filesystem for planet image
