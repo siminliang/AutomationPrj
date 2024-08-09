@@ -24,6 +24,7 @@ Feature: AddMoons
   Scenario Outline: As a User I should be able to add Moon (Negative Scenario)
     Given The User is already log on.
     Given The ID of the Planet "<OrbitedPlanetID>" does not exist in the Planetarium
+    Given Moon name "Titan" exist
     When The User selects planets from the drop-down menu
     When The User selects moon from the drop-down menu
     When The User enters "<MoonName>" for moon name

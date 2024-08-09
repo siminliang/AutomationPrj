@@ -102,7 +102,7 @@ public class PlanetariumHome {
         planetImageInput.sendKeys(absolutePath);
     }
 
-    public String getPlanetName(){
+    public String getCelestialTableAsText(){
 
         return celestialTable.getText();
     }

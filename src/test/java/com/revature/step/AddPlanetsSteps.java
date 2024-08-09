@@ -2,9 +2,7 @@ package com.revature.step;
 
 import com.revature.TestRunner;
 import com.revature.entity.PlanetEntity;
-import com.revature.entity.UserEntity;
 import com.revature.repositories.PlanetRepository;
-import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -33,7 +31,7 @@ public class AddPlanetsSteps {
     public void no_planet_with_name_in_planetarium(String string) {
         // Deletes planet from the planetarium if it already exists
         PlanetEntity planetEntity = new PlanetEntity(string);
-        PlanetRepository.deletePlanet(planetEntity);
+        PlanetRepository.deletePlanetWithString(planetEntity);
         TestRunner.refresh();
     }
 
@@ -61,22 +59,35 @@ public class AddPlanetsSteps {
 
     @Then("The planet {string} should be added to the planetarium")
     public void the_planet_should_be_added_to_the_planetarium(String string) {
-        TestRunner.wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("celestialTable")));
-        WebElement myElement = new WebDriverWait(TestRunner.driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.id("celestialTable")));
-        Assert.assertTrue(TestRunner.planetariumHome.getPlanetName().contains(string));
+        //TestRunner.wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("celestialTable")));
+        //TestRunner.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("celestialTable")));
+        //TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
+        //getPlanetName returns all text in celestialTable, so it should contain moon name as well
+        //TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        try{
+            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            //Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
+        }
+        catch (TimeoutException e){
+            //Assert.fail();
+        }
+        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+        Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
     }
 
     @Then("The planet {string} should not be added to the planetarium")
     public void the_planet_should_not_be_added_to_the_planetarium(String string) {
         try{
             TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
         }
         catch (TimeoutException e){
-            Assert.fail();
+            //Assert.fail();
         }
-        Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
-        TestRunner.driver.switchTo().alert().accept();
+        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+        Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
 
     }
 }

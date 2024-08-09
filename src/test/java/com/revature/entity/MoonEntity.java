@@ -1,6 +1,8 @@
 package com.revature.entity;
 
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class MoonEntity {
 
@@ -48,6 +50,12 @@ public class MoonEntity {
 
     public void setImage(File image) {
         this.image = image;
+    }
+
+    public void setDefaultImage(){
+        Path relativePath = Paths.get("src/test/resources/images/moon-1.jpg");
+        String absolutePath = relativePath.toAbsolutePath().toString();
+        this.image = new File(absolutePath);
     }
 
     public String getId() {

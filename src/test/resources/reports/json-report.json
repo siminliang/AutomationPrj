@@ -1,1 +1,5722 @@
-[]
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-09T16:39:14.996Z",
+        "line": 19,
+        "name": "As a User I should be able to add Moon (Positive Scenario)",
+        "description": "",
+        "id": "addmoons;as-a-user-i-should-be-able-to-add-moon-(positive-scenario);;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 281689500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 307323200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "No Planet or Moon with name \"Noom\" in planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Noom\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.no_planet_or_moon_with_name_in_planetarium(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 62068900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The ID of the Planet \"1\" that the moon orbiting does exist in Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.moon_orbiting_planet_exists(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 101833100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 194630300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The User selects moon from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_moon_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 157986800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The User enters \"Noom\" for moon name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Noom\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_for_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 66646300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_orbited_planet_id(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "\"moon-1.jpg\" The User selects an image from file explorer for moon image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"moon-1.jpg\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_an_image_from_filesystem_for_moon_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41843700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_be_added_to_the_planetarium(AddMoonSteps.java:87)\r\n\tat ✽.The Moon \"Noom\" should be added to planetarium(classpath:features/AddMoons.feature:15)\r\n",
+              "duration": 33240100,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "The Moon \"Noom\" should be added to planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Noom\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_moon_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddMoons"
+          },
+          {
+            "name": "@SCRUM-TC-22"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:16.316Z",
+        "line": 20,
+        "name": "As a User I should be able to add Moon (Positive Scenario)",
+        "description": "",
+        "id": "addmoons;as-a-user-i-should-be-able-to-add-moon-(positive-scenario);;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 256582800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 35314100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "No Planet or Moon with name \"Noom\" in planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Noom\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.no_planet_or_moon_with_name_in_planetarium(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 29683800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The ID of the Planet \"1\" that the moon orbiting does exist in Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.moon_orbiting_planet_exists(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 83202100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 79379100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The User selects moon from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_moon_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 182813900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The User enters \"Noom\" for moon name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Noom\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_for_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 121165900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_orbited_planet_id(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "\"\" The User selects an image from file explorer for moon image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_an_image_from_filesystem_for_moon_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30880900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_be_added_to_the_planetarium(AddMoonSteps.java:87)\r\n\tat ✽.The Moon \"Noom\" should be added to planetarium(classpath:features/AddMoons.feature:15)\r\n",
+              "duration": 22696400,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "The Moon \"Noom\" should be added to planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Noom\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_moon_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddMoons"
+          },
+          {
+            "name": "@SCRUM-TC-22"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:17.160Z",
+        "line": 38,
+        "name": "As a User I should be able to add Moon (Negative Scenario)",
+        "description": "",
+        "id": "addmoons;as-a-user-i-should-be-able-to-add-moon-(negative-scenario);;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 232913500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 36784300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The ID of the Planet \"1\" does not exist in the Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.id_of_orbited_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Moon name \"Titan\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.moon_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 71656400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 69190000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "The User selects moon from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_moon_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 163449900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User enters \"Titan\" for moon name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_for_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 116923500,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_orbited_planet_id(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "\"moon-1.jpg\" The User selects an image from file explorer for moon image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"moon-1.jpg\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_an_image_from_filesystem_for_moon_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 32750300,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(AddMoonSteps.java:101)\r\n\tat ✽.The Moon \"Titan\" should not be added to planetarium(classpath:features/AddMoons.feature:34)\r\n",
+              "duration": 1040883600,
+              "status": "failed"
+            },
+            "line": 34,
+            "name": "The Moon \"Titan\" should not be added to planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddMoons"
+          },
+          {
+            "name": "@SCRUM-TC-23"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:18.942Z",
+        "line": 39,
+        "name": "As a User I should be able to add Moon (Negative Scenario)",
+        "description": "",
+        "id": "addmoons;as-a-user-i-should-be-able-to-add-moon-(negative-scenario);;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 211011400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 31491400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The ID of the Planet \"1\" does not exist in the Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.id_of_orbited_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Moon name \"Titan\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.moon_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 67459100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 65888600,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "The User selects moon from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_moon_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 177754500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User enters \"Titan\" for moon name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_for_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 121457200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_orbited_planet_id(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "\"\" The User selects an image from file explorer for moon image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_an_image_from_filesystem_for_moon_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 33866900,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(AddMoonSteps.java:101)\r\n\tat ✽.The Moon \"Titan\" should not be added to planetarium(classpath:features/AddMoons.feature:34)\r\n",
+              "duration": 1049648800,
+              "status": "failed"
+            },
+            "line": 34,
+            "name": "The Moon \"Titan\" should not be added to planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddMoons"
+          },
+          {
+            "name": "@SCRUM-TC-23"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:20.705Z",
+        "line": 40,
+        "name": "As a User I should be able to add Moon (Negative Scenario)",
+        "description": "",
+        "id": "addmoons;as-a-user-i-should-be-able-to-add-moon-(negative-scenario);;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 244270500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 50031600,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The ID of the Planet \"1\" does not exist in the Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.id_of_orbited_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2008000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Moon name \"Titan\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.moon_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 73718600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 58612900,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "The User selects moon from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_moon_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 323567700,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User enters \"SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose\" for moon name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_for_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49791300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_orbited_planet_id(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "\"moon-1.jpg\" The User selects an image from file explorer for moon image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"moon-1.jpg\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_an_image_from_filesystem_for_moon_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24977500,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1041776600,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "The Moon \"SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose\" should not be added to planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddMoons"
+          },
+          {
+            "name": "@SCRUM-TC-23"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:22.584Z",
+        "line": 41,
+        "name": "As a User I should be able to add Moon (Negative Scenario)",
+        "description": "",
+        "id": "addmoons;as-a-user-i-should-be-able-to-add-moon-(negative-scenario);;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 232920600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 27585800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The ID of the Planet \"1\" does not exist in the Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.id_of_orbited_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Moon name \"Titan\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.moon_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 77074600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 187574700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "The User selects moon from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_moon_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 316965500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User enters \"SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose\" for moon name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_for_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72530000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "The User enters \"1\" for the planet that the moon is orbiting",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_orbited_planet_id(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "\"\" The User selects an image from file explorer for moon image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_an_image_from_filesystem_for_moon_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35561000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1058287900,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "The Moon \"SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose\" should not be added to planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddMoons"
+          },
+          {
+            "name": "@SCRUM-TC-23"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:24.612Z",
+        "line": 42,
+        "name": "As a User I should be able to add Moon (Negative Scenario)",
+        "description": "",
+        "id": "addmoons;as-a-user-i-should-be-able-to-add-moon-(negative-scenario);;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 213682600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 55153000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The ID of the Planet \"10\" does not exist in the Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.id_of_orbited_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3649000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Moon name \"Titan\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.moon_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 86488200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77018600,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "The User selects moon from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_moon_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 167839800,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User enters \"Normal\" for moon name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Normal\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_for_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 111541400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "The User enters \"10\" for the planet that the moon is orbiting",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_orbited_planet_id(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "\"moon-1.jpg\" The User selects an image from file explorer for moon image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"moon-1.jpg\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_an_image_from_filesystem_for_moon_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30339000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1033644900,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "The Moon \"Normal\" should not be added to planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Normal\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddMoons"
+          },
+          {
+            "name": "@SCRUM-TC-23"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:26.392Z",
+        "line": 43,
+        "name": "As a User I should be able to add Moon (Negative Scenario)",
+        "description": "",
+        "id": "addmoons;as-a-user-i-should-be-able-to-add-moon-(negative-scenario);;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 191576700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 31448300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The ID of the Planet \"10\" does not exist in the Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 21
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.id_of_orbited_planet_does_not_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1802200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "Moon name \"Titan\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.moon_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 79076800,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 64236300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "The User selects moon from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_moon_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 181661700,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User enters \"Normal\" for moon name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Normal\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_for_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 117218700,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "The User enters \"10\" for the planet that the moon is orbiting",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_enters_orbited_planet_id(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "\"\" The User selects an image from file explorer for moon image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_User_selects_an_image_from_filesystem_for_moon_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35143400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1047551300,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "The Moon \"Normal\" should not be added to planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Normal\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.AddMoonSteps.the_moon_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddMoons"
+          },
+          {
+            "name": "@SCRUM-TC-23"
+          }
+        ]
+      }
+    ],
+    "name": "AddMoons",
+    "description": "",
+    "id": "addmoons",
+    "keyword": "Feature",
+    "uri": "classpath:features/AddMoons.feature",
+    "tags": [
+      {
+        "name": "@AddMoons",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-09T16:39:28.152Z",
+        "line": 18,
+        "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
+        "description": "Add Planets Test Positive Scenario",
+        "id": "addplanets;as-a-user-i-want-to-add-new-planets-to-the-planetarium--so-i-can-track-the-planet-in-the-night-sky;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 260256100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 42099800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "No planet with name \"this planet name is 30 chars!!\" in planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 30 chars!!\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.no_planet_with_name_in_planetarium(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 100294900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 213910500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The User enters \"this planet name is 30 chars!!\" for planet name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 30 chars!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_enters_for_planet_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 99427300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "\"true\" The User selects an image from filesystem for planet image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"true\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_an_image_from_filesystem_for_planet_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49198000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1041930600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "The planet \"this planet name is 30 chars!!\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 30 chars!!\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanets"
+          },
+          {
+            "name": "@SCRUM-TC-24"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:29.977Z",
+        "line": 19,
+        "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
+        "description": "Add Planets Test Positive Scenario",
+        "id": "addplanets;as-a-user-i-want-to-add-new-planets-to-the-planetarium--so-i-can-track-the-planet-in-the-night-sky;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 289444700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 42247400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "No planet with name \"Terra\" in planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Terra\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.no_planet_with_name_in_planetarium(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 93615300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 153862100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The User enters \"Terra\" for planet name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Terra\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_enters_for_planet_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35749200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "\"true\" The User selects an image from filesystem for planet image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"true\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_an_image_from_filesystem_for_planet_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 37600200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1048567300,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "The planet \"Terra\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Terra\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanets"
+          },
+          {
+            "name": "@SCRUM-TC-24"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:31.684Z",
+        "line": 20,
+        "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
+        "description": "Add Planets Test Positive Scenario",
+        "id": "addplanets;as-a-user-i-want-to-add-new-planets-to-the-planetarium--so-i-can-track-the-planet-in-the-night-sky;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 241532800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 47944300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "No planet with name \"this planet name is 30 chars!!\" in planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 30 chars!!\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.no_planet_with_name_in_planetarium(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 67963000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 225799600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The User enters \"this planet name is 30 chars!!\" for planet name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 30 chars!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_enters_for_planet_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "\"false\" The User selects an image from filesystem for planet image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"false\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_an_image_from_filesystem_for_planet_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 112398600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddPlanetsSteps.the_planet_should_be_added_to_the_planetarium(AddPlanetsSteps.java:76)\r\n\tat ✽.The planet \"this planet name is 30 chars!!\" should be added to the planetarium(classpath:features/AddPlanets.feature:14)\r\n",
+              "duration": 1062503100,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "The planet \"this planet name is 30 chars!!\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 30 chars!!\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanets"
+          },
+          {
+            "name": "@SCRUM-TC-24"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:33.442Z",
+        "line": 21,
+        "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
+        "description": "Add Planets Test Positive Scenario",
+        "id": "addplanets;as-a-user-i-want-to-add-new-planets-to-the-planetarium--so-i-can-track-the-planet-in-the-night-sky;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 209560900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 63536400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "No planet with name \"Terra\" in planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Terra\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.no_planet_with_name_in_planetarium(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 70176400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 67793800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The User enters \"Terra\" for planet name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Terra\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_enters_for_planet_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "\"false\" The User selects an image from filesystem for planet image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"false\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_an_image_from_filesystem_for_planet_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 137437800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.AddPlanetsSteps.the_planet_should_be_added_to_the_planetarium(AddPlanetsSteps.java:76)\r\n\tat ✽.The planet \"Terra\" should be added to the planetarium(classpath:features/AddPlanets.feature:14)\r\n",
+              "duration": 1043454200,
+              "status": "failed"
+            },
+            "line": 14,
+            "name": "The planet \"Terra\" should be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Terra\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_planet_should_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanets"
+          },
+          {
+            "name": "@SCRUM-TC-24"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:35.040Z",
+        "line": 35,
+        "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
+        "description": "\tAdd Planets Test Negative Scenario",
+        "id": "addplanets;as-a-user-i-want-to-add-new-planets-to-the-planetarium--so-i-can-track-the-planet-in-the-night-sky;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 234683300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 78567200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 229111600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User enters \"this planet name is 31 chars!!!\" for planet name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 31 chars!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_enters_for_planet_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 91438100,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "\"true\" The User selects an image from filesystem for planet image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"true\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_an_image_from_filesystem_for_planet_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 43087000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 598358300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "The planet \"this planet name is 31 chars!!!\" should not be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 31 chars!!!\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_planet_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanets"
+          },
+          {
+            "name": "@SCRUM-TC-25"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:36.317Z",
+        "line": 36,
+        "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
+        "description": "\tAdd Planets Test Negative Scenario",
+        "id": "addplanets;as-a-user-i-want-to-add-new-planets-to-the-planetarium--so-i-can-track-the-planet-in-the-night-sky;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 248252200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 62701500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 87515900,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User enters \"nonunique\" for planet name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"nonunique\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_enters_for_planet_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 143072200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "\"true\" The User selects an image from filesystem for planet image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"true\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_an_image_from_filesystem_for_planet_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 108536900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddPlanetsSteps.the_planet_should_not_be_added_to_the_planetarium(AddPlanetsSteps.java:90)\r\n\tat ✽.The planet \"nonunique\" should not be added to the planetarium(classpath:features/AddPlanets.feature:31)\r\n",
+              "duration": 558434300,
+              "status": "failed"
+            },
+            "line": 31,
+            "name": "The planet \"nonunique\" should not be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"nonunique\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_planet_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanets"
+          },
+          {
+            "name": "@SCRUM-TC-25"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:37.526Z",
+        "line": 37,
+        "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
+        "description": "\tAdd Planets Test Negative Scenario",
+        "id": "addplanets;as-a-user-i-want-to-add-new-planets-to-the-planetarium--so-i-can-track-the-planet-in-the-night-sky;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 252634000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 76016600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 233318300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User enters \"this planet name is 31 chars!!!\" for planet name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 31 chars!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_enters_for_planet_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "\"false\" The User selects an image from filesystem for planet image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"false\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_an_image_from_filesystem_for_planet_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 104731300,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1039315200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "The planet \"this planet name is 31 chars!!!\" should not be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"this planet name is 31 chars!!!\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_planet_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanets"
+          },
+          {
+            "name": "@SCRUM-TC-25"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:39.236Z",
+        "line": 38,
+        "name": "As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky",
+        "description": "\tAdd Planets Test Negative Scenario",
+        "id": "addplanets;as-a-user-i-want-to-add-new-planets-to-the-planetarium--so-i-can-track-the-planet-in-the-night-sky;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 208974100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User is already log on.",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_is_already_log_on()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 67917600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 87449900,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User enters \"nonunique\" for planet name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"nonunique\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_enters_for_planet_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "\"false\" The User selects an image from filesystem for planet image",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"false\"",
+                  "offset": 0
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_an_image_from_filesystem_for_planet_image(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 151427900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "The User clicks on the submit button",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_clicks_on_the_submit_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.step.AddPlanetsSteps.the_planet_should_not_be_added_to_the_planetarium(AddPlanetsSteps.java:90)\r\n\tat ✽.The planet \"nonunique\" should not be added to the planetarium(classpath:features/AddPlanets.feature:31)\r\n",
+              "duration": 1037803300,
+              "status": "failed"
+            },
+            "line": 31,
+            "name": "The planet \"nonunique\" should not be added to the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"nonunique\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.AddPlanetsSteps.the_planet_should_not_be_added_to_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddPlanets"
+          },
+          {
+            "name": "@SCRUM-TC-25"
+          }
+        ]
+      }
+    ],
+    "name": "AddPlanets",
+    "description": "",
+    "id": "addplanets",
+    "keyword": "Feature",
+    "uri": "classpath:features/AddPlanets.feature",
+    "tags": [
+      {
+        "name": "@AddPlanets",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-09T16:39:40.793Z",
+        "line": 16,
+        "name": "As a user I want to be able to remove Planets from the Planetarium",
+        "description": "\tDelete Planet Positive Scenario",
+        "id": "deletemoons;as-a-user-i-want-to-be-able-to-remove-planets-from-the-planetarium;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Moon name \"Moon\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Moon\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.moon_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 265302500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 57386600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The User selects moon from drop-down menu",
+            "match": {
+              "location": "com.revature.step.DeleteMoonSteps.the_User_selects_moon_from_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54908100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User enters valid moon name \"Moon\" for celestial body to be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Moon\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.user_enters_valid_moon_name_for_celestial_body_to_be_deleted(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 129505300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35159700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The moon \"Moon\" should be deleted from the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Moon\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.the_moon_should_be_deleted_from_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeleteMoons"
+          },
+          {
+            "name": "@SCRUM-TC-31"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:41.343Z",
+        "line": 17,
+        "name": "As a user I want to be able to remove Planets from the Planetarium",
+        "description": "\tDelete Planet Positive Scenario",
+        "id": "deletemoons;as-a-user-i-want-to-be-able-to-remove-planets-from-the-planetarium;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Moon name \"MoonMoon\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"MoonMoon\"",
+                  "offset": 10
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.moon_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 308214400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 40840300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The User selects moon from drop-down menu",
+            "match": {
+              "location": "com.revature.step.DeleteMoonSteps.the_User_selects_moon_from_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 72643500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User enters valid moon name \"MoonMoon\" for celestial body to be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"MoonMoon\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.user_enters_valid_moon_name_for_celestial_body_to_be_deleted(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27973900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 672907400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The moon \"MoonMoon\" should be deleted from the planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"MoonMoon\"",
+                  "offset": 9
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.the_moon_should_be_deleted_from_the_planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeleteMoons"
+          },
+          {
+            "name": "@SCRUM-TC-31"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:42.469Z",
+        "line": 31,
+        "name": "As a user I should not be able to remove Moon from the Planetarium when given invalid names",
+        "description": "\tDelete Moon Negative Scenario",
+        "id": "deletemoons;as-a-user-i-should-not-be-able-to-remove-moon-from-the-planetarium-when-given-invalid-names;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 287478800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 971400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "There is no Moon named \"Kirby of the Stars\" in planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Kirby of the Stars\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.there_is_no_Moon_named_in_planetarium(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 49190000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User selects moon from drop-down menu",
+            "match": {
+              "location": "com.revature.step.DeleteMoonSteps.the_User_selects_moon_from_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 203147500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User enters invalid \"\u003cInvalidMoonNames\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\u003cInvalidMoonNames\u003e\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.user_enters_invalid(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49065500,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 12753500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The user should see error message pop-up",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_user_should_see_error_message_pop_up()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeleteMoons"
+          },
+          {
+            "name": "@SCRUM-TC-32"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:43.072Z",
+        "line": 32,
+        "name": "As a user I should not be able to remove Moon from the Planetarium when given invalid names",
+        "description": "\tDelete Moon Negative Scenario",
+        "id": "deletemoons;as-a-user-i-should-not-be-able-to-remove-moon-from-the-planetarium-when-given-invalid-names;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 284006100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 998200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "There is no Moon named \"Hoshi no Narby\" in planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Hoshi no Narby\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.there_is_no_Moon_named_in_planetarium(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 51092300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User selects moon from drop-down menu",
+            "match": {
+              "location": "com.revature.step.DeleteMoonSteps.the_User_selects_moon_from_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 101913000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User enters invalid \"\u003cInvalidMoonNames\u003e\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\u003cInvalidMoonNames\u003e\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.user_enters_invalid(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 148038700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 526220900,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The user should see error message pop-up",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_user_should_see_error_message_pop_up()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeleteMoons"
+          },
+          {
+            "name": "@SCRUM-TC-32"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:44.186Z",
+        "line": 45,
+        "name": "User should not be able to delete a moon by  its ID",
+        "description": "",
+        "id": "deletemoons;user-should-not-be-able-to-delete-a-moon-by--its-id;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 443484200,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 574306000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "Moon with ID \"1\" exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 13
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.moon_with_ID_exists(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 114501700,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "The User selects moon from drop-down menu",
+            "match": {
+              "location": "com.revature.step.DeleteMoonSteps.the_User_selects_moon_from_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 116098600,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "User enters moon id \"1\" for celestial body to be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.user_enters_moon_id_for_celestial_body_to_be_deleted(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36029800,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39702400,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "The user should see error, and the moon with ID \"1\" should not be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 48
+                }
+              ],
+              "location": "com.revature.step.DeleteMoonSteps.the_user_should_see_error_and_the_moon_with_ID_should_not_be_deleted(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeleteMoons"
+          },
+          {
+            "name": "@SCRUM-TC-34"
+          }
+        ]
+      }
+    ],
+    "name": "DeleteMoons",
+    "description": "",
+    "id": "deletemoons",
+    "keyword": "Feature",
+    "uri": "classpath:features/DeleteMoons.feature",
+    "tags": [
+      {
+        "name": "@DeleteMoons",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-09T16:39:45.512Z",
+        "line": 16,
+        "name": "As a user I want to be able to remove Planets from the Planetarium",
+        "description": "\tDelete Planet Positive Scenario",
+        "id": "deleteplanets;as-a-user-i-want-to-be-able-to-remove-planets-from-the-planetarium;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 343742200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 600884600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Given Planet names \"Namke\" exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Namke\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.given_Planet_names_exists(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 122328100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The User selects planets from drop-down menu",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_selects_planets_from_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 76729200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User enters valid \"Namke\" for celestial body to be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Namke\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.user_enters_valid_for_celestial_body_to_be_deleted(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36565600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1049840600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The planet \"Namke\" should be deleted from the Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Namke\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.the_planet_should_be_deleted_from_the_Planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlanets"
+          },
+          {
+            "name": "@SCRUM-TC-21"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:47.752Z",
+        "line": 17,
+        "name": "As a user I want to be able to remove Planets from the Planetarium",
+        "description": "\tDelete Planet Positive Scenario",
+        "id": "deleteplanets;as-a-user-i-want-to-be-able-to-remove-planets-from-the-planetarium;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 288520000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 602059300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Given Planet names \"Vegeta\" exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Vegeta\"",
+                  "offset": 19
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.given_Planet_names_exists(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 74769500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The User selects planets from drop-down menu",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_selects_planets_from_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 108152700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User enters valid \"Vegeta\" for celestial body to be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Vegeta\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.user_enters_valid_for_celestial_body_to_be_deleted(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 33314100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1058414200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The planet \"Vegeta\" should be deleted from the Planetarium",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Vegeta\"",
+                  "offset": 11
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.the_planet_should_be_deleted_from_the_Planetarium(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlanets"
+          },
+          {
+            "name": "@SCRUM-TC-21"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:49.917Z",
+        "line": 31,
+        "name": "As a user I want to be able to remove Planets from the Planetarium, Negative Scenario",
+        "description": "\tDelete Planet Negative Scenario",
+        "id": "deleteplanets;as-a-user-i-want-to-be-able-to-remove-planets-from-the-planetarium--negative-scenario;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 250639100,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1998100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "No planet with name \"ZaWarudo\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ZaWarudo\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.no_planet_with_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 70502400,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 178856000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User enters invalid \"ZaWarudo\" for celestial body to be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ZaWarudo\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.user_enters_invalid_for_celestial_body_to_be_deleted(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 174110800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14763900,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The user should see error message pop-up",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_user_should_see_error_message_pop_up()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlanets"
+          },
+          {
+            "name": "@SCRUM-TC-30"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:50.613Z",
+        "line": 32,
+        "name": "As a user I want to be able to remove Planets from the Planetarium, Negative Scenario",
+        "description": "\tDelete Planet Negative Scenario",
+        "id": "deleteplanets;as-a-user-i-want-to-be-able-to-remove-planets-from-the-planetarium--negative-scenario;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 289064000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1440300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "No planet with name \"toki yo tomare\" exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"toki yo tomare\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.no_planet_with_name_exist(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 71997600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User selects planets from the drop-down menu",
+            "match": {
+              "location": "com.revature.step.AddPlanetsSteps.the_User_selects_planets_from_the_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 193567800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User enters invalid \"toki yo tomare\" for celestial body to be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"toki yo tomare\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.user_enters_invalid_for_celestial_body_to_be_deleted(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39931200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8755900,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The user should see error message pop-up",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_user_should_see_error_message_pop_up()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlanets"
+          },
+          {
+            "name": "@SCRUM-TC-30"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:51.222Z",
+        "line": 45,
+        "name": "User should not be able to delete a planet by its ID",
+        "description": "",
+        "id": "deleteplanets;user-should-not-be-able-to-delete-a-planet-by-its-id;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 302881500,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "The User is already logged in",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_is_already_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7046700,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "Planet with ID \"1\" exists",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.planet_with_ID_exists(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 70231200,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "The User selects planets from drop-down menu",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.the_User_selects_planets_from_drop_down_menu()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 50401600,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "User enters planet ID \"1\" for celestial body to be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.user_enters_planet_for_celestial_body_to_be_deleted(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31786800,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "User clicks on the Delete Button",
+            "match": {
+              "location": "com.revature.step.DeletePlanetSteps.user_clicks_on_the_Delete_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1141470000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "The user should see error, and the planet with ID \"1\" should not be deleted",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.revature.step.DeletePlanetSteps.the_user_should_see_error_and_the_planet_with_ID_should_not_be_deleted(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlanets"
+          },
+          {
+            "name": "@SCRUM-TC-33"
+          }
+        ]
+      }
+    ],
+    "name": "DeletePlanets",
+    "description": "",
+    "id": "deleteplanets",
+    "keyword": "Feature",
+    "uri": "classpath:features/DeletePlanets.feature",
+    "tags": [
+      {
+        "name": "@DeletePlanets",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-09T16:39:52.826Z",
+        "line": 16,
+        "name": "As a User I want to Login to my Account so that I can Enter the Planetarium",
+        "description": "\tLogin Functionality Test Positive Scenario",
+        "id": "login;as-a-user-i-want-to-login-to-my-account-so-that-i-can-enter-the-planetarium;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 74156800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4016800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Account with username \"Batman\" and password \"I am the night\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"I am the night\"",
+                  "offset": 44
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 85602200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The User enters \"Batman\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 127208100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The User enters \"I am the night\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"I am the night\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 38399300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 58380500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The User is redirected to the Planetarium",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_redirected_to_the_Planetarium()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-17"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:53.226Z",
+        "line": 30,
+        "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
+        "description": "\tLogin Functionality Test Negative Scenario",
+        "id": "login;as-the-system-i-don-t-want-a-user-to-login-to-an-account-using-an-invalid-username-and-password-combo-so-that-i-can-ensure-my-user-accounts-are-secure;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 46390800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2373500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 55771300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "The User enters \"Lisan\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42754200,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User enters \"atreidies\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"atreidies\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39443800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22816400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User is kept at the login page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_kept_at_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-18"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:53.437Z",
+        "line": 31,
+        "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
+        "description": "\tLogin Functionality Test Negative Scenario",
+        "id": "login;as-the-system-i-don-t-want-a-user-to-login-to-an-account-using-an-invalid-username-and-password-combo-so-that-i-can-ensure-my-user-accounts-are-secure;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 41706600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2055400,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 101231000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "The User enters \"Paul\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94013100,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User enters \"al-gaib\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 55581100,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17382300,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User is kept at the login page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_kept_at_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-18"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:53.759Z",
+        "line": 32,
+        "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
+        "description": "\tLogin Functionality Test Negative Scenario",
+        "id": "login;as-the-system-i-don-t-want-a-user-to-login-to-an-account-using-an-invalid-username-and-password-combo-so-that-i-can-ensure-my-user-accounts-are-secure;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 35813600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2014200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 50943700,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "The User enters \"\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 77122400,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User enters \"\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 69735300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 32710000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User is kept at the login page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_kept_at_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-18"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:54.035Z",
+        "line": 33,
+        "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
+        "description": "\tLogin Functionality Test Negative Scenario",
+        "id": "login;as-the-system-i-don-t-want-a-user-to-login-to-an-account-using-an-invalid-username-and-password-combo-so-that-i-can-ensure-my-user-accounts-are-secure;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 61867600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3006700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 92077500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "The User enters \"Lisan\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 51951800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User enters \"\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40598600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13698700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User is kept at the login page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_kept_at_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-18"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:54.304Z",
+        "line": 34,
+        "name": "As the System I don\u0027t want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure",
+        "description": "\tLogin Functionality Test Negative Scenario",
+        "id": "login;as-the-system-i-don-t-want-a-user-to-login-to-an-account-using-an-invalid-username-and-password-combo-so-that-i-can-ensure-my-user-accounts-are-secure;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 35553000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2003500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 43437900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "The User enters \"\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 57189900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User enters \"al-gaib\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35144300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13662200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User is kept at the login page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_kept_at_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-18"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:54.495Z",
+        "line": 50,
+        "name": "As a User I want to Logout of my Account so that I can exit the Planetarium",
+        "description": "\tLogin Functionality Test Positive Scenario",
+        "id": "login;as-a-user-i-want-to-logout-of-my-account-so-that-i-can-exit-the-planetarium;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 25415800,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000400,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "Account with username \"Batman\" and password \"I am the night\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"I am the night\"",
+                  "offset": 44
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 45649400,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "The User enters \"Batman\" into username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_username_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 67031200,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "The User enters \"I am the night\" into password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"I am the night\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.LoginSteps.the_User_enters_into_password_input_bar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 32271000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "The User clicks on the Login Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_clicks_on_the_Login_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35494400,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "The User is redirected to the Planetarium",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_redirected_to_the_Planetarium()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34272000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "The User clicks on the Logout Button",
+            "match": {
+              "location": "com.revature.step.LoginSteps.theUserClicksOnTheLogoutButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 33325500,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "The User is redirected back to the Login page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.theUserIsRedirectedBackToTheLoginPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-26"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:54.774Z",
+        "line": 53,
+        "name": "As the System I don\u0027t want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users",
+        "description": "\tLogin Functionality Test Negative Scenario",
+        "id": "login;as-the-system-i-don-t-want-a-user-to-bypass-the-login-page-so-that-i-can-ensure-the-planetarium-is-only-for-logged-in-users",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 30212100,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 50960400,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "The User enters the Planetarium Main Page URL into the browser URL",
+            "match": {
+              "location": "com.revature.step.LoginSteps.theUserEntersThePlanetariumMainPageURLIntoTheBrowserURL()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4023600,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "The User is not redirected to the Planetarium",
+            "match": {
+              "location": "com.revature.step.LoginSteps.theUserIsNotRedirectedToThePlanetarium()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@SCRUM-TC-27"
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "classpath:features/Login.feature",
+    "tags": [
+      {
+        "name": "@Login",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-09T16:39:54.862Z",
+        "line": 17,
+        "name": "As a User I want to Register an Account with the Planetarium so that I can Login Securely",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-a-user-i-want-to-register-an-account-with-the-planetarium-so-that-i-can-login-securely;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 38453600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7201100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "No Registered User with username \"Paul muad\u0027dib atreides!!!!!!!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul muad\u0027dib atreides!!!!!!!!\"",
+                  "offset": 33
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.no_Registered_User_with_username(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 122014100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 95661800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The User enters \"Paul muad\u0027dib atreides!!!!!!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul muad\u0027dib atreides!!!!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 106077700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The User enters \"Air power sea power desert30!!\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Air power sea power desert30!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41682600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 560561100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "The User is registered and redirected into the Planetarium Login page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_is_registered_and_redirected_into_the_Planetarium()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-19"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:55.839Z",
+        "line": 32,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 26933200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2009000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 111823300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 55732600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User enters \"Lisan\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 86848700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User enters \"atreidies\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"atreidies\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41177000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 531738400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:56.699Z",
+        "line": 33,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 39829000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1134400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 96286100,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 88466900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User enters \"House Harkonnen owns Arrakis!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"House Harkonnen owns Arrakis!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 101326400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User enters \"Air power sea power desert30!!\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Air power sea power desert30!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35616600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17245800,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:57.084Z",
+        "line": 34,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 40054900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2006800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 98630500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 128577200,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User enters \"House Harkonnen owns Arrakis!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"House Harkonnen owns Arrakis!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 109506900,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User enters \"The Lisan will liberate Arrakis\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The Lisan will liberate Arrakis\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41770700,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13255000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:57.522Z",
+        "line": 35,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 47074300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1493200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 113124000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 44147100,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User enters \"\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39021000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User enters \"\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 33405600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14205400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:57.820Z",
+        "line": 36,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 48504900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1031300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 101195300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 59982400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User enters \"\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 155986000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User enters \"Air power sea power desert30!!\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Air power sea power desert30!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35426800,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 18655600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:58.244Z",
+        "line": 37,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 41231700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 977000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 89790300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 38235400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User enters \"\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 110190400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User enters \"The Lisan will liberate Arrakis\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The Lisan will liberate Arrakis\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36772500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16700100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:58.581Z",
+        "line": 38,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 49092000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1241900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 108403300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 96477700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User enters \"Paul muad\u0027dib atreides!!!!!!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul muad\u0027dib atreides!!!!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 45857400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User enters \"\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 50316900,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14711600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:58.951Z",
+        "line": 39,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 43785600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1019200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 94195600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 100369300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User enters \"House Harkonnen owns Arrakis!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"House Harkonnen owns Arrakis!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 48470000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User enters \"\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36951200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 17164400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-08-09T16:39:59.297Z",
+        "line": 40,
+        "name": "As the System I don\u0027t want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met",
+        "description": "\tRegistration Feature Testing Positive Scenario",
+        "id": "registration;as-the-system-i-don-t-want-a-user-to-register-an-account-using-invalid-usernames-and-passwords-so-that-i-can-ensure-system-requirements-are-met;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 44336700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The User is on the Login Page",
+            "match": {
+              "location": "com.revature.step.LoginSteps.the_User_is_on_the_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2205900,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Account with username \"Lisan\" and password \"al-gaib\" already registered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Lisan\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"al-gaib\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.account_with_username_and_password_already_registered(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 100551300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The User clicks on Create an Account Link",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_Create_an_Account_Link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102520700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The User enters \"Paul muad\u0027dib atreides!!!!!!!!\" into registration username input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paul muad\u0027dib atreides!!!!!!!!\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationUsernameInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 103549800,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "The User enters \"The Lisan will liberate Arrakis\" into registration password input bar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The Lisan will liberate Arrakis\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.revature.step.RegistrationSteps.theUserEntersIntoRegistrationPasswordInputBar(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 46724200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "The User clicks on the Create Button",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.the_User_clicks_on_the_Create_Button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16070600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The User is kept at the Registration page",
+            "match": {
+              "location": "com.revature.step.RegistrationSteps.theUserIsKeptAtTheRegistrationPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Registration"
+          },
+          {
+            "name": "@SCRUM-TC-20"
+          }
+        ]
+      }
+    ],
+    "name": "Registration",
+    "description": "",
+    "id": "registration",
+    "keyword": "Feature",
+    "uri": "classpath:features/Registration.feature",
+    "tags": [
+      {
+        "name": "@Registration",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-08-09T16:39:59.716Z",
+        "line": 10,
+        "name": "User wants to see all the available celestial bodies in planetarium",
+        "description": "",
+        "id": "view-celestial-bodies;user-wants-to-see-all-the-available-celestial-bodies-in-planetarium;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 269956100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "The User is already logged in with \"Robin\" and  \"I am the day\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robin\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"I am the day\"",
+                  "offset": 48
+                }
+              ],
+              "location": "com.revature.step.ViewCeletialBodiesSteps.the_User_is_already_logged_in_with_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7192400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is redirected to the Planetarium",
+            "match": {
+              "location": "com.revature.step.ViewCeletialBodiesSteps.the_User_is_redirected_to_the_Planetarium()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat com.revature.step.ViewCeletialBodiesSteps.user_sees_all_the_bodies(ViewCeletialBodiesSteps.java:57)\r\n\tat ✽.User see all the available celestial Bodies.(classpath:features/ViewCeletialBodies.feature:6)\r\n",
+              "duration": 1656636000,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "User see all the available celestial Bodies.",
+            "match": {
+              "location": "com.revature.step.ViewCeletialBodiesSteps.user_sees_all_the_bodies()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ViewCelestialBodies"
+          }
+        ]
+      }
+    ],
+    "name": "View Celestial Bodies",
+    "description": "",
+    "id": "view-celestial-bodies",
+    "keyword": "Feature",
+    "uri": "classpath:features/ViewCeletialBodies.feature",
+    "tags": [
+      {
+        "name": "@ViewCelestialBodies",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
