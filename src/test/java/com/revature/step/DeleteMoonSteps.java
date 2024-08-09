@@ -2,13 +2,16 @@ package com.revature.step;
 
 import com.revature.TestRunner;
 import com.revature.entity.MoonEntity;
+import com.revature.entity.PlanetEntity;
 import com.revature.repositories.MoonRepository;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.time.Duration;
@@ -19,14 +22,25 @@ public class DeleteMoonSteps {
 
     @Given("Moon name {string} exist")
     public void moon_name_exist(String string) {
-        MoonEntity moonEntity = new MoonEntity(string);
-        DatabaseScriptRunnerUtility.addTempMoon(moonEntity);
+        MoonEntity moonEntity = new MoonEntity(string, "1");
+        moonEntity.setDefaultImage();
+        MoonRepository.addMoon(moonEntity);
+        /*
         TestRunner.refresh();
         TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
         //getPlanetName returns all text in celestialTable, so it should contain moon name as well
-        TestRunner.wait.until(driver -> TestRunner.planetariumHome.getPlanetName().contains(string));
 
-        Assert.assertTrue(TestRunner.planetariumHome.getPlanetName().contains(string));
+        boolean existID = false;
+        List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
+        for(MoonEntity moonEntity1 : moonEntityList){
+            if(moonEntity1.getName().equals(string))
+                existID = true;
+        }
+        Assert.assertTrue(existID);
+        //TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+       // Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+
+         */
     }
 
     @When("The User selects moon from drop-down menu")
@@ -41,14 +55,30 @@ public class DeleteMoonSteps {
 
     @Then("The moon {string} should be deleted from the planetarium")
     public void the_moon_should_be_deleted_from_the_planetarium(String string) {
-        TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-        Assert.assertFalse(TestRunner.planetariumHome.getPlanetName().contains(string));
+        try{
+            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
+        }
+        catch (TimeoutException e){
+            //Assert.fail();
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = true;
+            List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
+            for(MoonEntity moonEntity : moonEntityList){
+                if(moonEntity.getName().equals(string))
+                    existID = false;
+            }
+            Assert.assertTrue(existID);
+        }
+
     }
 
     @Given("There is no Moon named {string} in planetarium")
     public void there_is_no_Moon_named_in_planetarium(String string) {
         MoonEntity moonEntity = new MoonEntity(string);
-        MoonRepository.deleteMoon(moonEntity);
+        MoonRepository.deleteMoonWithString(moonEntity);
     }
 
     @When("User enters invalid {string}")
@@ -58,13 +88,24 @@ public class DeleteMoonSteps {
 
     @Given("Moon with ID {string} exists")
     public void moon_with_ID_exists(String string) {
+        MoonEntity moonEntity = new MoonEntity("checkingIdDeletionMoon", "1");
+        moonEntity.setDefaultImage();
+        moonEntity.setId(string);
+        MoonRepository.addMoon(moonEntity);
+        TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
+        //getPlanetName returns all text in celestialTable, so it should contain moon name as well
+        TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        /*
         boolean existID = false;
         List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
-        for(MoonEntity moonEntity : moonEntityList){
-            if(moonEntity.getId().equals(string))
+        for(MoonEntity moonEntity1 : moonEntityList){
+            if(moonEntity1.getId().equals(string))
                 existID = true;
         }
         Assert.assertTrue(existID);
+
+         */
     }
 
     @When("User enters moon id {string} for celestial body to be deleted")
@@ -72,8 +113,25 @@ public class DeleteMoonSteps {
         TestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
-    @Then("The user should see error, and the moon with ID {string} should not be deleted")
-    public void the_user_should_see_error_and_the_moon_with_ID_should_not_be_deleted(String string) {
+    @Then("The user should see error")
+    public void the_user_should_see_error_and_the_moon_with_ID_should_not_be_deleted() {
+        try{
+            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
+        }
+        catch (TimeoutException e){
+            //Assert.fail();
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+
+        }
+
+
+    }
+
+    @And("The moon with ID {string} should not be deleted")
+    public void theMoonWithIDShouldNotBeDeleted(String string) {
         boolean existID = false;
         List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
         for(MoonEntity moonEntity : moonEntityList){

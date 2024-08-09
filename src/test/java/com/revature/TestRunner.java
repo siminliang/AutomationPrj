@@ -95,7 +95,7 @@ public class TestRunner {
         planetariumHome = new PlanetariumHome(driver);
 
         // initialize a wait object for any situations you need to explicitly wait for something
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(1));
     }
 
     public static void refresh(){

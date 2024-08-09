@@ -1,7 +1,6 @@
 package com.revature.utilities;
 
 import com.revature.entity.MoonEntity;
-import com.revature.entity.PlanetEntity;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,9 +16,16 @@ public class DatabaseMoonPreparedStatements {
         preparedStatement.setString(2, moonEntity.owner);
         preparedStatement.setBinaryStream(3, fis, (int) moonEntity.image.length());
     }
+    public static void addMoonWithId(PreparedStatement preparedStatement, MoonEntity moonEntity) throws SQLException, FileNotFoundException {
+        FileInputStream fis = new FileInputStream(moonEntity.image);
+        preparedStatement.setString(1, moonEntity.id);
+        preparedStatement.setString(2, moonEntity.name);
+        preparedStatement.setString(3, moonEntity.owner);
+        preparedStatement.setBinaryStream(4, fis, (int) moonEntity.image.length());
+    }
 
 
-    public static void deleteMoon(PreparedStatement preparedStatement, MoonEntity moonEntity) throws SQLException {
+    public static void deleteMoonWithString(PreparedStatement preparedStatement, MoonEntity moonEntity) throws SQLException {
         preparedStatement.setString(1, moonEntity.name);
     }
 

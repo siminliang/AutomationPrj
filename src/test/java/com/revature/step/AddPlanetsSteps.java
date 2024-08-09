@@ -17,10 +17,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class AddPlanetsSteps {
 
-    @Given("The User is already log on.")
+    @Given("The User is already log on")
     public void the_User_is_already_log_on() {
         // All the steps required to log the user in
         UserEntity userEntity = new UserEntity("Lisan", "al-gaib");
@@ -36,11 +37,7 @@ public class AddPlanetsSteps {
     public void no_planet_with_name_in_planetarium(String string) {
         // Deletes planet from the planetarium if it already exists
         PlanetEntity planetEntity = new PlanetEntity(string);
-        if(string.equals("nonunique")){
-            PlanetRepository.addPlanet(planetEntity);
-            return;
-        }
-        PlanetRepository.deletePlanet(planetEntity);
+        PlanetRepository.deletePlanetWithString(planetEntity);
         TestRunner.refresh();
     }
 
@@ -68,22 +65,52 @@ public class AddPlanetsSteps {
 
     @Then("The planet {string} should be added to the planetarium")
     public void the_planet_should_be_added_to_the_planetarium(String string) {
-        TestRunner.wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("celestialTable")));
-        WebElement myElement = new WebDriverWait(TestRunner.driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.tagName("td")));
-        Assert.assertTrue(TestRunner.planetariumHome.getPlanetName().contains(string));
+        //TestRunner.wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("celestialTable")));
+        //TestRunner.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("celestialTable")));
+        //TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
+        //getPlanetName returns all text in celestialTable, so it should contain moon name as well
+        //TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        //TestRunner.wait..until(ExpectedConditions.visibilityOfElementLocated(By.tagName("td")));
+        try{
+            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
+        }
+        catch (TimeoutException e){
+            //Assert.fail();
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = false;
+            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+            for(PlanetEntity planetEntity : planetEntityList){
+                if(planetEntity.getName().equals(string))
+                    existID = true;
+            }
+            Assert.assertTrue(existID);
+        }
+
     }
 
     @Then("The planet {string} should not be added to the planetarium")
     public void the_planet_should_not_be_added_to_the_planetarium(String string) {
         try{
             TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
         }
         catch (TimeoutException e){
-            Assert.fail();
+            //Assert.fail();
+            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = true;
+            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+            for(PlanetEntity planetEntity : planetEntityList){
+                if(planetEntity.getName().equals(string))
+                    existID = false;
+            }
+            Assert.assertTrue(existID);
         }
-        Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
-        TestRunner.driver.switchTo().alert().accept();
+
 
     }
 }

@@ -4,8 +4,8 @@ Feature: DeleteMoons
 	@SCRUM-TC-31
 	Scenario Outline: As a user I want to be able to remove Planets from the Planetarium
 	Delete Planet Positive Scenario
-		Given The User is already logged in
 		Given Moon name "<MoonName>" exist
+		Given The User is already logged in
 		When The User selects moon from drop-down menu
 		When User enters valid moon name "<MoonName>" for celestial body to be deleted
 		When User clicks on the Delete Button
@@ -32,13 +32,14 @@ Feature: DeleteMoons
 		| Hoshi no Narby     |
 
 	@SCRUM-TC-34
-	Scenario: User should not be able to delete a moon by  its ID
+	Scenario Outline: User should not be able to delete a moon by  its ID
 		Given The User is already logged in
 		Given Moon with ID "<ID>" exists
 		When The User selects moon from drop-down menu
 		When User enters moon id "<ID>" for celestial body to be deleted
 		When User clicks on the Delete Button
-		Then The user should see error, and the moon with ID "<ID>" should not be deleted
+		Then The user should see error
+		And The moon with ID "<ID>" should not be deleted
 
 	Examples:
 		| ID |
