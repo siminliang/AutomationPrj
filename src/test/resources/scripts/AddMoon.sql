@@ -1,1 +1,1 @@
-INSERT INTO planets (name, myPlanetId, image) VALUES (?, ?, ?);
+INSERT INTO moons (name, myPlanetId, image) VALUES (?, ?, ?);

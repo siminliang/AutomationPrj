@@ -1,0 +1,1 @@
+INSERT INTO moons (id, name, myPlanetId, image) VALUES (?, ?, ?, ?);

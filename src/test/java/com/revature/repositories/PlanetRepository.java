@@ -1,8 +1,6 @@
 package com.revature.repositories;
 
-import com.revature.entity.MoonEntity;
 import com.revature.entity.PlanetEntity;
-import com.revature.entity.UserEntity;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
 
 import java.util.List;
@@ -19,8 +17,18 @@ public class PlanetRepository {
         DatabaseScriptRunnerUtility.runSQLScript(fileName, planetEntity);
     }
 
-    public static void deletePlanet(PlanetEntity planetEntity){
-        String fileName = "DeletePlanet.sql";
+    public static void addPlanetWithId(PlanetEntity planetEntity){
+        String fileName = "AddPlanetWithId.sql";
+        DatabaseScriptRunnerUtility.runSQLScript(fileName, planetEntity);
+    }
+
+    public static void deletePlanetWithString(PlanetEntity planetEntity){
+        String fileName = "DeletePlanetWithString.sql";
+        DatabaseScriptRunnerUtility.runSQLScript(fileName, planetEntity);
+    }
+
+    public static void deletePlanetWithId(PlanetEntity planetEntity){
+        String fileName = "DeletePlanetWithId.sql";
         DatabaseScriptRunnerUtility.runSQLScript(fileName, planetEntity);
     }
 }

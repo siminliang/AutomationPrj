@@ -94,8 +94,14 @@ public class DatabaseScriptRunnerUtility {
                 case "AddPlanet.sql":
                     DatabasePlanetPreparedStatements.addPlanet(preparedStatement, planetEntity);
                     break;
-                case "DeletePlanet.sql":
-                    DatabasePlanetPreparedStatements.deletePlanet(preparedStatement, planetEntity);
+                case "AddPlanetWithId.sql":
+                    DatabasePlanetPreparedStatements.addPlanetWithId(preparedStatement, planetEntity);
+                    break;
+                case "DeletePlanetWithString.sql":
+                    DatabasePlanetPreparedStatements.deletePlanetWithString(preparedStatement, planetEntity);
+                    break;
+                case "DeletePlanetWithId.sql":
+                    DatabasePlanetPreparedStatements.deletePlanetWithId(preparedStatement, planetEntity);
                     break;
             }
         }
@@ -106,8 +112,11 @@ public class DatabaseScriptRunnerUtility {
                 case "AddMoon.sql":
                     DatabaseMoonPreparedStatements.addMoon(preparedStatement, moonEntity);
                     break;
-                case "DeleteMoon.sql":
-                    DatabaseMoonPreparedStatements.deleteMoon(preparedStatement, moonEntity);
+                case "AddMoonWithId.sql":
+                    DatabaseMoonPreparedStatements.addMoonWithId(preparedStatement, moonEntity);
+                    break;
+                case "DeleteMoonWithString.sql":
+                    DatabaseMoonPreparedStatements.deleteMoonWithString(preparedStatement, moonEntity);
                     break;
             }
         }

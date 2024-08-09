@@ -5,7 +5,7 @@ Feature: AddMoons
   Scenario Outline: As a User I should be able to add Moon (Positive Scenario)
     Given The User is already log on
     Given No Planet or Moon with name "<MoonName>" in planetarium
-    Given The ID of the Planet "<OrbitedPlanetID>" that the moon orbiting does exist in Planetarium
+    Given Planet with ID "<OrbitedPlanetID>" exists
     When The User selects planets from the drop-down menu
     When The User selects moon from the drop-down menu
     When The User enters "<MoonName>" for moon name
@@ -23,7 +23,9 @@ Feature: AddMoons
   @SCRUM-TC-23
   Scenario Outline: As a User I should be able to add Moon (Negative Scenario)
     Given The User is already log on
-
+    Given Planet with ID "3" exists
+    Given The ID of the Planet "10" does not exist in the Planetarium
+    Given Moon name "Titan" exist
     When The User selects planets from the drop-down menu
     When The User selects moon from the drop-down menu
     When The User enters "<MoonName>" for moon name

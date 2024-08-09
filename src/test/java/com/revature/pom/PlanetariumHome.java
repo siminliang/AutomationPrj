@@ -113,7 +113,7 @@ public class PlanetariumHome {
 
     }
 
-    public String getPlanetName(){
+    public String getCelestialTableAsText(){
 
         wait.until(ExpectedConditions.visibilityOf(celestialTable));
         return celestialTable.getText();
