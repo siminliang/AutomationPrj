@@ -31,7 +31,7 @@ public class DatabasePlanetPreparedStatements {
     }
 
     public static void deletePlanetWithId(PreparedStatement preparedStatement, PlanetEntity planetEntity) throws SQLException {
-        preparedStatement.setString(1, planetEntity.name);
+        preparedStatement.setString(1, planetEntity.id);
     }
 
 }
