@@ -14,6 +14,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -36,13 +37,13 @@ public class ViewCeletialBodiesSteps {
     }
 
     @Then("User is redirected to the Planetarium")
-        public void the_User_is_redirected_to_the_Planetarium() {
-            // Write code here that turns the phrase above into concrete actions
-            TestRunner.wait.until(ExpectedConditions.titleIs("Home"));
-            Assert.assertEquals("Home", TestRunner.driver.getTitle());
-        }
+    public void the_User_is_redirected_to_the_Planetarium() {
+        // Write code here that turns the phrase above into concrete actions
+        TestRunner.wait.until(ExpectedConditions.titleIs("Home"));
+        Assert.assertEquals("Home", TestRunner.driver.getTitle());
+    }
     @Then("User see all the available celestial Bodies.")
-        public void user_sees_all_the_bodies(){
+    public void user_sees_all_the_bodies(){
         Map<String, List<Integer>> tableData  = TestRunner.planetariumHome.viewAllData();
 
 //        Select id from planets and moons and compare them with table with the data from table
@@ -50,12 +51,11 @@ public class ViewCeletialBodiesSteps {
         List<Integer> planetIds = PlanetRepository.getPlanets();
         List<Integer> moonIds = MoonRepository.getMoons();
 
-
-        boolean isMoonSame = moonIds.equals(tableData.get("moon"));
-        boolean isPlanetSame = planetIds.equals(tableData.get("planet"));
+        boolean isMoonSame = moonIds.equals(tableData.getOrDefault("moon", new ArrayList<>()));
+        boolean isPlanetSame = planetIds.equals(tableData.getOrDefault("planet",new ArrayList<>()));
 
         Assert.assertTrue(isMoonSame && isPlanetSame);
-        }
+    }
 
     @After
     public void tearDown(){
