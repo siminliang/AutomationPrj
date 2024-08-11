@@ -24,7 +24,7 @@ Feature: DeleteMoons
 		Given The User is already log on
 		Given There is no Moon named "<invalidMoonNames>" in planetarium
 		When The User selects moon from drop-down menu
-		When User enters invalid "<InvalidMoonNames>"
+		When User enters invalid "<invalidMoonNames>"
 		When User clicks on the Delete Button
 		Then The user should see error message pop-up
 
