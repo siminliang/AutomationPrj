@@ -20,7 +20,7 @@ Feature: Registration
 	Scenario Outline: As the System I don't want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met
 	Registration Feature Testing Positive Scenario
 		Given The User is on the Login Page
-		Given Account with username "Lisan" and password "al-gaib" already registered
+		Given Account with username "AlreadyRegisteredUsername!!!!!" and password "PasswordIsThirtyCharactersLong" already registered
 		When The User clicks on Create an Account Link
 		When The User enters "<username>" into registration username input bar
 		When The User enters "<password>" into registration password input bar
@@ -29,7 +29,7 @@ Feature: Registration
 
 	Examples: 
 		| username                        | password                        |
-		| Lisan                           | atreidies                       |
+		| AlreadyRegisteredUsername!!!!!                           | NotTheCorrectPasswordNotAtAll!                      |
 		| House Harkonnen owns Arrakis!!! | Air power sea power desert30!!  |
 		| House Harkonnen owns Arrakis!!! | The Lisan will liberate Arrakis |
 		|                                 |                                 |

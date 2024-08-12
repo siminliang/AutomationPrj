@@ -7,4 +7,4 @@ Feature:  View Celestial Bodies
 
     Examples:
       | username | password |
-      | Robin   | I am the day |
+      | UsernameIsThirtyCharactersLong   | PasswordIsThirtyCharactersLong |

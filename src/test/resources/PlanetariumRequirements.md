@@ -16,13 +16,12 @@
     - data:
       - planet name
         - this planet name is 30 chars!!
-        - Terra
       - image
         - true
         - false
   - As a User I should not be able to add new planets to the Planetarium with incorrect credentials
     - Given: The User is already log on
-    - Given: Planet with name "non-unique-planet" already exists
+    - Given: Planet with name "AlreadyAddedPlanetInDatabase!!" already exists
     - When: The User selects planets from the drop-down menu
     - When: The User enters "<PlanetName>" for planet name
     - When: "\<image>" The User selects an image from filesystem for planet image
@@ -31,7 +30,7 @@
     - data:
       - planet name
         - this planet name is 31 chars!!!
-        - non-unique-planet
+        - AlreadyAddedPlanetInDatabase!!
       - image
         - true
         - false
@@ -56,25 +55,26 @@
     - Then: The User is redirected to the Planetarium
     - data:
       - username
-        - Batman
+        - UsernameIsNotInThePlanetarium!
       - password
-        - I am the night
+        - PasswordIsThirtyCharactersLong
   - As the System I don't want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure
     Login Functionality Test Negative Scenario
     - Given: The User is on the Login Page
-    - Given: Account with username "Lisan" and password "al-gaib" already registered
+    - Given: Account with username "AlreadyRegisteredUsername!!!!!" and password "PasswordIsThirtyCharactersLong" already registered
+    - Given No Registered User with username "UsernameIsNotInThePlanetarium!"
     - When: The User enters "<username>" into username input bar
     - When: The User enters "<password>" into password input bar
     - When: The User clicks on the Login Button
     - Then: The User is kept at the login page
     - data:
       - username
-        - Lisan
-        - Paul
+        - AlreadyRegisteredUsername!!!!!
+        - UsernameIsNotInThePlanetarium!
         - 
       - password
-        - atreidies
-        - al-gaib
+        - NotTheCorrectPasswordNotAtAll!
+        - PasswordIsThirtyCharactersLong
         - 
   - As a User I want to Logout of my Account so that I can exit the Planetarium
     Login Functionality Test Positive Scenario
@@ -88,9 +88,9 @@
     - Then: The User is redirected back to the Login page
     - data:
       - username
-        - Batman
+        - UsernameIsNotInThePlanetarium!
       - password
-        - I am the night
+        - PasswordIsThirtyCharactersLong
   - As the System I don't want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users
     Login Functionality Test Negative Scenario
     - Given: The User is on the Login Page
@@ -124,7 +124,7 @@
   - As the System I don't want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met
     Registration Feature Testing Positive Scenario
     - Given The User is on the Login Page
-    - Given Account with username "Lisan" and password "al-gaib" already registered
+    - Given Account with username "AlreadyRegisteredUsername!!!!!" and password "PasswordIsThirtyCharactersLong" already registered
     - When The User clicks on Create an Account Link
     - When The User enters "<username>" into registration username input bar
     - When The User enters "<password>" into registration password input bar
@@ -132,13 +132,63 @@
     - Then The User is kept at the Registration page
     - data:
       - username
-        - Lisan
+        - AlreadyRegisteredUsername!!!!!
         - House Harkonnen owns Arrakis!!!
         - Paul muad'dib atreides!!!!!!!!
         - 
       - password
-        - atreidies
+        - NotTheCorrectPasswordNotAtAll!
         - Air power sea power desert30!!
         - The Lisan will liberate Arrakis
         - 
 
+
+- **Epic**
+  - Adding Moons
+- **User Stories**
+  - As a User I should be able to add Moon (Positive Scenario)
+  - As a User I should be able to add Moon (Negative Scenario)
+- **Acceptance Criteria**
+  - As a User I should be able to add Moon (Positive Scenario)
+    - Given The User is already log on
+    - Given No Planet or Moon with name "<MoonName>" in planetarium
+    - Given Planet with ID "<OrbitedPlanetID>" exists
+    - When The User selects planets from the drop-down menu
+    - When The User selects moon from the drop-down menu
+    - When The User enters "<MoonName>" for moon name
+    - When The User enters "<OrbitedPlanetID>" for the planet that the moon is orbiting
+    - When "<image>" The User selects an image from file explorer for moon image
+    - When The User clicks on the submit button
+    - Then The Moon "<MoonName>" should be added to planetarium
+    - data:
+      - MoonName
+        - MoonsAreThirtyCharactersLong!!
+      - OrbitedPlanetId
+        - 3
+      - image
+        - moon-1.jpg
+        - 
+  - As a User I should be able to add Moon (Negative Scenario)
+    - Given The User is already log on
+    - Given Planet with ID "3" exists
+    - Given The ID of the Planet "10" does not exist in the Planetarium
+    - Given No Planet or Moon with name "<MoonName>" in planetarium
+    - Given Moon name "AlreadyAddedMoonInTheDatabase!" exist
+    - When The User selects planets from the drop-down menu
+    - When The User selects moon from the drop-down menu
+    - When The User enters "<MoonName>" for moon name
+    - When The User enters "<OrbitedPlanetID>" for the planet that the moon is orbiting
+    - When "<image>" The User selects an image from file explorer for moon image
+    - When The User clicks on the submit button
+    - Then The Moon "<MoonName>" should not be added to planetarium
+    - data:
+      - MoonName
+        - AlreadyAddedMoonInTheDatabase!
+        - MoonIsThirtyOneCharactersLong!!
+        - MoonsAreThirtyCharactersLong!!
+      - OrbitedPlanetId
+        - 3
+        - 10
+      - Image
+        - moon-1.jpg
+        -

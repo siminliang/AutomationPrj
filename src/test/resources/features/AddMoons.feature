@@ -16,8 +16,8 @@ Feature: AddMoons
 
   Examples:
     | MoonName | OrbitedPlanetID | image       |
-    | Noom     | 3               | moon-1.jpg  |
-    | Noom2    | 3               |             |
+    | MoonsAreThirtyCharactersLong!!     | 3               | moon-1.jpg  |
+    | MoonsAreThirtyCharactersLong!!    | 3               |             |
 
 
   @SCRUM-TC-23
@@ -25,7 +25,8 @@ Feature: AddMoons
     Given The User is already log on
     Given Planet with ID "3" exists
     Given The ID of the Planet "10" does not exist in the Planetarium
-    Given Moon name "non-unique-moon" exist
+    Given No Planet or Moon with name "<MoonName>" in planetarium
+    Given Moon name "AlreadyAddedMoonInTheDatabase!" exist
     When The User selects planets from the drop-down menu
     When The User selects moon from the drop-down menu
     When The User enters "<MoonName>" for moon name
@@ -36,9 +37,9 @@ Feature: AddMoons
 
   Examples:
       | MoonName                                            | OrbitedPlanetID | image       |
-      | non-unique-moon                                               | 3               | moon-1.jpg  |
-      | non-unique-moon                                               | 3               |             |
-      | SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose  | 3               | moon-1.jpg  |
-      | SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose  | 3               |             |
-      | Normal                                              | 10              | moon-1.jpg  |
-      | Normal                                              | 10              |             |
+      | AlreadyAddedMoonInTheDatabase!                                               | 3               | moon-1.jpg  |
+      | AlreadyAddedMoonInTheDatabase!                                               | 3               |             |
+      | MoonIsThirtyOneCharactersLong!!  | 3               | moon-1.jpg  |
+      | MoonIsThirtyOneCharactersLong!!  | 3               |             |
+      | MoonsAreThirtyCharactersLong!!                                              | 10              | moon-1.jpg  |
+      | MoonsAreThirtyCharactersLong!!                                              | 10              |             |
