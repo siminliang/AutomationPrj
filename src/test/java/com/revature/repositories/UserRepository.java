@@ -14,4 +14,5 @@ public class UserRepository {
         String fileName = "DeleteUser.sql";
         DatabaseScriptRunnerUtility.runSQLScript(fileName, userEntity);
     }
+
 }

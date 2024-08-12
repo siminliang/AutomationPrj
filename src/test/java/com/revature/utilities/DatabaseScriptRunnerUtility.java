@@ -75,6 +75,8 @@ public class DatabaseScriptRunnerUtility {
 
 
 
+
+
     private static void setParameters(PreparedStatement preparedStatement, String sqlFileName, Object entity) throws SQLException, FileNotFoundException {
         if( entity instanceof UserEntity) {
             UserEntity userEntity = (UserEntity) entity;
@@ -199,6 +201,24 @@ public class DatabaseScriptRunnerUtility {
             System.out.println(e.getMessage());
         }
         return null;
+    }
+
+    public static int getUserId(UserEntity userEntity){
+        String sql = "SELECT id FROM users WHERE username = ?";
+        int generatedId = -1;
+        try (Connection connection = DatabaseConnectorUtility.createConnection()) {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, userEntity.getUsername());
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    generatedId = resultSet.getInt("id");
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return generatedId;
     }
 
     public static List<PlanetEntity> getAllPlanetId(){

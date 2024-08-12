@@ -3,6 +3,7 @@ package com.revature.step;
 import com.revature.TestRunner;
 import com.revature.entity.MoonEntity;
 import com.revature.entity.PlanetEntity;
+import com.revature.entity.UserEntity;
 import com.revature.repositories.MoonRepository;
 import com.revature.repositories.PlanetRepository;
 import com.revature.services.LoginService;
@@ -132,6 +133,28 @@ public class AddMoonSteps {
             } else{
                 Assert.assertTrue(existID);
             }
+        }
+    }
+
+    @Then("The Moon {string} should be owned by {string}")
+    public void the_Moon_should_be_owned_by(String string, String string2) {
+        // Write code here that turns the phrase above into concrete actions
+        try{
+            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
+        }
+        catch (TimeoutException e){
+            boolean existID = false;
+            List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
+            for(MoonEntity moonEntity : moonEntityList){
+                if(moonEntity.getName().equals(string)) {
+                    if(moonEntity.getOwner().equals(string2)){
+                        existID = true;
+                    }
+                }
+            }
+            Assert.assertTrue(existID);
         }
     }
 }
