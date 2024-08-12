@@ -16,15 +16,15 @@ Add Planets Test Positive Scenario
 	Examples: 
 		| PlanetName                     | image |
 		| this planet name is 30 chars!! | true  |
-		| Terra                          | true  |
 		| this planet name is 30 chars!! | false |
-		| Terra                          | false |
+		| 303030303030303030303030303030 | true  |
+		| 303030303030303030303030303030 | false |
 
 	@SCRUM-TC-25
 	Scenario Outline: As a User I should not be able to add new planets to the Planetarium with incorrect credentials
 	Add Planets Test Negative Scenario
 		Given The User is already log on
-		Given Planet with name "non-unique-planet" already exists
+		Given Planet with name "AlreadyAddedPlanetInDatabase!!" already exists
 		When The User selects planets from the drop-down menu
 		When The User enters "<PlanetName>" for planet name
 		When "<image>" The User selects an image from filesystem for planet image
@@ -34,6 +34,8 @@ Add Planets Test Positive Scenario
 	Examples: 
 		| PlanetName                      | image |
 		| this planet name is 31 chars!!! | true  |
-		| non-unique-planet                       | true  |
+		| AlreadyAddedPlanetInDatabase!!                       | true  |
+		| 3131313131313131313131313131311 | true |
 		| this planet name is 31 chars!!! | false |
-		| non-unique-planet                       | false|
+		| AlreadyAddedPlanetInDatabase!!                       | false|
+		| 3131313131313131313131313131311 | false |

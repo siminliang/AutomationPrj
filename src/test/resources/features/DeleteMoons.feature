@@ -2,8 +2,8 @@
 Feature: DeleteMoons
 
 	@SCRUM-TC-31
-	Scenario Outline: As a user I want to be able to remove Planets from the Planetarium
-	Delete Planet Positive Scenario
+	Scenario Outline: As a user I want to be able to remove Moons from the Planetarium
+	Delete Moon Positive Scenario
 		Given Moon name "<MoonName>" exist
 		Given The User is already log on
 		When The User selects moon from drop-down menu
@@ -13,10 +13,8 @@ Feature: DeleteMoons
 
 	Examples: 
 		| MoonName |
-		| Moon     |
-		| MoonMoon |
-		| 2        |
-		| 66       |
+		| MoonIsThirtyOneCharactersLong!!    |
+		| 303030303030303030303030303030      |
 
 	@SCRUM-TC-32
 	Scenario Outline: As a user I should not be able to remove Moon from the Planetarium when given invalid names
@@ -30,8 +28,8 @@ Feature: DeleteMoons
 
 	Examples: 
 		| invalidMoonNames   |
-		| Kirby of the Stars |
-		| Hoshi no Narby     |
+		| NoMoonInDatabaseToDeleteHere!! |
+		| 3131313131313131313131313131311                               |
 
 	@SCRUM-TC-34
 	Scenario Outline: User should not be able to delete a moon by  its ID

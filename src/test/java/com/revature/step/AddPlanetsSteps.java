@@ -123,7 +123,7 @@ public class AddPlanetsSteps {
                     existID = false;
                 }
             }
-            if (Objects.equals(string, "non-unique-planet")){
+            if (Objects.equals(string, "AlreadyAddedPlanetInDatabase!!")){
                 Assert.assertEquals(1, count);
             } else{
                 Assert.assertTrue(existID);

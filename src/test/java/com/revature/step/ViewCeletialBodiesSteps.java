@@ -12,6 +12,7 @@ import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.After;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -44,6 +45,7 @@ public class ViewCeletialBodiesSteps {
     public  void the_planet_is_alreay_there(String planetname){
         planetEntity = new PlanetEntity(planetname, "1");
         planetEntity.setDefaultImage();
+        PlanetRepository.deletePlanetWithString(planetEntity);
         PlanetRepository.addPlanet(planetEntity);
         TestRunner.refresh();
         TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
@@ -51,14 +53,14 @@ public class ViewCeletialBodiesSteps {
         Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(planetname));
     }
 
-    @Then("User is redirected to the Planetarium")
+    @When("User is redirected to the Planetarium")
     public void the_User_is_redirected_to_the_Planetarium() {
         // Write code here that turns the phrase above into concrete actions
         TestRunner.wait.until(ExpectedConditions.titleIs("Home"));
         Assert.assertEquals("Home", TestRunner.driver.getTitle());
     }
 
-    @Then("User add new planet {string}")
+    @When("User add new planet {string}")
     public  void user_add_new_planet(String planetname){
         planetEntity = new PlanetEntity(planetname);
         TestRunner.planetariumHome.selectPlanet();
@@ -84,7 +86,7 @@ public class ViewCeletialBodiesSteps {
             Assert.assertTrue(existID);
         }
     }
-    @Then("User delete new planet {string}")
+    @When("User delete new planet {string}")
     public void user_delete_new_planet(String planet){
         TestRunner.planetariumHome.sendToDeleteInput(planet);
         TestRunner.planetariumHome.clickDeleteButton();

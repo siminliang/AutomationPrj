@@ -127,7 +127,7 @@ public class AddMoonSteps {
                     existID = false;
                 }
             }
-            if (Objects.equals(string, "non-unique-moon")){
+            if (Objects.equals(string, "AlreadyAddedMoonInTheDatabase!")){
                 Assert.assertEquals(1, count);
             } else{
                 Assert.assertTrue(existID);

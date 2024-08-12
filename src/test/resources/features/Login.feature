@@ -13,13 +13,14 @@ Feature: Login
 
 	Examples: 
 		| username | password       |
-		| Batman   | I am the night |
+		| UsernameIsNotInThePlanetarium!   | PasswordIsThirtyCharactersLong |
 
 	@SCRUM-TC-18
 	Scenario Outline: As the System I don't want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure
 	Login Functionality Test Negative Scenario
 		Given The User is on the Login Page
-		Given Account with username "Lisan" and password "al-gaib" already registered
+		Given Account with username "AlreadyRegisteredUsername!!!!!" and password "PasswordIsThirtyCharactersLong" already registered
+		Given No Registered User with username "UsernameIsNotInThePlanetarium!"
 		When The User enters "<username>" into username input bar
 		When The User enters "<password>" into password input bar
 		When The User clicks on the Login Button
@@ -27,11 +28,11 @@ Feature: Login
 
 	Examples: 
 		| username | password  |
-		| Lisan    | atreidies |
-		| Paul     | al-gaib   |
+		| AlreadyRegisteredUsername!!!!!    | NotTheCorrectPasswordNotAtAll! |
+		| UsernameIsNotInThePlanetarium!     |  PasswordIsThirtyCharactersLong  |
 		|          |           |
-		| Lisan    |           |
-		|          | al-gaib   |
+		| AlreadyRegisteredUsername!!!!!    |           |
+		|          | PasswordIsThirtyCharactersLong   |
 
 	@SCRUM-TC-26
 	Scenario Outline: As a User I want to Logout of my Account so that I can exit the Planetarium
@@ -47,7 +48,7 @@ Feature: Login
 
 	Examples: 
 		| username | password       |
-		| Batman   | I am the night |
+		| UsernameIsNotInThePlanetarium!   | PasswordIsThirtyCharactersLong |
 
 	@SCRUM-TC-27
 	Scenario: As the System I don't want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users

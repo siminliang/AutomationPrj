@@ -13,10 +13,8 @@ Feature: DeletePlanets
 
 	Examples: 
 		| PlanetName |
-		| Namke      |
-		| Vegeta     |
-		| 777        |
-		| 888        |
+		| PlanetIsThirtyCharactersLong!!      |
+		| 303030303030303030303030303030        |
 
 	@SCRUM-TC-30
 	Scenario Outline: As a user I want to be able to remove Planets from the Planetarium, Negative Scenario
@@ -30,8 +28,8 @@ Feature: DeletePlanets
 
 	Examples: 
 		| PlanetName     |
-		| ZaWarudo       |
-		| toki yo tomare |
+		| NoPlanetInDatabaseToDeleteHere       |
+		| 3131313131313131313131313131311 |
 
 	@SCRUM-TC-33
 	Scenario Outline: User should not be able to delete a planet by its ID
