@@ -1,7 +1,7 @@
 @Login
 Feature: Login
 
-	@SCRUM-TC-17
+
 	Scenario Outline: As a User I want to Login to my Account so that I can Enter the Planetarium
 	Login Functionality Test Positive Scenario
 		Given The User is on the Login Page
@@ -15,7 +15,7 @@ Feature: Login
 		| username | password       |
 		| Batman   | I am the night |
 
-	@SCRUM-TC-18
+
 	Scenario Outline: As the System I don't want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure
 	Login Functionality Test Negative Scenario
 		Given The User is on the Login Page
@@ -33,7 +33,6 @@ Feature: Login
 		| Lisan    |           |
 		|          | al-gaib   |
 
-	@SCRUM-TC-26
 	Scenario Outline: As a User I want to Logout of my Account so that I can exit the Planetarium
 	Login Functionality Test Positive Scenario
 		Given The User is on the Login Page
@@ -49,7 +48,7 @@ Feature: Login
 		| username | password       |
 		| Batman   | I am the night |
 
-	@SCRUM-TC-27
+
 	Scenario: As the System I don't want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users
 	Login Functionality Test Negative Scenario
 		Given The User is on the Login Page

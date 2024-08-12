@@ -1,7 +1,7 @@
 @AddMoons
 Feature: AddMoons
 
-  @SCRUM-TC-22
+
   Scenario Outline: As a User I should be able to add Moon (Positive Scenario)
     Given The User is already log on
     Given No Planet or Moon with name "<MoonName>" in planetarium
@@ -20,7 +20,7 @@ Feature: AddMoons
     | Noom2    | 3               |             |
 
 
-  @SCRUM-TC-23
+
   Scenario Outline: As a User I should be able to add Moon (Negative Scenario)
     Given The User is already log on
     Given Planet with ID "3" exists

@@ -1,7 +1,7 @@
 @Registration
 Feature: Registration
 
-	@SCRUM-TC-19
+
 	Scenario Outline: As a User I want to Register an Account with the Planetarium so that I can Login Securely
 	Registration Feature Testing Positive Scenario
 		Given The User is on the Login Page
@@ -16,7 +16,7 @@ Feature: Registration
 		| username                       | password                       |
 		| Paul muad'dib atreides!!!!!!!! | Air power sea power desert30!! |
 
-	@SCRUM-TC-20
+
 	Scenario Outline: As the System I don't want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met
 	Registration Feature Testing Positive Scenario
 		Given The User is on the Login Page

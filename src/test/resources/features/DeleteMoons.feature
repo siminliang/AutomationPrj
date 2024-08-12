@@ -1,7 +1,6 @@
 @DeleteMoons
 Feature: DeleteMoons
 
-	@SCRUM-TC-31
 	Scenario Outline: As a user I want to be able to remove Planets from the Planetarium
 	Delete Planet Positive Scenario
 		Given Moon name "<MoonName>" exist
@@ -18,7 +17,7 @@ Feature: DeleteMoons
 		| 2        |
 		| 66       |
 
-	@SCRUM-TC-32
+
 	Scenario Outline: As a user I should not be able to remove Moon from the Planetarium when given invalid names
 	Delete Moon Negative Scenario
 		Given The User is already log on
@@ -33,7 +32,6 @@ Feature: DeleteMoons
 		| Kirby of the Stars |
 		| Hoshi no Narby     |
 
-	@SCRUM-TC-34
 	Scenario Outline: User should not be able to delete a moon by  its ID
 		Given The User is already log on
 		Given Moon with ID "<ID>" exists

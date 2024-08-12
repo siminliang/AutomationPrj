@@ -54,7 +54,8 @@ import java.time.Duration;
                 "pretty",
                 "html:src/test/resources/reports/html-report.html",
                 "json:src/test/resources/reports/json-report.json"
-        }
+        },
+        tags =  "@ViewCelestialBodies"
 
 )
 public class TestRunner {

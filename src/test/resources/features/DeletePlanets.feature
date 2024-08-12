@@ -1,7 +1,7 @@
 @DeletePlanets
 Feature: DeletePlanets
 
-	@SCRUM-TC-21
+
 	Scenario Outline: As a user I want to be able to remove Planets from the Planetarium
 	Delete Planet Positive Scenario
 		Given The User is already log on
@@ -18,7 +18,7 @@ Feature: DeletePlanets
 		| 777        |
 		| 888        |
 
-	@SCRUM-TC-30
+
 	Scenario Outline: As a user I want to be able to remove Planets from the Planetarium, Negative Scenario
 	Delete Planet Negative Scenario
 		Given The User is already log on
@@ -33,7 +33,7 @@ Feature: DeletePlanets
 		| ZaWarudo       |
 		| toki yo tomare |
 
-	@SCRUM-TC-33
+
 	Scenario Outline: User should not be able to delete a planet by its ID
 		Given The User is already log on
 		Given Planet with ID "<ID>" exists

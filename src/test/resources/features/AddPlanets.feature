@@ -1,7 +1,7 @@
 @AddPlanets
 Feature: AddPlanets
 
-	@SCRUM-TC-24
+
 	Scenario Outline: As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
 	
 Add Planets Test Positive Scenario
@@ -20,7 +20,7 @@ Add Planets Test Positive Scenario
 		| this planet name is 30 chars!! | false |
 		| Terra                          | false |
 
-	@SCRUM-TC-25
+
 	Scenario Outline: As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
 	Add Planets Test Negative Scenario
 		Given The User is already log on
