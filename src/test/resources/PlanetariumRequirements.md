@@ -3,22 +3,38 @@
   - Adding Planets
 - **User Stories**
   - As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
+  - As a User I should not be able to add new planets to the Planetarium with incorrect credentials
 - **Acceptance Criteria**
   - As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
-    - Given: The User is on the Planetarium Homepage
-    - Given: No planet with name "<PlanetName\>" in planetarium
+    - Given: The User is already log on
+    - Given: No planet with name "<PlanetName>" in planetarium
     - When: The User selects planets from the drop-down menu
-    - When: The User enters "<planet name\>" for planet name
-    - When: The User selects an image from filesystem for planet image
-    - When The User clicks on the submit button
-    - Then: The planet should be added to the planetarium
+    - When: The User enters "<PlanetName>" for planet name
+    - When: "\<image>" The User selects an image from filesystem for planet image
+    - When: The User clicks on the submit button
+    - Then: The planet "<PlanetName>" should be added to the planetarium
     - data:
       - planet name
         - this planet name is 30 chars!!
-        - this planet name is 31 chars!!!
         - Terra
-        - nonunique
-
+      - image
+        - true
+        - false
+  - As a User I should not be able to add new planets to the Planetarium with incorrect credentials
+    - Given: The User is already log on
+    - Given: Planet with name "non-unique-planet" already exists
+    - When: The User selects planets from the drop-down menu
+    - When: The User enters "<PlanetName>" for planet name
+    - When: "\<image>" The User selects an image from filesystem for planet image
+    - When: The User clicks on the submit button
+    - Then: The planet "<PlanetName>" should not be added to the planetarium
+    - data:
+      - planet name
+        - this planet name is 31 chars!!!
+        - non-unique-planet
+      - image
+        - true
+        - false
 
 - **Epic**
   - Login
