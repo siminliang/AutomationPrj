@@ -43,7 +43,6 @@ import java.time.Duration;
             it can be to specific classes
          */
         glue = "com.revature.step",
-       // tags = "@AddPlanets",
         /*
             the plugin option lets you configure other generic settings for
             your tests. The options below make the terminal readout of the
