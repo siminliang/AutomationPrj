@@ -4,7 +4,7 @@ Feature: DeletePlanets
 	@SCRUM-TC-21
 	Scenario Outline: As a user I want to be able to remove Planets from the Planetarium
 	Delete Planet Positive Scenario
-		Given The User is already logged in
+		Given The User is already log on
 		Given Given Planet names "<PlanetName>" exists
 		When The User selects planets from drop-down menu
 		When User enters valid "<PlanetName>" for celestial body to be deleted
@@ -15,11 +15,13 @@ Feature: DeletePlanets
 		| PlanetName |
 		| Namke      |
 		| Vegeta     |
+		| 777        |
+		| 888        |
 
 	@SCRUM-TC-30
 	Scenario Outline: As a user I want to be able to remove Planets from the Planetarium, Negative Scenario
 	Delete Planet Negative Scenario
-		Given The User is already logged in
+		Given The User is already log on
 		Given No planet with name "<PlanetName>" exist
 		When The User selects planets from the drop-down menu
 		When User enters invalid "<PlanetName>" for celestial body to be deleted
@@ -33,7 +35,7 @@ Feature: DeletePlanets
 
 	@SCRUM-TC-33
 	Scenario Outline: User should not be able to delete a planet by its ID
-		Given The User is already logged in
+		Given The User is already log on
 		Given Planet with ID "<ID>" exists
 		When The User selects planets from drop-down menu
 		When User enters planet ID "<ID>" for celestial body to be deleted
