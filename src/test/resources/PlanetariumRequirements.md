@@ -21,7 +21,8 @@
         - true
         - false
   - As a User I should not be able to add new planets to the Planetarium with incorrect credentials
-    - Given The User is already log on
+    - Given: The User is already log on
+    - Given: Planet with name "non-unique-planet" already exists
     - When: The User selects planets from the drop-down menu
     - When: The User enters "<PlanetName>" for planet name
     - When: "\<image>" The User selects an image from filesystem for planet image
@@ -30,7 +31,7 @@
     - data:
       - planet name
         - this planet name is 31 chars!!!
-        - nonunique
+        - non-unique-planet
       - image
         - true
         - false
