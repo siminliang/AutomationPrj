@@ -24,6 +24,7 @@ Add Planets Test Positive Scenario
 	Scenario Outline: As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
 	Add Planets Test Negative Scenario
 		Given The User is already log on
+		Given Planet with name "non-unique-planet" already exists
 		When The User selects planets from the drop-down menu
 		When The User enters "<PlanetName>" for planet name
 		When "<image>" The User selects an image from filesystem for planet image
@@ -33,6 +34,6 @@ Add Planets Test Positive Scenario
 	Examples: 
 		| PlanetName                      | image |
 		| this planet name is 31 chars!!! | true  |
-		| nonunique                       | true  |
+		| non-unique-planet                       | true  |
 		| this planet name is 31 chars!!! | false |
-		| nonunique                       | false|
+		| non-unique-planet                       | false|

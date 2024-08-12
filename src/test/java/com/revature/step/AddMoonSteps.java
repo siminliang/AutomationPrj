@@ -19,6 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Objects;
 
 public class AddMoonSteps {
 
@@ -98,8 +99,9 @@ public class AddMoonSteps {
             boolean existID = false;
             List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
             for(MoonEntity moonEntity : moonEntityList){
-                if(moonEntity.getName().equals(string))
+                if(moonEntity.getName().equals(string)) {
                     existID = true;
+                }
             }
             Assert.assertTrue(existID);
         }
@@ -116,14 +118,20 @@ public class AddMoonSteps {
             //Assert.fail();
             //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
             //Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            int count = 0;
             boolean existID = true;
             List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
-            for(MoonEntity moonEntity : moonEntityList){
-                if(moonEntity.getName().equals(string))
+            for(MoonEntity moonEntity : moonEntityList) {
+                if (moonEntity.getName().equals(string)) {
+                    count++;
                     existID = false;
+                }
             }
-            Assert.assertTrue(existID);
+            if (Objects.equals(string, "non-unique-moon")){
+                Assert.assertEquals(1, count);
+            } else{
+                Assert.assertTrue(existID);
+            }
         }
-
     }
 }
