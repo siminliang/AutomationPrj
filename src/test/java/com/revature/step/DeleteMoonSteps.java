@@ -4,6 +4,7 @@ import com.revature.TestRunner;
 import com.revature.entity.MoonEntity;
 import com.revature.entity.PlanetEntity;
 import com.revature.repositories.MoonRepository;
+import com.revature.repositories.PlanetRepository;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -23,6 +24,7 @@ public class DeleteMoonSteps {
     public void moon_name_exist(String string) {
         MoonEntity moonEntity = new MoonEntity(string, "1");
         moonEntity.setDefaultImage();
+        MoonRepository.deleteMoonWithString(moonEntity); // make sure we are not creating duplicates
         MoonRepository.addMoon(moonEntity);
     }
 
@@ -36,16 +38,7 @@ public class DeleteMoonSteps {
         TestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
-    @Then("The moon {string} should be deleted from the planetarium")
-    public void the_moon_should_be_deleted_from_the_planetarium(String string) {
-        boolean existID = true;
-        List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
-        for(MoonEntity moonEntity : moonEntityList){
-            if(moonEntity.getName().equals(string))
-                existID = false;
-        }
-        Assert.assertTrue(existID);
-    }
+
 
     @Given("There is no Moon named {string} in planetarium")
     public void there_is_no_Moon_named_in_planetarium(String string) {
@@ -75,6 +68,18 @@ public class DeleteMoonSteps {
         TestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
+    @Then("The moon {string} should be deleted from the planetarium")
+    public void the_moon_should_be_deleted_from_the_planetarium(String string) {
+        boolean existID = true;
+        List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
+        for(MoonEntity moonEntity : moonEntityList){
+            if(moonEntity.getName().equals(string)) {
+                existID = false;
+            }
+        }
+        Assert.assertTrue(existID);
+    }
+
     @Then("The user should see error")
     public void the_user_should_see_error_and_the_moon_with_ID_should_not_be_deleted() {
         Assert.assertTrue(DeletePlanetSteps.getAlertPresent());
@@ -85,8 +90,9 @@ public class DeleteMoonSteps {
         boolean existID = false;
         List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
         for(MoonEntity moonEntity : moonEntityList){
-            if(moonEntity.getId().equals(string))
+            if(moonEntity.getId().equals(string)) {
                 existID = true;
+            }
         }
         Assert.assertTrue(existID);
     }

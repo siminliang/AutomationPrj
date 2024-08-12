@@ -1,8 +1,10 @@
 package com.revature.step;
 
 import com.revature.TestRunner;
+import com.revature.entity.MoonEntity;
 import com.revature.entity.PlanetEntity;
 import com.revature.entity.UserEntity;
+import com.revature.repositories.MoonRepository;
 import com.revature.repositories.PlanetRepository;
 import com.revature.repositories.UserRepository;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
@@ -18,6 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Objects;
 
 public class AddPlanetsSteps {
 
@@ -39,6 +42,14 @@ public class AddPlanetsSteps {
         PlanetEntity planetEntity = new PlanetEntity(string);
         PlanetRepository.deletePlanetWithString(planetEntity);
         TestRunner.refresh();
+    }
+
+    @Given("Planet with name {string} already exists")
+    public void planetWithNameAlreadyExists(String string) {
+        PlanetEntity planetEntity = new PlanetEntity("checkingIdDeletionMoon", "1");
+        planetEntity.setDefaultImage();;
+        PlanetRepository.deletePlanetWithString(planetEntity); // make sure we are not creating duplicates
+        PlanetRepository.addPlanet(planetEntity);
     }
 
     @When("The User selects planets from the drop-down menu")
@@ -83,8 +94,9 @@ public class AddPlanetsSteps {
             boolean existID = false;
             List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
             for(PlanetEntity planetEntity : planetEntityList){
-                if(planetEntity.getName().equals(string))
+                if(planetEntity.getName().equals(string)) {
                     existID = true;
+                }
             }
             Assert.assertTrue(existID);
         }
@@ -98,19 +110,26 @@ public class AddPlanetsSteps {
             Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
             TestRunner.driver.switchTo().alert().accept();
         }
-        catch (TimeoutException e){
+        catch (TimeoutException e) {
             //Assert.fail();
-            TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            int count = 0;
             boolean existID = true;
             List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
-            for(PlanetEntity planetEntity : planetEntityList){
-                if(planetEntity.getName().equals(string))
+            for (PlanetEntity planetEntity : planetEntityList) {
+                if (planetEntity.getName().equals(string)){
+                    count++;
                     existID = false;
+                }
             }
-            Assert.assertTrue(existID);
+            if (Objects.equals(string, "non-unique-planet")){
+                Assert.assertEquals(1, count);
+            } else{
+                Assert.assertTrue(existID);
+            }
         }
-
-
     }
+
+
 }

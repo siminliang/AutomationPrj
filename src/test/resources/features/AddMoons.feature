@@ -25,7 +25,7 @@ Feature: AddMoons
     Given The User is already log on
     Given Planet with ID "3" exists
     Given The ID of the Planet "10" does not exist in the Planetarium
-    Given Moon name "Titan" exist
+    Given Moon name "non-unique-moon" exist
     When The User selects planets from the drop-down menu
     When The User selects moon from the drop-down menu
     When The User enters "<MoonName>" for moon name
@@ -36,8 +36,8 @@ Feature: AddMoons
 
   Examples:
       | MoonName                                            | OrbitedPlanetID | image       |
-      | Titan                                               | 3               | moon-1.jpg  |
-      | Titan                                               | 3               |             |
+      | non-unique-moon                                               | 3               | moon-1.jpg  |
+      | non-unique-moon                                               | 3               |             |
       | SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose  | 3               | moon-1.jpg  |
       | SuperNoomIsTheBestMoonInTheGalaxyAndItNotEvenClose  | 3               |             |
       | Normal                                              | 10              | moon-1.jpg  |

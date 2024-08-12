@@ -31,6 +31,7 @@ public class DeletePlanetSteps {
     public void given_Planet_names_exists(String string) {
         PlanetEntity planetEntity = new PlanetEntity(string, "1");
         planetEntity.setDefaultImage();
+        PlanetRepository.deletePlanetWithString(planetEntity);
         PlanetRepository.addPlanet(planetEntity);
         TestRunner.refresh();
         TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
@@ -96,8 +97,9 @@ public class DeletePlanetSteps {
         boolean existID = false;
         List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
         for(PlanetEntity planetEntity1 : planetEntityList){
-            if(planetEntity1.getId().equals(string))
+            if(planetEntity1.getId().equals(string)) {
                 existID = true;
+            }
         }
         Assert.assertTrue(existID);
     }
@@ -114,8 +116,9 @@ public class DeletePlanetSteps {
         boolean existID = false;
         List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
         for(PlanetEntity planetEntity : planetEntityList){
-            if(planetEntity.getId().equals(string))
+            if(planetEntity.getId().equals(string)) {
                 existID = true;
+            }
         }
         Assert.assertTrue(existID);
     }
