@@ -4,7 +4,7 @@
 - **User Stories**
   - As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
 - **Acceptance Criteria**
-  - As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
+  - As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky (Positive Scenarios)
     - Given: The User is on the Planetarium Homepage
     - Given: No planet with name "<PlanetName\>" in planetarium
     - When: The User selects planets from the drop-down menu
@@ -18,3 +18,4 @@
         - this planet name is 31 chars!!!
         - Terra
         - nonunique
+  - As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky (Negative Scenarios)

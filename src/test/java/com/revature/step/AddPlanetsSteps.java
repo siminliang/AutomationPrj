@@ -85,7 +85,7 @@ public class AddPlanetsSteps {
             for(PlanetEntity planetEntity : planetEntityList){
                 if(planetEntity.getName().equals(string))
                     existID = true;
-            }
+                 }
             Assert.assertTrue(existID);
         }
 
@@ -101,11 +101,13 @@ public class AddPlanetsSteps {
         catch (TimeoutException e){
             //Assert.fail();
             TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            System.out.println(TestRunner.planetariumHome.getCelestialTableAsText());
             Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
             boolean existID = true;
             List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
             for(PlanetEntity planetEntity : planetEntityList){
                 if(planetEntity.getName().equals(string))
+                    System.out.println(planetEntity.getName());
                     existID = false;
             }
             Assert.assertTrue(existID);
