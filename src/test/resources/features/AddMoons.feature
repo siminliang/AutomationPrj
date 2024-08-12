@@ -18,6 +18,8 @@ Feature: AddMoons
     | MoonName | OrbitedPlanetID | image       |
     | MoonsAreThirtyCharactersLong!!     | 3               | moon-1.jpg  |
     | MoonsAreThirtyCharactersLong!!    | 3               |             |
+    | 303030303030303030303030303030     | 3               | moon-1.jpg  |
+    | 303030303030303030303030303030    | 3               |             |
 
 
   @SCRUM-TC-23
@@ -41,5 +43,7 @@ Feature: AddMoons
       | AlreadyAddedMoonInTheDatabase!                                               | 3               |             |
       | MoonIsThirtyOneCharactersLong!!  | 3               | moon-1.jpg  |
       | MoonIsThirtyOneCharactersLong!!  | 3               |             |
+      | 3131313131313131313131313131311  | 3               | moon-1.jpg  |
+      | 3131313131313131313131313131311  | 3               |             |
       | MoonsAreThirtyCharactersLong!!                                              | 10              | moon-1.jpg  |
       | MoonsAreThirtyCharactersLong!!                                              | 10              |             |

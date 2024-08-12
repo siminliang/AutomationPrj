@@ -16,6 +16,7 @@
     - data:
       - planet name
         - this planet name is 30 chars!!
+        - 303030303030303030303030303030
       - image
         - true
         - false
@@ -31,6 +32,7 @@
       - planet name
         - this planet name is 31 chars!!!
         - AlreadyAddedPlanetInDatabase!!
+        - 3131313131313131313131313131311
       - image
         - true
         - false
@@ -123,13 +125,13 @@
         - Air power sea power desert30!!
   - As the System I don't want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met
     Registration Feature Testing Positive Scenario
-    - Given The User is on the Login Page
-    - Given Account with username "AlreadyRegisteredUsername!!!!!" and password "PasswordIsThirtyCharactersLong" already registered
-    - When The User clicks on Create an Account Link
-    - When The User enters "<username>" into registration username input bar
-    - When The User enters "<password>" into registration password input bar
-    - When The User clicks on the Create Button
-    - Then The User is kept at the Registration page
+    - Given: The User is on the Login Page
+    - Given: Account with username "AlreadyRegisteredUsername!!!!!" and password "PasswordIsThirtyCharactersLong" already registered
+    - When: The User clicks on Create an Account Link
+    - When: The User enters "<username>" into registration username input bar
+    - When: The User enters "<password>" into registration password input bar
+    - When: The User clicks on the Create Button
+    - Then: The User is kept at the Registration page
     - data:
       - username
         - AlreadyRegisteredUsername!!!!!
@@ -150,45 +152,172 @@
   - As a User I should be able to add Moon (Negative Scenario)
 - **Acceptance Criteria**
   - As a User I should be able to add Moon (Positive Scenario)
-    - Given The User is already log on
-    - Given No Planet or Moon with name "<MoonName>" in planetarium
-    - Given Planet with ID "<OrbitedPlanetID>" exists
-    - When The User selects planets from the drop-down menu
-    - When The User selects moon from the drop-down menu
-    - When The User enters "<MoonName>" for moon name
-    - When The User enters "<OrbitedPlanetID>" for the planet that the moon is orbiting
-    - When "<image>" The User selects an image from file explorer for moon image
-    - When The User clicks on the submit button
-    - Then The Moon "<MoonName>" should be added to planetarium
+    - Given: The User is already log on
+    - Given: No Planet or Moon with name "<MoonName>" in planetarium
+    - Given: Planet with ID "<OrbitedPlanetID>" exists
+    - When: The User selects planets from the drop-down menu
+    - When: The User selects moon from the drop-down menu
+    - When: The User enters "<MoonName>" for moon name
+    - When: The User enters "<OrbitedPlanetID>" for the planet that the moon is orbiting
+    - When: "<image>" The User selects an image from file explorer for moon image
+    - When: The User clicks on the submit button
+    - Then: The Moon "<MoonName>" should be added to planetarium
     - data:
       - MoonName
         - MoonsAreThirtyCharactersLong!!
+        - 303030303030303030303030303030
       - OrbitedPlanetId
         - 3
       - image
         - moon-1.jpg
         - 
   - As a User I should be able to add Moon (Negative Scenario)
-    - Given The User is already log on
-    - Given Planet with ID "3" exists
-    - Given The ID of the Planet "10" does not exist in the Planetarium
-    - Given No Planet or Moon with name "<MoonName>" in planetarium
-    - Given Moon name "AlreadyAddedMoonInTheDatabase!" exist
-    - When The User selects planets from the drop-down menu
-    - When The User selects moon from the drop-down menu
-    - When The User enters "<MoonName>" for moon name
-    - When The User enters "<OrbitedPlanetID>" for the planet that the moon is orbiting
-    - When "<image>" The User selects an image from file explorer for moon image
-    - When The User clicks on the submit button
-    - Then The Moon "<MoonName>" should not be added to planetarium
+    - Given: The User is already log on
+    - Given: Planet with ID "3" exists
+    - Given: The ID of the Planet "10" does not exist in the Planetarium
+    - Given: No Planet or Moon with name "<MoonName>" in planetarium
+    - Given: Moon name "AlreadyAddedMoonInTheDatabase!" exist
+    - When: The User selects planets from the drop-down menu
+    - When: The User selects moon from the drop-down menu
+    - When: The User enters "<MoonName>" for moon name
+    - When: The User enters "<OrbitedPlanetID>" for the planet that the moon is orbiting
+    - When: "<image>" The User selects an image from file explorer for moon image
+    - When: The User clicks on the submit button
+    - Then: The Moon "<MoonName>" should not be added to planetarium
     - data:
       - MoonName
         - AlreadyAddedMoonInTheDatabase!
         - MoonIsThirtyOneCharactersLong!!
         - MoonsAreThirtyCharactersLong!!
+        - 3131313131313131313131313131311
       - OrbitedPlanetId
         - 3
         - 10
       - Image
         - moon-1.jpg
         -
+
+- **Epic**
+  - Delete Moons
+- **User Stories**
+  - As a user I want to be able to remove Moons from the Planetarium
+  - As a user I should not be able to remove Moon from the Planetarium when given invalid names
+  - User should not be able to delete a moon by  its ID
+- **Acceptance Criteria**
+  - As a user I want to be able to remove Moons from the Planetarium
+    - Given: Moon name "<MoonName>" exist
+    - Given: The User is already log on
+    - When: The User selects moon from drop-down menu
+    - When: User enters valid moon name "<MoonName>" for celestial body to be deleted
+    - When: User clicks on the Delete Button
+    - Then: The moon "<MoonName>" should be deleted from the planetarium
+    - data:
+      - MoonName
+        - MoonIsThirtyOneCharactersLong!!
+        - 303030303030303030303030303030
+  - As a user I should not be able to remove Moon from the Planetarium when given invalid names
+    - Given: The User is already log on
+    - Given: There is no Moon named "<invalidMoonNames>" in planetarium
+    - When: The User selects moon from drop-down menu
+    - When: User enters invalid "<invalidMoonNames>"
+    - When: User clicks on the Delete Button
+    - Then: The user should see error message pop-up
+    - data:
+      - invalidMoonNames
+        - NoMoonInDatabaseToDeleteHere!!
+        - 3131313131313131313131313131311
+  - User should not be able to delete a moon by  its ID
+    - Given: The User is already log on
+    - Given: Moon with ID "<ID>" exists
+    - When: The User selects moon from drop-down menu
+    - When: User enters moon id "<ID>" for celestial body to be deleted
+    - When: User clicks on the Delete Button
+    - Then: The user should see error
+    - And: The moon with ID "<ID>" should not be deleted
+    - data:
+      - ID
+        - 1
+
+- **Epic**
+  - Delete Planets
+- **User Stories**
+  - As a user I want to be able to remove Planets from the Planetarium
+  - As a user I want to be able to remove Planets from the Planetarium, Negative Scenario
+  - User should not be able to delete a planet by its ID
+- **Acceptance Criteria**
+  - As a user I want to be able to remove Planets from the Planetarium
+    - Given: The User is already log on
+    - Given: Given Planet names "<PlanetName>" exists
+    - When: The User selects planets from drop-down menu
+    - When: User enters valid "<PlanetName>" for celestial body to be deleted
+    - When: User clicks on the Delete Button
+    - Then: The planet "<PlanetName>" should be deleted from the Planetarium
+    - data:
+      - PlanetName
+        - PlanetIsThirtyCharactersLong!!
+        - 303030303030303030303030303030
+  - As a user I want to be able to remove Planets from the Planetarium, Negative Scenario
+    - Given: The User is already log on
+    - Given: No planet with name "<PlanetName>" exist
+    - When: The User selects planets from the drop-down menu
+    - When: User enters invalid "<PlanetName>" for celestial body to be deleted
+    - When: User clicks on the Delete Button
+    - Then: The user should see error message pop-up
+    - data:
+      - PlanetName
+        - NoPlanetInDatabaseToDeleteHere
+        - 3131313131313131313131313131311
+  - User should not be able to delete a planet by its ID
+    - Given: The User is already log on
+    - Given: Planet with ID "<ID>" exists
+    - When: The User selects planets from drop-down menu
+    - When: User enters planet ID "<ID>" for celestial body to be deleted
+    - When: User clicks on the Delete Button
+    - Then: The user should see error
+    - And: The planet with ID "<ID>" should not be deleted
+    - data:
+      - ID
+        - 2
+
+
+- **Epic**
+  - View Celestial Planets
+- **User Stories**
+  - User wants to see all the available celestial bodies in planetarium
+  - User should be able to see new added celestial bodies.
+- **Acceptance Criteria**
+  - User wants to see all the available celestial bodies in planetarium
+    - Given: The User is already logged in with "<username>" and  "<password>"
+    - When:  User is redirected to the Planetarium
+    - Then: User see all the available celestial Bodies.
+    - data:
+      - username
+        - UsernameIsThirtyCharactersLong
+      - password
+        - PasswordIsThirtyCharactersLong
+  - User should be able to see new added celestial bodies.
+    - Given: The User is already logged in with "<username>" and  "<password>"
+    - Given: No planet with name "<planetname>" in planetarium
+    - When:  User is redirected to the Planetarium
+    - When: User add new planet "<planetname>"
+    - Then: User see all the available celestial Bodies.
+    - data:
+      - username
+        - UsernameIsThirtyCharactersLong
+      - password
+        - PasswordIsThirtyCharactersLong
+      - planetname
+        - PlanetIsThirtyCharactersLong!!
+  - User should be not able to see newly deleted celestial bodies.
+    - Given: The User is already logged in with "<username>" and  "<password>"
+    - Given: The planet "<planetname>" is already there
+    - When:  User is redirected to the Planetarium
+    - When: User delete new planet "<planetname>"
+    - Then: User see all the available celestial Bodies.
+    - data:
+      - username
+        - UsernameIsThirtyCharactersLong
+      - password
+        - PasswordIsThirtyCharactersLong
+      - planetname
+        - PlanetIsThirtyCharactersLong!!

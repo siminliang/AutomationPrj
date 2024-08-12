@@ -17,6 +17,8 @@ Add Planets Test Positive Scenario
 		| PlanetName                     | image |
 		| this planet name is 30 chars!! | true  |
 		| this planet name is 30 chars!! | false |
+		| 303030303030303030303030303030 | true  |
+		| 303030303030303030303030303030 | false |
 
 	@SCRUM-TC-25
 	Scenario Outline: As a User I should not be able to add new planets to the Planetarium with incorrect credentials
@@ -33,5 +35,7 @@ Add Planets Test Positive Scenario
 		| PlanetName                      | image |
 		| this planet name is 31 chars!!! | true  |
 		| AlreadyAddedPlanetInDatabase!!                       | true  |
+		| 3131313131313131313131313131311 | true |
 		| this planet name is 31 chars!!! | false |
 		| AlreadyAddedPlanetInDatabase!!                       | false|
+		| 3131313131313131313131313131311 | false |
