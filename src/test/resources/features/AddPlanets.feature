@@ -21,7 +21,7 @@ Add Planets Test Positive Scenario
 		| Terra                          | false |
 
 	@SCRUM-TC-25
-	Scenario Outline: As a User I want to add new planets to the Planetarium, so I can track the planet in the night sky
+	Scenario Outline: As a User I should not be able to add new planets to the Planetarium with incorrect credentials
 	Add Planets Test Negative Scenario
 		Given The User is already log on
 		When The User selects planets from the drop-down menu
