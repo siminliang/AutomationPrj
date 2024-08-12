@@ -8,6 +8,7 @@ import com.revature.repositories.MoonRepository;
 import com.revature.repositories.PlanetRepository;
 import com.revature.repositories.UserRepository;
 import com.revature.services.LoginService;
+import com.revature.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.After;
@@ -64,6 +65,24 @@ public class ViewCeletialBodiesSteps {
         TestRunner.planetariumHome.sendToPlanetNameInput(planetname);
         TestRunner.planetariumHome.uploadImage();
         TestRunner.planetariumHome.clickSubmitButton();
+        try{
+            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
+        }
+        catch (TimeoutException e){
+            //Assert.fail();
+            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            boolean existID = false;
+            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+            for(PlanetEntity planetEntity : planetEntityList){
+                if(planetEntity.getName().equals(planetname)) {
+                    existID = true;
+                }
+            }
+            Assert.assertTrue(existID);
+        }
     }
     @Then("User delete new planet {string}")
     public void user_delete_new_planet(String planet){
@@ -84,9 +103,6 @@ public class ViewCeletialBodiesSteps {
 
         List<Integer> planetIds = PlanetRepository.getPlanets();
         List<Integer> moonIds = MoonRepository.getMoons();
-        System.out.println(tableData);
-        System.out.println(planetIds);
-        System.out.println(moonIds);
         boolean isMoonSame = moonIds.equals(tableData.getOrDefault("moon", new ArrayList<>()));
         boolean isPlanetSame = planetIds.equals(tableData.getOrDefault("planet",new ArrayList<>()));
 
