@@ -14,11 +14,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Duration;
 import java.util.List;
 
 public class DeletePlanetSteps {
+    private static boolean alertPresent = false;
 
+    public static boolean getAlertPresent(){
+        return alertPresent;
+    }
     @Given("The User is already logged in")
     public void the_User_is_already_logged_in() {
         Assert.assertTrue(LoginService.loginBatman());
@@ -48,28 +51,23 @@ public class DeletePlanetSteps {
     @When("User clicks on the Delete Button")
     public void user_clicks_on_the_Delete_Button() {
         TestRunner.planetariumHome.clickDeleteButton();
+        try {
+            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            TestRunner.driver.switchTo().alert().accept();
+            alertPresent = true;
+        } catch (TimeoutException ignored){
+        }
     }
 
     @Then("The planet {string} should be deleted from the Planetarium")
     public void the_planet_should_be_deleted_from_the_Planetarium(String string) {
-        try{
-            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
-            TestRunner.driver.switchTo().alert().accept();
+        boolean existID = true;
+        List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+        for(PlanetEntity planetEntity : planetEntityList){
+            if(planetEntity.getName().equals(string))
+                existID = false;
         }
-        catch (TimeoutException e){
-            //Assert.fail();
-            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            //Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-            boolean existID = true;
-            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
-            for(PlanetEntity planetEntity : planetEntityList){
-                if(planetEntity.getName().equals(string))
-                    existID = false;
-            }
-            Assert.assertTrue(existID);
-        }
-
+        Assert.assertTrue(existID);
     }
 
     @Given("No planet with name {string} exist")
@@ -85,8 +83,7 @@ public class DeletePlanetSteps {
 
     @Then("The user should see error message pop-up")
     public void the_user_should_see_error_message_pop_up() {
-        TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-        TestRunner.driver.switchTo().alert().accept();
+        Assert.assertTrue(alertPresent);
     }
 
     @Given("Planet with ID {string} exists")
@@ -95,6 +92,7 @@ public class DeletePlanetSteps {
         planetEntity.setDefaultImage();
         planetEntity.setId(string);
         PlanetRepository.addPlanetWithId(planetEntity);
+
         boolean existID = false;
         List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
         for(PlanetEntity planetEntity1 : planetEntityList){

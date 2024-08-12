@@ -18,29 +18,12 @@ import java.time.Duration;
 import java.util.List;
 
 public class DeleteMoonSteps {
-    private int moonId = -1;
 
     @Given("Moon name {string} exist")
     public void moon_name_exist(String string) {
         MoonEntity moonEntity = new MoonEntity(string, "1");
         moonEntity.setDefaultImage();
         MoonRepository.addMoon(moonEntity);
-        /*
-        TestRunner.refresh();
-        TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
-        //getPlanetName returns all text in celestialTable, so it should contain moon name as well
-
-        boolean existID = false;
-        List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
-        for(MoonEntity moonEntity1 : moonEntityList){
-            if(moonEntity1.getName().equals(string))
-                existID = true;
-        }
-        Assert.assertTrue(existID);
-        //TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-       // Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-
-         */
     }
 
     @When("The User selects moon from drop-down menu")
@@ -55,24 +38,13 @@ public class DeleteMoonSteps {
 
     @Then("The moon {string} should be deleted from the planetarium")
     public void the_moon_should_be_deleted_from_the_planetarium(String string) {
-        try{
-            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
-            TestRunner.driver.switchTo().alert().accept();
+        boolean existID = true;
+        List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
+        for(MoonEntity moonEntity : moonEntityList){
+            if(moonEntity.getName().equals(string))
+                existID = false;
         }
-        catch (TimeoutException e){
-            //Assert.fail();
-            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            //Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-            boolean existID = true;
-            List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
-            for(MoonEntity moonEntity : moonEntityList){
-                if(moonEntity.getName().equals(string))
-                    existID = false;
-            }
-            Assert.assertTrue(existID);
-        }
-
+        Assert.assertTrue(existID);
     }
 
     @Given("There is no Moon named {string} in planetarium")
@@ -96,16 +68,6 @@ public class DeleteMoonSteps {
         //getPlanetName returns all text in celestialTable, so it should contain moon name as well
         TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
         Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-        /*
-        boolean existID = false;
-        List<MoonEntity> moonEntityList = DatabaseScriptRunnerUtility.getAllMoonInfo();
-        for(MoonEntity moonEntity1 : moonEntityList){
-            if(moonEntity1.getId().equals(string))
-                existID = true;
-        }
-        Assert.assertTrue(existID);
-
-         */
     }
 
     @When("User enters moon id {string} for celestial body to be deleted")
@@ -115,19 +77,7 @@ public class DeleteMoonSteps {
 
     @Then("The user should see error")
     public void the_user_should_see_error_and_the_moon_with_ID_should_not_be_deleted() {
-        try{
-            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
-            TestRunner.driver.switchTo().alert().accept();
-        }
-        catch (TimeoutException e){
-            //Assert.fail();
-            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-
-        }
-
-
+        Assert.assertTrue(DeletePlanetSteps.getAlertPresent());
     }
 
     @And("The moon with ID {string} should not be deleted")
