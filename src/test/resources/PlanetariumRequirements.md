@@ -42,11 +42,8 @@
 - **User Stories**
   - As a User I want to Login to my Account so that I can Enter the Planetarium
   - As the System I don't want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure
-    Login Functionality Test Negative Scenario
   - As a User I want to Logout of my Account so that I can exit the Planetarium
-    Login Functionality Test Positive Scenario
   - As the System I don't want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users
-    Login Functionality Test Negative Scenario
 - **Acceptance Criteria**
   - As a User I want to Login to my Account so that I can Enter the Planetarium
     - Given: The User is on the Login Page
@@ -105,9 +102,7 @@
   - Registration
 - **User Stories**
   - As a User I want to Register an Account with the Planetarium so that I can Login Securely
-    Registration Feature Testing Positive Scenario
   - As the System I don't want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met
-    Registration Feature Testing Positive Scenario
 - **Acceptance Criteria**
   - As a User I want to Register an Account with the Planetarium so that I can Login Securely
     Registration Feature Testing Positive Scenario
@@ -285,6 +280,7 @@
 - **User Stories**
   - User wants to see all the available celestial bodies in planetarium
   - User should be able to see new added celestial bodies.
+  - User should be not able to see newly deleted celestial bodies.
 - **Acceptance Criteria**
   - User wants to see all the available celestial bodies in planetarium
     - Given: The User is already logged in with "<username>" and  "<password>"
