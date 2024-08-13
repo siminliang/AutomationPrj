@@ -131,5 +131,30 @@ public class AddPlanetsSteps {
         }
     }
 
+    @Then("The planet {string} should be owned by the User that Added it")
+    public void the_planet_should_be_owned_by_the_User_that_Added_it(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        UserEntity userEntity = new UserEntity("Lisan", "al-gaib");
+        int userID = DatabaseScriptRunnerUtility.getUserId(userEntity);
+
+        try{
+            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
+            TestRunner.driver.switchTo().alert().accept();
+        }
+        catch (TimeoutException e){
+            boolean existID = false;
+            List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
+            for(PlanetEntity planetEntity : planetEntityList){
+                if(planetEntity.getName().equals(string)) {
+                    if(planetEntity.getOwner().equals(Integer.toString(userID))){
+                        existID = true;
+                    }
+                }
+            }
+            Assert.assertTrue(existID);
+        }
+    }
+
 
 }

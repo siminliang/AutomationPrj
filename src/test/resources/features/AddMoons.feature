@@ -13,6 +13,7 @@ Feature: AddMoons
     When "<image>" The User selects an image from file explorer for moon image
     When The User clicks on the submit button
     Then The Moon "<MoonName>" should be added to planetarium
+    Then The Moon "<MoonName>" should be owned by "<OrbitedPlanetID>"
 
   Examples:
     | MoonName | OrbitedPlanetID | image       |
