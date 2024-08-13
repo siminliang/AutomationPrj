@@ -58,7 +58,6 @@
       - password
         - PasswordIsThirtyCharactersLong
   - @SCRUM-TC-18: As the System I don't want a user to Login to an Account using an invalid Username and Password combo so that I can ensure my user accounts are secure
-    Login Functionality Test Negative Scenario
     - Given: The User is on the Login Page
     - Given: Account with username "AlreadyRegisteredUsername!!!!!" and password "PasswordIsThirtyCharactersLong" already registered
     - Given No Registered User with username "UsernameIsNotInThePlanetarium!"
@@ -76,7 +75,6 @@
         - PasswordIsThirtyCharactersLong
         - 
   - @SCRUM-TC-26: As a User I want to Logout of my Account so that I can exit the Planetarium
-    Login Functionality Test Positive Scenario
     - Given: The User is on the Login Page
     - Given: Account with username "\<username>" and password "<password>" already registered
     - When: The User enters "\<username>" into username input bar
@@ -91,7 +89,6 @@
       - password
         - PasswordIsThirtyCharactersLong
   - @SCRUM-TC-27: As the System I don't want a user to bypass the Login page so that I can ensure the Planetarium is only for logged in users
-    Login Functionality Test Negative Scenario
     - Given: The User is on the Login Page
     - When: The User enters the Planetarium Main Page URL into the browser URL
     - Then: The User is not redirected to the Planetarium
@@ -105,7 +102,6 @@
   - @SCRUM-TC-20: As the System I don't want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met
 - **Acceptance Criteria**
   - @SCRUM-TC-19: As a User I want to Register an Account with the Planetarium so that I can Login Securely
-    Registration Feature Testing Positive Scenario
     - Given: The User is on the Login Page
     - Given: No Registered User with username "\<username>"
     - When: The User clicks on Create an Account Link
@@ -120,7 +116,6 @@
       - password
         - Air power sea power desert30!!
   - @SCRUM-TC-20: As the System I don't want a user to Register an Account using invalid usernames and passwords so that I can ensure system requirements are met
-    Registration Feature Testing Positive Scenario
     - Given: The User is on the Login Page
     - Given: Account with username "AlreadyRegisteredUsername!!!!!" and password "PasswordIsThirtyCharactersLong" already registered
     - When: The User clicks on Create an Account Link
