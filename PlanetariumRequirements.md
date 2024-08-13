@@ -13,6 +13,7 @@
     - When: "\<image>" The User selects an image from filesystem for planet image
     - When: The User clicks on the submit button
     - Then: The planet "\<PlanetName>" should be added to the planetarium
+    - Then: The planet "<PlanetName>" should be owned by the User that Added it
     - data:
       - planet name
         - this planet name is 30 chars!!
@@ -154,6 +155,7 @@
     - When: "\<image>" The User selects an image from file explorer for moon image
     - When: The User clicks on the submit button
     - Then: The Moon "\<MoonName>" should be added to planetarium
+    - Then The Moon "<MoonName>" should be owned by "<OrbitedPlanetID>"
     - data:
       - MoonName
         - MoonsAreThirtyCharactersLong!!
