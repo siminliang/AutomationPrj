@@ -10,7 +10,9 @@ Feature: Registration
 		When The User enters "<username>" into registration username input bar
 		When The User enters "<password>" into registration password input bar
 		When The User clicks on the Create Button
-		Then The User is registered and redirected into the Planetarium Login page
+		Then The User is redirected into the Planetarium Login page
+		Then The User "<username>" and password "<password>" is registered
+
 
 	Examples: 
 		| username                       | password                       |
@@ -26,6 +28,7 @@ Feature: Registration
 		When The User enters "<password>" into registration password input bar
 		When The User clicks on the Create Button
 		Then The User is kept at the Registration page
+		Then The User "<username>" and password "<password>" is not registered
 
 	Examples: 
 		| username                        | password                        |

@@ -112,7 +112,8 @@
     - When: The User enters "<username>" into registration username input bar
     - When: The User enters "<password>" into registration password input bar
     - When: The User clicks on the Create Button
-    - Then: The User is registered and redirected into the Planetarium Login page
+    - Then The User is redirected into the Planetarium Login page
+    - Then: The User "<username>" and password "<password>" is registered
     - data:
       - username
         - Paul muad'dib atreides!!!!!!!!
@@ -126,7 +127,8 @@
     - When: The User enters "<username>" into registration username input bar
     - When: The User enters "<password>" into registration password input bar
     - When: The User clicks on the Create Button
-    - Then: The User is kept at the Registration page
+    - Then The User is kept at the Registration page
+    - Then The User "<username>" and password "<password>" is not registered
     - data:
       - username
         - AlreadyRegisteredUsername!!!!!
@@ -208,7 +210,7 @@
     - Then: The moon "<MoonName>" should be deleted from the planetarium
     - data:
       - MoonName
-        - MoonIsThirtyOneCharactersLong!!
+        - MoonsAreThirtyCharactersLong!!
         - 303030303030303030303030303030
   - As a user I should not be able to remove Moon from the Planetarium when given invalid names
     - Given: The User is already log on

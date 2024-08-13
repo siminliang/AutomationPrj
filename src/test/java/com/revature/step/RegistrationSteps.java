@@ -1,6 +1,7 @@
 package com.revature.step;
 
 import com.revature.TestRunner;
+import com.revature.entity.PlanetEntity;
 import com.revature.entity.UserEntity;
 import com.revature.repositories.UserRepository;
 import com.revature.utilities.DatabaseScriptRunnerUtility;
@@ -12,6 +13,8 @@ import com.revature.TestRunner;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
 
 public class RegistrationSteps {
 
@@ -56,13 +59,27 @@ public class RegistrationSteps {
         //TestRunner.wait.until(ExpectedConditions.elementToBeClickable(TestRunner.driver.findElement(By.xpath("//input[@type='submit' and @value='Create']"))));
         TestRunner.planetariumRegistrationHome.clickCreateButton();
     }
-    @Then("The User is registered and redirected into the Planetarium Login page")
+    @Then("The User is redirected into the Planetarium Login page")
     public void the_User_is_registered_and_redirected_into_the_Planetarium() {
         // Write code here that turns the phrase above into concrete actions
         TestRunner.wait.until(ExpectedConditions.alertIsPresent());
         TestRunner.driver.switchTo().alert().accept();
         TestRunner.wait.until(ExpectedConditions.titleIs("Planetarium Login"));
         Assert.assertEquals("Planetarium Login", TestRunner.driver.getTitle());
+
+    }
+
+    @Then("The User {string} and password {string} is registered")
+    public void the_User_is_registered(String string, String string2) {
+        // Write code here that turns the phrase above into concrete actions
+        boolean existID = false;
+        List<UserEntity> userEntityList = DatabaseScriptRunnerUtility.getAllUserInfo();
+        for(UserEntity userEntity : userEntityList){
+            if(userEntity.getUsername().equals(string) && userEntity.getPassword().equals(string2)) {
+                existID = true;
+            }
+        }
+        Assert.assertTrue(existID);
 
     }
 
@@ -74,6 +91,20 @@ public class RegistrationSteps {
         TestRunner.wait.until(ExpectedConditions.titleIs("Account Creation"));
         Assert.assertEquals("Account Creation", TestRunner.driver.getTitle());
     }
+
+    @Then("The User {string} and password {string} is not registered")
+    public void theUserIsNotRegistered(String string, String string2) {
+        boolean existID = false;
+        List<UserEntity> userEntityList = DatabaseScriptRunnerUtility.getAllUserInfo();
+        for(UserEntity userEntity : userEntityList){
+            if(userEntity.getUsername().equals(string) && userEntity.getPassword().equals(string2)) {
+                existID = true;
+            }
+        }
+        Assert.assertFalse(existID);
+    }
+
+
 
 
 }

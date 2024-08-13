@@ -15,6 +15,9 @@ public class UserEntity {
         this.password = "default";
     }
 
+    public UserEntity(){
+    }
+
     public String getUsername() {
         return username;
     }

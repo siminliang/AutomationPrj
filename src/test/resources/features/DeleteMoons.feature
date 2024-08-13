@@ -13,7 +13,7 @@ Feature: DeleteMoons
 
 	Examples: 
 		| MoonName |
-		| MoonIsThirtyOneCharactersLong!!    |
+		| MoonsAreThirtyCharactersLong!!    |
 		| 303030303030303030303030303030      |
 
 	@SCRUM-TC-32
