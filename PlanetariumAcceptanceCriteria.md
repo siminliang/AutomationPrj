@@ -1,4 +1,4 @@
-# Planetarium Requirements Document
+# Planetarium Acceptance Criteria Document
 - **Epic**
   - Adding Planets
 - **User Stories**
