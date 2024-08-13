@@ -158,6 +158,26 @@ public class DatabaseScriptRunnerUtility {
         return null;
     }
 
+    public static List<UserEntity> getAllUserInfo(){
+        String sql = "SELECT * FROM \"users\"";
+        try(Connection connection = DatabaseConnectorUtility.createConnection()){
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            List<UserEntity> entities = new ArrayList<>();
+            while(resultSet.next()){
+                UserEntity userEntity = new UserEntity();
+                userEntity.setId(resultSet.getString("id"));
+                userEntity.setUsername(resultSet.getString("username"));
+                userEntity.setPassword(resultSet.getString("password"));
+                entities.add(userEntity);
+            }
+            return entities;
+        }catch (SQLException exception){
+            System.out.println(exception.getMessage());
+        }
+        return null;
+    }
+
 
     //add temp moon and returns its id
     public static int addTempMoon(MoonEntity moonEntity){
