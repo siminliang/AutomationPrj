@@ -210,7 +210,7 @@
     - Then: The moon "<MoonName>" should be deleted from the planetarium
     - data:
       - MoonName
-        - MoonIsThirtyOneCharactersLong!!
+        - MoonsAreThirtyCharactersLong!!
         - 303030303030303030303030303030
   - As a user I should not be able to remove Moon from the Planetarium when given invalid names
     - Given: The User is already log on
