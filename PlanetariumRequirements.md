@@ -48,7 +48,7 @@
 - **Acceptance Criteria**
   - @SCRUM-TC-17: As a User I want to Login to my Account so that I can Enter the Planetarium
     - Given: The User is on the Login Page
-    - Given: Account with username "\<username>" and password "<password>" already registered
+    - Given: Account with username "\<username>" and password "\<password>" already registered
     - When: The User enters "\<username>" into username input bar
     - When: The User enters "\<password>" into password input bar
     - When: The User clicks on the Login Button
@@ -77,7 +77,7 @@
         - 
   - @SCRUM-TC-26: As a User I want to Logout of my Account so that I can exit the Planetarium
     - Given: The User is on the Login Page
-    - Given: Account with username "\<username>" and password "<password>" already registered
+    - Given: Account with username "\<username>" and password "\<password>" already registered
     - When: The User enters "\<username>" into username input bar
     - When: The User enters "\<password>" into password input bar
     - When: The User clicks on the Login Button
@@ -110,7 +110,7 @@
     - When: The User enters "\<password>" into registration password input bar
     - When: The User clicks on the Create Button
     - Then The User is redirected into the Planetarium Login page
-    - Then: The User "\<username>" and password "<password>" is registered
+    - Then: The User "\<username>" and password "\<password>" is registered
     - data:
       - username
         - Paul muad'dib atreides!!!!!!!!
@@ -155,7 +155,7 @@
     - When: "\<image>" The User selects an image from file explorer for moon image
     - When: The User clicks on the submit button
     - Then: The Moon "\<MoonName>" should be added to planetarium
-    - Then The Moon "\<MoonName>" should be owned by "<OrbitedPlanetID>"
+    - Then The Moon "\<MoonName>" should be owned by "\<OrbitedPlanetID>"
     - data:
       - MoonName
         - MoonsAreThirtyCharactersLong!!
