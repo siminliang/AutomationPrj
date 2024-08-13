@@ -12,6 +12,7 @@ Add Planets Test Positive Scenario
 		When "<image>" The User selects an image from filesystem for planet image
 		When The User clicks on the submit button
 		Then The planet "<PlanetName>" should be added to the planetarium
+		Then The planet "<PlanetName>" should be owned by the User that Added it
 
 	Examples: 
 		| PlanetName                     | image |
@@ -34,8 +35,8 @@ Add Planets Test Positive Scenario
 	Examples: 
 		| PlanetName                      | image |
 		| this planet name is 31 chars!!! | true  |
-		| AlreadyAddedPlanetInDatabase!!                       | true  |
-		| 3131313131313131313131313131311 | true |
+		| AlreadyAddedPlanetInDatabase!!  | true  |
+		| 3131313131313131313131313131311 | true  |
 		| this planet name is 31 chars!!! | false |
-		| AlreadyAddedPlanetInDatabase!!                       | false|
+		| AlreadyAddedPlanetInDatabase!!  | false |
 		| 3131313131313131313131313131311 | false |
