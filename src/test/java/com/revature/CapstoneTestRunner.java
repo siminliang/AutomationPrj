@@ -1,5 +1,6 @@
 package com.revature;
 
+import com.revature.planetarium.Utility;
 import com.revature.planetarium.integrationTests.repository.UserDaoImpIntegrationTests;
 import com.revature.planetarium.integrationTests.service.UserServiceImpIntegrationTests;
 import com.revature.planetarium.unitTests.controller.UserControllerUnitTests;
@@ -30,6 +31,9 @@ public class CapstoneTestRunner {
     @BeforeClass
     public static void runnerSetup(){
         System.out.println("This method will run before any tests in the suite");
+
+        // reset the database everytime we run our tests
+        Utility.resetTestDatabase();
     }
 
 }
