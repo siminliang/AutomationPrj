@@ -42,7 +42,7 @@ import java.time.Duration;
             this can be a reference to on or more packages that have your code, or
             it can be to specific classes
          */
-        glue = "com.revature.step",
+        glue = "com.revature.selenium.step",
         /*
             the plugin option lets you configure other generic settings for
             your tests. The options below make the terminal readout of the
