@@ -1,10 +1,10 @@
-package com.revature.entity;
+package com.revature.selenium.entity;
 
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class PlanetEntity {
+public class MoonEntity {
 
     public String name;
 
@@ -14,18 +14,19 @@ public class PlanetEntity {
 
     public String id;
 
-    public PlanetEntity(String name, String owner, File image){
+    public MoonEntity(String name, String owner, File image){
         this.name = name;
         this.owner = owner;
         this.image = image;
     }
 
-    public PlanetEntity(String name, String owner){
+    public MoonEntity(String name, String owner){
         this.name = name;
         this.owner = owner;
     }
 
-    public PlanetEntity(){}
+
+    public MoonEntity(){}
 
     public String getName() {
         return name;
@@ -65,7 +66,7 @@ public class PlanetEntity {
         this.id = id;
     }
 
-    public PlanetEntity(String name){
+    public MoonEntity(String name){
         this.name = name;
     }
 

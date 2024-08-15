@@ -1,6 +1,6 @@
-package com.revature.utilities;
+package com.revature.selenium.entity.utilities;
 
-import com.revature.entity.PlanetEntity;
+import com.revature.selenium.entity.PlanetEntity;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

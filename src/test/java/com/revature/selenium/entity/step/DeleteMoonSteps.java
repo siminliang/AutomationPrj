@@ -1,21 +1,17 @@
-package com.revature.step;
+package com.revature.selenium.entity.step;
 
-import com.revature.TestRunner;
-import com.revature.entity.MoonEntity;
-import com.revature.entity.PlanetEntity;
-import com.revature.repositories.MoonRepository;
-import com.revature.repositories.PlanetRepository;
-import com.revature.utilities.DatabaseScriptRunnerUtility;
+import com.revature.SeleniumTestRunner;
+import com.revature.selenium.entity.MoonEntity;
+import com.revature.selenium.entity.repositories.MoonRepository;
+import com.revature.selenium.entity.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Duration;
 import java.util.List;
 
 public class DeleteMoonSteps {
@@ -30,12 +26,12 @@ public class DeleteMoonSteps {
 
     @When("The User selects moon from drop-down menu")
     public void the_User_selects_moon_from_drop_down_menu() {
-        TestRunner.planetariumHome.selectMoon();
+        SeleniumTestRunner.planetariumHome.selectMoon();
     }
 
     @When("User enters valid moon name {string} for celestial body to be deleted")
     public void user_enters_valid_moon_name_for_celestial_body_to_be_deleted(String string) {
-        TestRunner.planetariumHome.sendToDeleteInput(string);
+        SeleniumTestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
 
@@ -48,7 +44,7 @@ public class DeleteMoonSteps {
 
     @When("User enters invalid {string}")
     public void user_enters_invalid(String string) {
-        TestRunner.planetariumHome.sendToDeleteInput(string);
+        SeleniumTestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
     @Given("Moon with ID {string} exists")
@@ -57,15 +53,15 @@ public class DeleteMoonSteps {
         moonEntity.setDefaultImage();
         moonEntity.setId(string);
         MoonRepository.addMoon(moonEntity);
-        TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
+        SeleniumTestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
         //getPlanetName returns all text in celestialTable, so it should contain moon name as well
-        TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-        Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        SeleniumTestRunner.wait.until(driver -> SeleniumTestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        Assert.assertTrue(SeleniumTestRunner.planetariumHome.getCelestialTableAsText().contains(string));
     }
 
     @When("User enters moon id {string} for celestial body to be deleted")
     public void user_enters_moon_id_for_celestial_body_to_be_deleted(String string) {
-        TestRunner.planetariumHome.sendToDeleteInput(string);
+        SeleniumTestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
     @Then("The moon {string} should be deleted from the planetarium")

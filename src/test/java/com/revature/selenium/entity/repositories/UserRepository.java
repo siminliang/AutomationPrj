@@ -1,7 +1,7 @@
-package com.revature.repositories;
+package com.revature.selenium.entity.repositories;
 
-import com.revature.entity.UserEntity;
-import com.revature.utilities.DatabaseScriptRunnerUtility;
+import com.revature.selenium.entity.UserEntity;
+import com.revature.selenium.entity.utilities.DatabaseScriptRunnerUtility;
 
 public class UserRepository {
 

@@ -1,8 +1,8 @@
 package com.revature;
 
-import com.revature.pom.PlanetariumHome;
-import com.revature.pom.PlanetariumLoginHome;
-import com.revature.pom.PlanetariumRegistrationHome;
+import com.revature.selenium.entity.pom.PlanetariumHome;
+import com.revature.selenium.entity.pom.PlanetariumLoginHome;
+import com.revature.selenium.entity.pom.PlanetariumRegistrationHome;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -16,10 +16,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 /*
-    a TestRunner class is used to facilitate the setup and teardown of
+    a SeleniumTestRunner class is used to facilitate the setup and teardown of
     your automated tests. It is particularly useful when using Cucumber
     and Junit for automated browser testing because we can use the
-    TestRunner class to initialize our driver, poms, and any other shared
+    SeleniumTestRunner class to initialize our driver, poms, and any other shared
     resources needed for our End-to-End testing
  */
 @RunWith(Cucumber.class)// this tells Junit that Cucumber will be providing test step information
@@ -57,9 +57,9 @@ import java.time.Duration;
         }
 
 )
-public class TestRunner {
+public class SeleniumTestRunner {
     /*
-        The resources we initialize in this TestRunner class are going
+        The resources we initialize in this SeleniumTestRunner class are going
         to be static so we can access them directly from the class
         itself.
      */

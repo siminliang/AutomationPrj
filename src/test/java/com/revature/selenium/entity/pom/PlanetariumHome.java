@@ -1,4 +1,4 @@
-package com.revature.pom;
+package com.revature.selenium.entity.pom;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.revature.TestRunner.wait;
+import static com.revature.SeleniumTestRunner.wait;
 
 public class PlanetariumHome {
     private WebDriver driver;

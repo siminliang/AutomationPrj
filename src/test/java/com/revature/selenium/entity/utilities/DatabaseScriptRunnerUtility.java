@@ -1,8 +1,8 @@
-package com.revature.utilities;
+package com.revature.selenium.entity.utilities;
 
-import com.revature.entity.MoonEntity;
-import com.revature.entity.PlanetEntity;
-import com.revature.entity.UserEntity;
+import com.revature.selenium.entity.MoonEntity;
+import com.revature.selenium.entity.PlanetEntity;
+import com.revature.selenium.entity.UserEntity;
 
 
 import java.io.FileNotFoundException;

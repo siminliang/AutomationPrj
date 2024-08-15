@@ -1,6 +1,6 @@
-package com.revature.utilities;
+package com.revature.selenium.entity.utilities;
 
-import com.revature.entity.MoonEntity;
+import com.revature.selenium.entity.MoonEntity;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

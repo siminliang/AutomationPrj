@@ -1,24 +1,18 @@
-package com.revature.step;
+package com.revature.selenium.entity.step;
 
-import com.revature.TestRunner;
-import com.revature.entity.MoonEntity;
-import com.revature.entity.PlanetEntity;
-import com.revature.entity.UserEntity;
-import com.revature.repositories.MoonRepository;
-import com.revature.repositories.PlanetRepository;
-import com.revature.repositories.UserRepository;
-import com.revature.utilities.DatabaseScriptRunnerUtility;
+import com.revature.SeleniumTestRunner;
+import com.revature.selenium.entity.PlanetEntity;
+import com.revature.selenium.entity.UserEntity;
+import com.revature.selenium.entity.repositories.PlanetRepository;
+import com.revature.selenium.entity.repositories.UserRepository;
+import com.revature.selenium.entity.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 import java.util.Objects;
 
@@ -29,11 +23,11 @@ public class AddPlanetsSteps {
         // All the steps required to log the user in
         UserEntity userEntity = new UserEntity("Lisan", "al-gaib");
         UserRepository.addUser(userEntity);
-        TestRunner.planetariumLoginHome.goToPlanetariumLoginHome();
-        TestRunner.planetariumLoginHome.sendToUsernameInput("Lisan");
-        TestRunner.planetariumLoginHome.sendToPasswordInput("al-gaib");
-        TestRunner.planetariumLoginHome.clickLoginButton();
-        TestRunner.wait.until(ExpectedConditions.titleIs("Home"));
+        SeleniumTestRunner.planetariumLoginHome.goToPlanetariumLoginHome();
+        SeleniumTestRunner.planetariumLoginHome.sendToUsernameInput("Lisan");
+        SeleniumTestRunner.planetariumLoginHome.sendToPasswordInput("al-gaib");
+        SeleniumTestRunner.planetariumLoginHome.clickLoginButton();
+        SeleniumTestRunner.wait.until(ExpectedConditions.titleIs("Home"));
     }
 
     @Given("No planet with name {string} in planetarium")
@@ -41,7 +35,7 @@ public class AddPlanetsSteps {
         // Deletes planet from the planetarium if it already exists
         PlanetEntity planetEntity = new PlanetEntity(string);
         PlanetRepository.deletePlanetWithString(planetEntity);
-        TestRunner.refresh();
+        SeleniumTestRunner.refresh();
     }
 
     @Given("Planet with name {string} already exists")
@@ -54,43 +48,43 @@ public class AddPlanetsSteps {
 
     @When("The User selects planets from the drop-down menu")
     public void the_User_selects_planets_from_the_drop_down_menu() {
-        TestRunner.planetariumHome.selectPlanet();
+        SeleniumTestRunner.planetariumHome.selectPlanet();
     }
 
     @When("The User enters {string} for planet name")
     public void the_User_enters_for_planet_name(String string) {
-        TestRunner.planetariumHome.sendToPlanetNameInput(string);
+        SeleniumTestRunner.planetariumHome.sendToPlanetNameInput(string);
     }
 
     @When("{string} The User selects an image from filesystem for planet image")
     public void the_User_selects_an_image_from_filesystem_for_planet_image(String string) {
         if(string.equals("true")){
-            TestRunner.planetariumHome.uploadImage();
+            SeleniumTestRunner.planetariumHome.uploadImage();
         }
     }
 
     @When("The User clicks on the submit button")
     public void the_User_clicks_on_the_submit_button() {
-        TestRunner.planetariumHome.clickSubmitButton();
+        SeleniumTestRunner.planetariumHome.clickSubmitButton();
     }
 
     @Then("The planet {string} should be added to the planetarium")
     public void the_planet_should_be_added_to_the_planetarium(String string) {
-        //TestRunner.wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("celestialTable")));
-        //TestRunner.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("celestialTable")));
-        //TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
+        //SeleniumTestRunner.wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("celestialTable")));
+        //SeleniumTestRunner.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("celestialTable")));
+        //SeleniumTestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
         //getPlanetName returns all text in celestialTable, so it should contain moon name as well
-        //TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-        //TestRunner.wait..until(ExpectedConditions.visibilityOfElementLocated(By.tagName("td")));
+        //SeleniumTestRunner.wait.until(driver -> SeleniumTestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        //SeleniumTestRunner.wait..until(ExpectedConditions.visibilityOfElementLocated(By.tagName("td")));
         try{
-            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
-            TestRunner.driver.switchTo().alert().accept();
+            SeleniumTestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertFalse(SeleniumTestRunner.planetariumHome.isAlertPresent());
+            SeleniumTestRunner.driver.switchTo().alert().accept();
         }
         catch (TimeoutException e){
             //Assert.fail();
-            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            //Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //SeleniumTestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertTrue(SeleniumTestRunner.planetariumHome.getCelestialTableAsText().contains(string));
             boolean existID = false;
             List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
             for(PlanetEntity planetEntity : planetEntityList){
@@ -106,14 +100,14 @@ public class AddPlanetsSteps {
     @Then("The planet {string} should not be added to the planetarium")
     public void the_planet_should_not_be_added_to_the_planetarium(String string) {
         try{
-            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            Assert.assertTrue(TestRunner.planetariumHome.isAlertPresent());
-            TestRunner.driver.switchTo().alert().accept();
+            SeleniumTestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertTrue(SeleniumTestRunner.planetariumHome.isAlertPresent());
+            SeleniumTestRunner.driver.switchTo().alert().accept();
         }
         catch (TimeoutException e) {
             //Assert.fail();
-            //TestRunner.wait.withTimeout(Duration.ofSeconds(1));
-            //Assert.assertFalse(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+            //SeleniumTestRunner.wait.withTimeout(Duration.ofSeconds(1));
+            //Assert.assertFalse(SeleniumTestRunner.planetariumHome.getCelestialTableAsText().contains(string));
             int count = 0;
             boolean existID = true;
             List<PlanetEntity> planetEntityList = DatabaseScriptRunnerUtility.getAllPlanetInfo();
@@ -138,9 +132,9 @@ public class AddPlanetsSteps {
         int userID = DatabaseScriptRunnerUtility.getUserId(userEntity);
 
         try{
-            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            Assert.assertFalse(TestRunner.planetariumHome.isAlertPresent());
-            TestRunner.driver.switchTo().alert().accept();
+            SeleniumTestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            Assert.assertFalse(SeleniumTestRunner.planetariumHome.isAlertPresent());
+            SeleniumTestRunner.driver.switchTo().alert().accept();
         }
         catch (TimeoutException e){
             boolean existID = false;

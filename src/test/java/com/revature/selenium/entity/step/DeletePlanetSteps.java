@@ -1,10 +1,10 @@
-package com.revature.step;
+package com.revature.selenium.entity.step;
 
-import com.revature.TestRunner;
-import com.revature.entity.PlanetEntity;
-import com.revature.repositories.PlanetRepository;
-import com.revature.services.LoginService;
-import com.revature.utilities.DatabaseScriptRunnerUtility;
+import com.revature.SeleniumTestRunner;
+import com.revature.selenium.entity.PlanetEntity;
+import com.revature.selenium.entity.repositories.PlanetRepository;
+import com.revature.selenium.entity.services.LoginService;
+import com.revature.selenium.entity.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -33,28 +33,28 @@ public class DeletePlanetSteps {
         planetEntity.setDefaultImage();
         PlanetRepository.deletePlanetWithString(planetEntity);
         PlanetRepository.addPlanet(planetEntity);
-        TestRunner.refresh();
-        TestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
-        TestRunner.wait.until(driver -> TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
-        Assert.assertTrue(TestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        SeleniumTestRunner.refresh();
+        SeleniumTestRunner.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("celestialTable")));
+        SeleniumTestRunner.wait.until(driver -> SeleniumTestRunner.planetariumHome.getCelestialTableAsText().contains(string));
+        Assert.assertTrue(SeleniumTestRunner.planetariumHome.getCelestialTableAsText().contains(string));
     }
 
     @When("The User selects planets from drop-down menu")
     public void the_User_selects_planets_from_drop_down_menu() {
-        TestRunner.planetariumHome.selectPlanet();
+        SeleniumTestRunner.planetariumHome.selectPlanet();
     }
 
     @When("User enters valid {string} for celestial body to be deleted")
     public void user_enters_valid_for_celestial_body_to_be_deleted(String string) {
-        TestRunner.planetariumHome.sendToDeleteInput(string);
+        SeleniumTestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
     @When("User clicks on the Delete Button")
     public void user_clicks_on_the_Delete_Button() {
-        TestRunner.planetariumHome.clickDeleteButton();
+        SeleniumTestRunner.planetariumHome.clickDeleteButton();
         try {
-            TestRunner.wait.until(ExpectedConditions.alertIsPresent());
-            TestRunner.driver.switchTo().alert().accept();
+            SeleniumTestRunner.wait.until(ExpectedConditions.alertIsPresent());
+            SeleniumTestRunner.driver.switchTo().alert().accept();
             alertPresent = true;
         } catch (TimeoutException ignored){
         }
@@ -79,7 +79,7 @@ public class DeletePlanetSteps {
 
     @When("User enters invalid {string} for celestial body to be deleted")
     public void user_enters_invalid_for_celestial_body_to_be_deleted(String string) {
-        TestRunner.planetariumHome.sendToDeleteInput(string);
+        SeleniumTestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
     @Then("The user should see error message pop-up")
@@ -106,7 +106,7 @@ public class DeletePlanetSteps {
 
     @When("User enters planet ID {string} for celestial body to be deleted")
     public void user_enters_planet_for_celestial_body_to_be_deleted(String string) {
-        TestRunner.planetariumHome.sendToDeleteInput(string);
+        SeleniumTestRunner.planetariumHome.sendToDeleteInput(string);
     }
 
 

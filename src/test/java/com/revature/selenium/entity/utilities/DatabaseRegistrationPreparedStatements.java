@@ -1,6 +1,6 @@
-package com.revature.utilities;
+package com.revature.selenium.entity.utilities;
 
-import com.revature.entity.UserEntity;
+import com.revature.selenium.entity.UserEntity;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

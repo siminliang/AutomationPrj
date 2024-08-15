@@ -1,4 +1,4 @@
-package com.revature.entity;
+package com.revature.selenium.entity;
 
 public class UserEntity {
     public String username;
