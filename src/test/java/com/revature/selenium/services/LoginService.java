@@ -1,4 +1,4 @@
-package com.revature.selenium.entity.services;
+package com.revature.selenium.services;
 
 import com.revature.SeleniumTestRunner;
 import org.openqa.selenium.support.ui.ExpectedConditions;

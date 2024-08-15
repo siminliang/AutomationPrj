@@ -1,4 +1,4 @@
-package com.revature.selenium.entity.utilities;
+package com.revature.selenium.utilities;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

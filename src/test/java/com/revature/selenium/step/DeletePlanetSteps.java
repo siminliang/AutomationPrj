@@ -1,10 +1,10 @@
-package com.revature.selenium.entity.step;
+package com.revature.selenium.step;
 
 import com.revature.SeleniumTestRunner;
 import com.revature.selenium.entity.PlanetEntity;
-import com.revature.selenium.entity.repositories.PlanetRepository;
-import com.revature.selenium.entity.services.LoginService;
-import com.revature.selenium.entity.utilities.DatabaseScriptRunnerUtility;
+import com.revature.selenium.repositories.PlanetRepository;
+import com.revature.selenium.services.LoginService;
+import com.revature.selenium.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

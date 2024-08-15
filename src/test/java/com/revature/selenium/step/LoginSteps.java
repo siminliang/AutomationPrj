@@ -1,8 +1,8 @@
-package com.revature.selenium.entity.step;
+package com.revature.selenium.step;
 
 import com.revature.SeleniumTestRunner;
 import com.revature.selenium.entity.UserEntity;
-import com.revature.selenium.entity.repositories.UserRepository;
+import com.revature.selenium.repositories.UserRepository;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

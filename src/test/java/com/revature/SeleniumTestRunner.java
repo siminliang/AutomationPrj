@@ -1,8 +1,8 @@
 package com.revature;
 
-import com.revature.selenium.entity.pom.PlanetariumHome;
-import com.revature.selenium.entity.pom.PlanetariumLoginHome;
-import com.revature.selenium.entity.pom.PlanetariumRegistrationHome;
+import com.revature.selenium.pom.PlanetariumHome;
+import com.revature.selenium.pom.PlanetariumLoginHome;
+import com.revature.selenium.pom.PlanetariumRegistrationHome;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;

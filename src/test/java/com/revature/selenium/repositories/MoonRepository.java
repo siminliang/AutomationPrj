@@ -1,7 +1,7 @@
-package com.revature.selenium.entity.repositories;
+package com.revature.selenium.repositories;
 
 import com.revature.selenium.entity.MoonEntity;
-import com.revature.selenium.entity.utilities.DatabaseScriptRunnerUtility;
+import com.revature.selenium.utilities.DatabaseScriptRunnerUtility;
 
 import java.util.List;
 
