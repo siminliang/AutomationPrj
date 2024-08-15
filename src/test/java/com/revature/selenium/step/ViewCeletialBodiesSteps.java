@@ -1,13 +1,13 @@
-package com.revature.selenium.entity.step;
+package com.revature.selenium.step;
 
 import com.revature.SeleniumTestRunner;
 import com.revature.selenium.entity.PlanetEntity;
 import com.revature.selenium.entity.UserEntity;
-import com.revature.selenium.entity.repositories.MoonRepository;
-import com.revature.selenium.entity.repositories.PlanetRepository;
-import com.revature.selenium.entity.repositories.UserRepository;
-import com.revature.selenium.entity.services.LoginService;
-import com.revature.selenium.entity.utilities.DatabaseScriptRunnerUtility;
+import com.revature.selenium.repositories.MoonRepository;
+import com.revature.selenium.repositories.PlanetRepository;
+import com.revature.selenium.repositories.UserRepository;
+import com.revature.selenium.services.LoginService;
+import com.revature.selenium.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.After;
@@ -25,7 +25,7 @@ import java.util.Map;
 public class ViewCeletialBodiesSteps {
     private static boolean alertPresent = false;
     private LoginService loginService;
-    private UserEntity   testUser;
+    private UserEntity testUser;
     private PlanetEntity planetEntity;
     public ViewCeletialBodiesSteps(){
         this.loginService = new LoginService();

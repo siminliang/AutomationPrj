@@ -1,9 +1,9 @@
-package com.revature.selenium.entity.step;
+package com.revature.selenium.step;
 
 import com.revature.SeleniumTestRunner;
 import com.revature.selenium.entity.MoonEntity;
-import com.revature.selenium.entity.repositories.MoonRepository;
-import com.revature.selenium.entity.utilities.DatabaseScriptRunnerUtility;
+import com.revature.selenium.repositories.MoonRepository;
+import com.revature.selenium.utilities.DatabaseScriptRunnerUtility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

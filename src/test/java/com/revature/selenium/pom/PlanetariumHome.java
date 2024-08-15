@@ -1,4 +1,4 @@
-package com.revature.selenium.entity.pom;
+package com.revature.selenium.pom;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;

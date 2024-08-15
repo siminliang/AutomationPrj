@@ -1,4 +1,4 @@
-package com.revature.selenium.entity.utilities;
+package com.revature.selenium.utilities;
 
 import com.revature.selenium.entity.PlanetEntity;
 
