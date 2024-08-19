@@ -10,6 +10,7 @@ import com.revature.planetarium.exceptions.UserFail;
 import com.revature.planetarium.utility.DatabaseConnector;
 import org.junit.*;
 import com.revature.planetarium.repository.user.UserDaoImp;
+import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
 import static org.mockito.ArgumentMatchers.anyString;
@@ -24,13 +25,15 @@ public class UserDaoImpUnitTests {
     private Connection mockConnection;
     private PreparedStatement mockPreparedStatement;
     private ResultSet mockResultSet;
+    private static MockedStatic<DatabaseConnector> mockedStatic;
 
 
 
 
     @BeforeClass
-    public static void setup(){
-        Mockito.<DatabaseConnector>mockStatic(DatabaseConnector.class);
+    public static void setup() throws SQLException {
+        //Mockito.<DatabaseConnector>mockStatic(DatabaseConnector.class);
+        mockedStatic = Mockito.<DatabaseConnector>mockStatic(DatabaseConnector.class);
     }
 
     @Before
@@ -39,6 +42,7 @@ public class UserDaoImpUnitTests {
         userDaoImp = new UserDaoImp();
 
         // mock objects that the class and its methods are dependent on
+        //mockedStatic = Mockito.mock(DatabaseConnector.class);
         mockConnection = Mockito.mock(Connection.class);
         mockPreparedStatement = Mockito.mock(PreparedStatement.class);
         mockResultSet = Mockito.mock(ResultSet.class);
@@ -57,7 +61,7 @@ public class UserDaoImpUnitTests {
 
     @AfterClass
     public static void tearDown(){
-
+        mockedStatic.close();
     }
 
     @Test
@@ -68,6 +72,7 @@ public class UserDaoImpUnitTests {
 
         // stub the data
         // Mock the behavior of the PreparedStatement and ResultSet
+        //Mockito.when(mockDatabaseConnector.getConnection()).thenReturn(mockConnection);
         Mockito.when(mockConnection.prepareStatement(anyString(), eq(Statement.RETURN_GENERATED_KEYS)))
                 .thenReturn(mockPreparedStatement);
         Mockito.when(mockPreparedStatement.getGeneratedKeys()).thenReturn(mockResultSet);
@@ -100,6 +105,7 @@ public class UserDaoImpUnitTests {
         newUser.setPassword("testpass");
 
         // Mock the behavior to throw SQLException
+        //Mockito.when(mockDatabaseConnector.getConnection()).thenReturn(mockConnection);
         Mockito.when(mockConnection.prepareStatement(anyString(), eq(Statement.RETURN_GENERATED_KEYS)))
                 .thenReturn(mockPreparedStatement);
         Mockito.when(mockPreparedStatement.getGeneratedKeys()).thenThrow(new SQLException("Database error"));
@@ -118,6 +124,7 @@ public class UserDaoImpUnitTests {
         String username = "testuser";
 
         // Mock the behavior of the PreparedStatement and ResultSet
+        //Mockito.when(mockDatabaseConnector.getConnection()).thenReturn(mockConnection);
         Mockito.when(mockConnection.prepareStatement(anyString())).thenReturn(mockPreparedStatement);
         Mockito.when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
         Mockito.when(mockResultSet.next()).thenReturn(true);
@@ -150,6 +157,7 @@ public class UserDaoImpUnitTests {
         String username = "testuser";
 
         // Mock the behavior to throw SQLException
+        //Mockito.when(mockDatabaseConnector.getConnection()).thenReturn(mockConnection);
         Mockito.when(mockConnection.prepareStatement(anyString())).thenReturn(mockPreparedStatement);
         Mockito.when(mockPreparedStatement.executeQuery()).thenThrow(new SQLException("Database error"));
 
