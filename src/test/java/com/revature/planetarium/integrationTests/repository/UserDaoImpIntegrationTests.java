@@ -34,7 +34,12 @@ public class UserDaoImpIntegrationTests {
     }
 
     @Test
-    public void testExamplePlaceHolder(){
+    public void createUserIntegrationTest_Positive(){
+
+    }
+
+    @Test
+    public void createUserIntegrationTest_Negative(){
 
     }
 }

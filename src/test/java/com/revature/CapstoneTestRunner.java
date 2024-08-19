@@ -28,6 +28,8 @@ import org.junit.runners.Suite.SuiteClasses;
 )
 public class CapstoneTestRunner {
 
+    // TO RUN TESTS / CREATE MAVEN RESULTS TO UPLOAD TO JIRA:
+    // mvn clean test
     @BeforeClass
     public static void runnerSetup(){
         System.out.println("This method will run before any tests in the suite");
