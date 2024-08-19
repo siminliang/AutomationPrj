@@ -113,6 +113,20 @@ public class UserDaoImpIntegrationTests {
     }
 
     @Test
+    public void createUserIntegrationTest_Negative_UsernameAndPasswordTooLong(){
+        // Prepare the User objects
+        User user = new User();
+        user.setUsername("UserIsNotThirtyCharactersLong!!");
+        user.setPassword("PassIsNotThirtyCharactersLong!!");
+
+        // Attempt to insert the user with too long password
+        Assert.assertThrows(UserFail.class, () -> {
+            userDaoImp.createUser(user);
+        });
+    }
+
+
+    @Test
     public void createUserIntegrationTest_Negative_PasswordNull(){
         // Prepare the User objects
         User user = new User();
@@ -147,6 +161,34 @@ public class UserDaoImpIntegrationTests {
         // dont set username or password
         //user.setUsername("UsernameIsThirtyCharactersLong");
         //user.setPassword("PasswordIsThirtyCharactersLong");
+
+        // Attempt to insert the user with too long password
+        Assert.assertThrows(UserFail.class, () -> {
+            userDaoImp.createUser(user);
+        });
+    }
+
+    @Test
+    public void createUserIntegrationTest_Negative_UsernameTooLongAndPasswordNull(){
+        // Prepare the User objects
+        User user = new User();
+        user.setUsername("UserIsNotThirtyCharactersLong!!");
+        // dont set password
+        //user.setPassword("PassIsNotThirtyCharactersLong!!");
+
+        // Attempt to insert the user with too long password
+        Assert.assertThrows(UserFail.class, () -> {
+            userDaoImp.createUser(user);
+        });
+    }
+
+    @Test
+    public void createUserIntegrationTest_Negative_PasswordTooLongAndUsernameNull(){
+        // Prepare the User objects
+        User user = new User();
+        // dont set username
+        //user.setUsername("UserIsNotThirtyCharactersLong!!");
+        user.setPassword("PassIsNotThirtyCharactersLong!!");
 
         // Attempt to insert the user with too long password
         Assert.assertThrows(UserFail.class, () -> {
