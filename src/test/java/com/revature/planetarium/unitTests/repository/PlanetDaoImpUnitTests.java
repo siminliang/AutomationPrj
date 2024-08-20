@@ -49,11 +49,87 @@ public class PlanetDaoImpUnitTests {
 
     @AfterClass
     public static void tearDown(){
+        mockedStatic.close();
+    }
+
+    @Test
+    public void createPlanet_UnitTest_Positive(){
 
     }
 
     @Test
-    public void testExamplePlaceHolder(){
+    public void createPlanet_UnitTest_Negative(){
 
     }
+
+    @Test
+    public void readPlanet_id_UnitTest_Positive(){
+
+    }
+
+    @Test
+    public void readPlanet_id_UnitTest_Negative(){
+
+    }
+
+    @Test
+    public void readPlanet_name_UnitTest_Positive(){
+
+    }
+
+    @Test
+    public void readPlanet_name_UnitTest_Negative(){
+
+    }
+
+    @Test
+    public void readAllPlanets_UnitTest_Positive(){
+
+    }
+
+    @Test
+    public void readAllPlanets_UnitTest_Negative(){
+
+    }
+
+    @Test
+    public void readPlanetsByOwner_UnitTest_Positive(){
+
+    }
+
+    @Test
+    public void readPlanetsByOwner_UnitTest_Negative(){
+
+    }
+
+    @Test
+    public void updatePlanet_UnitTest_Positive(){
+
+    }
+
+    @Test
+    public void updatePlanet_UnitTest_Negative(){
+
+    }
+
+    @Test
+    public void deletePlanet_id_UnitTest_Positive(){
+
+    }
+
+    @Test
+    public void deletePlanet_id_UnitTest_Negative(){
+
+    }
+
+    @Test
+    public void deletePlanet_name_UnitTest_Positive(){
+
+    }
+
+    @Test
+    public void deletePlanet_name_UnitTest_Negative(){
+
+    }
+
 }
