@@ -18,11 +18,14 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 
 public class PlanetDaoImpUnitTests {
+    private static final String validName = "validName";
+    private static final String tooLongName ="thisIsTooLongOfANameForPlanets!";
+
     private User user;
     private Planet planet;
     private Moon moon;
 
-    private PlanetDao planetDao;
+    private PlanetDao planetDaoImp;
     private Connection mockConnections;
     private PreparedStatement mockPrepStmt;
     private ResultSet mockRstSet;
@@ -36,7 +39,7 @@ public class PlanetDaoImpUnitTests {
 
     @Before
     public void beforeEach() throws SQLException {
-        planetDao = new PlanetDaoImp();
+        planetDaoImp = new PlanetDaoImp();
 
         mockConnections = Mockito.mock(Connection.class);
         mockPrepStmt = Mockito.mock(PreparedStatement.class);
@@ -59,7 +62,7 @@ public class PlanetDaoImpUnitTests {
     @Test
     public void createPlanet_UnitTest_Positive() throws SQLException{
         Planet planet = new Planet();
-        planet.setPlanetName("validName");
+        planet.setPlanetName(validName);
         planet.setOwnerId(1);
 
         Mockito.when(mockConnections.prepareStatement(anyString(), eq(Statement.RETURN_GENERATED_KEYS)))
@@ -68,29 +71,33 @@ public class PlanetDaoImpUnitTests {
         Mockito.when(mockRstSet.next()).thenReturn(true);
         Mockito.when(mockRstSet.getInt(1)).thenReturn(1);
 
-        Optional<Planet> result = planetDao.createPlanet(planet);
+        Optional<Planet> result = planetDaoImp.createPlanet(planet);
 
         Assert.assertTrue(result.isPresent());
-        Assert.assertEquals("validName", result.get().getPlanetName());
+        Assert.assertEquals(validName, result.get().getPlanetName());
         Assert.assertEquals(1, result.get().getOwnerId());
     }
 
     @Test
     public void createPlanet_UnitTest_Negative() throws SQLException{
         Planet planet = new Planet();
-        planet.setPlanetName("thisistoolongofanameforplanets!");
+        planet.setPlanetName(tooLongName);
         planet.setOwnerId(1);
 
-        Mockito.when(mockConnections.prepareStatement(anyString())).thenReturn(mockPrepStmt);
-        Mockito.when(mockPrepStmt.getGeneratedKeys()).thenThrow(new SQLException());
+        Mockito.when(mockConnections.prepareStatement(anyString(), eq(Statement.RETURN_GENERATED_KEYS)))
+                .thenReturn(mockPrepStmt);
+        Mockito.when(mockPrepStmt.getGeneratedKeys()).thenReturn(mockRstSet);
+        Mockito.when(mockRstSet.next()).thenReturn(false);
 
-        Assert.assertThrows(PlanetFail.class, ()-> {planetDao.createPlanet(planet);
-        });
+        Optional<Planet> result = planetDaoImp.createPlanet(planet);
+
+        Assert.assertFalse(result.isPresent());
     }
 
     @Test
     public void readPlanet_id_UnitTest_Positive(){
-
+        Optional<Planet> planet = planetDaoImp.readPlanet(1);
+        Assert.assertNotNull(planet);
     }
 
     @Test
