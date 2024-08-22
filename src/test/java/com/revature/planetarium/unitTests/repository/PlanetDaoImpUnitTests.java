@@ -3,23 +3,26 @@ package com.revature.planetarium.unitTests.repository;
 import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.entities.User;
+import com.revature.planetarium.exceptions.PlanetFail;
+import com.revature.planetarium.repository.planet.PlanetDao;
 import com.revature.planetarium.repository.planet.PlanetDaoImp;
 import com.revature.planetarium.utility.DatabaseConnector;
 import org.junit.*;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.Optional;
+
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
 
 public class PlanetDaoImpUnitTests {
     private User user;
     private Planet planet;
     private Moon moon;
 
-    private PlanetDaoImp planetDaoImp;
+    private PlanetDao planetDao;
     private Connection mockConnections;
     private PreparedStatement mockPrepStmt;
     private ResultSet mockRstSet;
@@ -33,7 +36,7 @@ public class PlanetDaoImpUnitTests {
 
     @Before
     public void beforeEach() throws SQLException {
-        planetDaoImp = new PlanetDaoImp();
+        planetDao = new PlanetDaoImp();
 
         mockConnections = Mockito.mock(Connection.class);
         mockPrepStmt = Mockito.mock(PreparedStatement.class);
@@ -50,16 +53,39 @@ public class PlanetDaoImpUnitTests {
     @AfterClass
     public static void tearDown(){
         mockedStatic.close();
-    }
-
-    @Test
-    public void createPlanet_UnitTest_Positive(){
 
     }
 
     @Test
-    public void createPlanet_UnitTest_Negative(){
+    public void createPlanet_UnitTest_Positive() throws SQLException{
+        Planet planet = new Planet();
+        planet.setPlanetName("validName");
+        planet.setOwnerId(1);
 
+        Mockito.when(mockConnections.prepareStatement(anyString(), eq(Statement.RETURN_GENERATED_KEYS)))
+                .thenReturn(mockPrepStmt);
+        Mockito.when(mockPrepStmt.getGeneratedKeys()).thenReturn(mockRstSet);
+        Mockito.when(mockRstSet.next()).thenReturn(true);
+        Mockito.when(mockRstSet.getInt(1)).thenReturn(1);
+
+        Optional<Planet> result = planetDao.createPlanet(planet);
+
+        Assert.assertTrue(result.isPresent());
+        Assert.assertEquals("validName", result.get().getPlanetName());
+        Assert.assertEquals(1, result.get().getOwnerId());
+    }
+
+    @Test
+    public void createPlanet_UnitTest_Negative() throws SQLException{
+        Planet planet = new Planet();
+        planet.setPlanetName("thisistoolongofanameforplanets!");
+        planet.setOwnerId(1);
+
+        Mockito.when(mockConnections.prepareStatement(anyString())).thenReturn(mockPrepStmt);
+        Mockito.when(mockPrepStmt.getGeneratedKeys()).thenThrow(new SQLException());
+
+        Assert.assertThrows(PlanetFail.class, ()-> {planetDao.createPlanet(planet);
+        });
     }
 
     @Test
