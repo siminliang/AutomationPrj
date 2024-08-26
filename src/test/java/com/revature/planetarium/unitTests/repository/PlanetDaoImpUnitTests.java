@@ -269,28 +269,66 @@ public class PlanetDaoImpUnitTests {
     }
 
     @Test
-    public void updatePlanet_UnitTest_Negative(){
+    public void updatePlanet_UnitTest_Negative() throws SQLException {
+        Planet mockPlanet = new Planet();
+        mockPlanet.setOwnerId(999);
+        mockPlanet.setPlanetName("nonExistent");
+        mockPlanet.setOwnerId(1);
 
+        Mockito.when(mockConnections.prepareStatement(anyString())).thenReturn(mockPrepStmt);
+        Mockito.when(mockPrepStmt.executeUpdate()).thenReturn(0); // No rows updated
+
+        Optional<Planet> result = planetDaoImp.updatePlanet(mockPlanet);
+
+        Assert.assertFalse(result.isPresent());
     }
 
     @Test
-    public void deletePlanet_id_UnitTest_Positive(){
+    public void deletePlanet_id_UnitTest_Positive() throws SQLException {
+        int planetId = 1;
 
+        Mockito.when(mockConnections.prepareStatement(anyString())).thenReturn(mockPrepStmt);
+        Mockito.when(mockPrepStmt.executeUpdate()).thenReturn(1); // 1 row deleted
+
+        boolean result = planetDaoImp.deletePlanet(planetId);
+
+        Assert.assertTrue(result);
     }
 
     @Test
-    public void deletePlanet_id_UnitTest_Negative(){
+    public void deletePlanet_id_UnitTest_Negative() throws SQLException {
+        int planetId = 999; // Assume this ID doesn't exist
 
+        Mockito.when(mockConnections.prepareStatement(anyString())).thenReturn(mockPrepStmt);
+        Mockito.when(mockPrepStmt.executeUpdate()).thenReturn(0); // No rows deleted
+
+        boolean result = planetDaoImp.deletePlanet(planetId);
+
+        Assert.assertFalse(result);
     }
 
     @Test
-    public void deletePlanet_name_UnitTest_Positive(){
+    public void deletePlanet_name_UnitTest_Positive() throws SQLException {
+        String planetName = "Earth";
 
+        Mockito.when(mockConnections.prepareStatement(anyString())).thenReturn(mockPrepStmt);
+        Mockito.when(mockPrepStmt.executeUpdate()).thenReturn(1); // 1 row deleted
+
+        boolean result = planetDaoImp.deletePlanet(planetName);
+
+        Assert.assertTrue(result);
     }
 
     @Test
-    public void deletePlanet_name_UnitTest_Negative(){
+    public void deletePlanet_name_UnitTest_Negative() throws SQLException {
+        String planetName = "NonExistent";
 
+        Mockito.when(mockConnections.prepareStatement(anyString())).thenReturn(mockPrepStmt);
+        Mockito.when(mockPrepStmt.executeUpdate()).thenReturn(0); // No rows deleted
+
+        boolean result = planetDaoImp.deletePlanet(planetName);
+
+        Assert.assertFalse(result);
     }
 
 }
