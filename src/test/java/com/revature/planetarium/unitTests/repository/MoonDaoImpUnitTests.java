@@ -13,6 +13,7 @@ import javax.swing.text.html.Option;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
@@ -210,7 +211,8 @@ public class MoonDaoImpUnitTests {
 
         List<Moon> result = moonDaoImp.readMoonsByPlanet(planetId);
 
-        Assert.assertNull(result);
+        List<Moon> emptyList =  new ArrayList<>();
+        Assert.assertEquals(emptyList, result);
     }
 
     @Test
