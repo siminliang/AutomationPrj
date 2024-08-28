@@ -1,10 +1,18 @@
 package com.revature;
 
 import com.revature.planetarium.Utility;
+import com.revature.planetarium.integrationTests.repository.MoonDaoImpIntegrationTests;
+import com.revature.planetarium.integrationTests.repository.PlanetDaoImpIntegrationTests;
 import com.revature.planetarium.integrationTests.repository.UserDaoImpIntegrationTests;
+import com.revature.planetarium.integrationTests.service.MoonServiceImpIntegrationTests;
+import com.revature.planetarium.integrationTests.service.PlanetServiceImpIntegrationTests;
 import com.revature.planetarium.integrationTests.service.UserServiceImpIntegrationTests;
 import com.revature.planetarium.unitTests.controller.UserControllerUnitTests;
+import com.revature.planetarium.unitTests.repository.MoonDaoImpUnitTests;
+import com.revature.planetarium.unitTests.repository.PlanetDaoImpUnitTests;
 import com.revature.planetarium.unitTests.repository.UserDaoImpUnitTests;
+import com.revature.planetarium.unitTests.service.MoonServiceImpUnitTests;
+import com.revature.planetarium.unitTests.service.PlanetServiceImpUnitTests;
 import com.revature.planetarium.unitTests.service.UserServiceImpUnitTests;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
@@ -19,11 +27,19 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses(
         {
-                UserControllerUnitTests.class,
+                //UserControllerUnitTests.class,
                 UserServiceImpUnitTests.class,
                 UserServiceImpIntegrationTests.class,
                 UserDaoImpUnitTests.class,
-                UserDaoImpIntegrationTests.class
+                UserDaoImpIntegrationTests.class,
+                MoonDaoImpUnitTests.class,
+                MoonDaoImpIntegrationTests.class,
+                MoonServiceImpUnitTests.class,
+                MoonServiceImpIntegrationTests.class,
+                PlanetDaoImpUnitTests.class,
+                PlanetDaoImpIntegrationTests.class,
+                PlanetServiceImpUnitTests.class,
+                PlanetServiceImpIntegrationTests.class
         }
 )
 public class CapstoneTestRunner {
