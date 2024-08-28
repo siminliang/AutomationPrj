@@ -55,7 +55,7 @@ public class MoonDaoImpIntegrationTests {
     }
 
     @Test
-    public void createMoon_noImage_integrationTest_nositive(){
+    public void createMoon_noImage_integrationTest_positive(){
         Moon moon = new Moon();
         moon.setMoonName("Moon");
         moon.setOwnerId(1);
@@ -134,12 +134,15 @@ public class MoonDaoImpIntegrationTests {
 
     @Test
     public void updateMoon_integrationTest_negative(){
-        Moon nonExistingMoon = new Moon();
-        nonExistingMoon.setMoonName("FakeMoon");
-        nonExistingMoon.setOwnerId(1);
+        Moon updateMoon = new Moon();
+        updateMoon.setMoonName("validMoon");
+        updateMoon.setOwnerId(1);
 
-        Optional<Moon> result = moonDaoImp.updateMoon(nonExistingMoon);
-        Assert.assertFalse(result.isPresent());
+        Optional<Moon> validMoonName = moonDaoImp.createMoon(updateMoon);
+        Assert.assertTrue(validMoonName.isPresent());
+        updateMoon.setMoonName("invalidNameThatIsTooLongToBeAMoonName");
+
+        Assert.assertThrows(MoonFail.class, () -> moonDaoImp.updateMoon(updateMoon));
     }
 
     @Test
