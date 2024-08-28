@@ -3,6 +3,7 @@ package com.revature.planetarium.integrationTests.repository;
 import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.entities.User;
+import com.revature.planetarium.repository.moon.MoonDaoImp;
 import org.junit.*;
 
 public class PlanetDaoImpIntegrationTests {
@@ -19,7 +20,6 @@ public class PlanetDaoImpIntegrationTests {
 
     @Before
     public void beforeEach(){
-
     }
 
     @After
