@@ -27,16 +27,9 @@ public class PlanetDaoImpUnitTests {
     private Planet planet;
     private Moon moon;
 
-    @Mock
     private PlanetDao planetDaoImp;
-
-    @Mock
     private Connection mockConnections;
-
-    @Mock
     private PreparedStatement mockPrepStmt;
-
-    @Mock
     private ResultSet mockRstSet;
     private static MockedStatic<DatabaseConnector> mockedStatic;
 

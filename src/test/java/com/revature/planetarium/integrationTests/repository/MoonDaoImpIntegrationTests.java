@@ -1,26 +1,18 @@
 package com.revature.planetarium.integrationTests.repository;
 
+import com.revature.Setup;
 import com.revature.planetarium.entities.Moon;
-import com.revature.planetarium.entities.Planet;
-import com.revature.planetarium.entities.User;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.planetarium.repository.moon.MoonDao;
 import com.revature.planetarium.repository.moon.MoonDaoImp;
-import com.revature.planetarium.utility.DatabaseConnector;
-import io.cucumber.core.options.CucumberOptionsAnnotationParser;
-import io.cucumber.messages.internal.com.google.protobuf.OptionOrBuilder;
 import org.junit.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Base64;
 import java.util.Optional;
 
 public class MoonDaoImpIntegrationTests {
-    private User user;
-    private Planet planet;
     private Moon moon;
 
     private MoonDao moonDaoImp;
@@ -47,28 +39,18 @@ public class MoonDaoImpIntegrationTests {
 
     @After
     public void afterEach(){
-
     }
 
     @AfterClass
     public static void tearDown(){
-
+        Setup.resetTestDatabase();
     }
-
-    @Test
-    public void testExamplePlaceHolder(){
-
-    }
-
-    //updateMoon
-    //deleteMoon_id
-    //deleteMoon_name
 
     //createMoon
     @Test
     public void createMoon_integrationTest_positive(){
         Optional<Moon> newMoon = moonDaoImp.createMoon(moon);
-        Assert.assertNotNull(newMoon);
+        Assert.assertTrue(newMoon.isPresent());
         Assert.assertEquals("Lunar", newMoon.get().getMoonName());
     }
 
@@ -80,7 +62,7 @@ public class MoonDaoImpIntegrationTests {
         //moon.setImageData(moonImage);
 
         Optional<Moon> newMoon = moonDaoImp.createMoon(moon);
-        Assert.assertNotNull(newMoon);
+        Assert.assertTrue(newMoon.isPresent());
         Assert.assertEquals("Moon", newMoon.get().getMoonName());
     }
 
@@ -124,11 +106,6 @@ public class MoonDaoImpIntegrationTests {
         Assert.assertFalse(moonDaoImp.readAllMoons().isEmpty());
     }
 
-    @Test
-    public void readAllMoon_integrationTest_negative(){
-        //delete all moon then read moon
-    }
-
     //readMoonsByPlanet
     @Test
     public void readMoonsByPlanet_integrationTest_positive(){
@@ -144,10 +121,10 @@ public class MoonDaoImpIntegrationTests {
 
     @Test
     public void updateMoon_integrationTest_positive(){
-        Optional<Moon> defaultMoon = moonDaoImp.readMoon("Lunar");
-        Assert.assertTrue(defaultMoon.isPresent());
+        Optional<Moon> testMoon = moonDaoImp.createMoon(moon);
+        Assert.assertTrue(testMoon.isPresent());
 
-        Moon updatedMoon = defaultMoon.get();
+        Moon updatedMoon = testMoon.get();
         updatedMoon.setMoonName("New Lunar");
 
         Optional<Moon> updatedResult = moonDaoImp.updateMoon(updatedMoon);
