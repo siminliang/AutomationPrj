@@ -106,7 +106,8 @@ public class PlanetDaoImpUnitTests {
         Mockito.when(mockRstSet.getInt("id")).thenReturn(1);
         Mockito.when(mockRstSet.getString("name")).thenReturn("Earth");
         Mockito.when(mockRstSet.getInt("ownerId")).thenReturn(1);
-        Optional<Planet> result = planetDaoImp.readPlanet(1);
+
+        Optional<Planet> result = planetDaoImp.readPlanet(id);
 
         Assert.assertTrue(result.isPresent());
         Assert.assertEquals(1, result.get().getPlanetId());
@@ -266,7 +267,6 @@ public class PlanetDaoImpUnitTests {
         Planet mockPlanet = new Planet();
         mockPlanet.setOwnerId(999);
         mockPlanet.setPlanetName("nonExistent");
-        mockPlanet.setOwnerId(1);
 
         Mockito.when(mockConnections.prepareStatement(anyString())).thenReturn(mockPrepStmt);
         Mockito.when(mockPrepStmt.executeUpdate()).thenReturn(0); // No rows updated
