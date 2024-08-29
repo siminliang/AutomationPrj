@@ -32,9 +32,11 @@ public class UserControllerIntegrationTests {
     public static void tearDown(){
 
     }
-
+/*
     @Test
     public void testExamplePlaceHolder(){
 
     }
+
+ */
 }

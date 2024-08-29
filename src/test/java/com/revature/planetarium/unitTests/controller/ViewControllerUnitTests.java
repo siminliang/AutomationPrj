@@ -31,9 +31,11 @@ public class ViewControllerUnitTests {
     public static void tearDown(){
 
     }
-
+/*
     @Test
     public void testExamplePlaceHolder(){
 
     }
+    /*
+ */
 }
