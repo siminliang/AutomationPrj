@@ -1,6 +1,8 @@
 package com.revature.planetarium.unitTests.repository;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import com.revature.planetarium.entities.Moon;
@@ -117,6 +119,26 @@ public class UserDaoImpUnitTests {
 
     }
 
+    @Test
+    public void createUserUnitTest_Negative_EmptyReturn() throws SQLException {
+        // Prepare the User object
+        User newUser = new User();
+        newUser.setUsername("testuser");
+        newUser.setPassword("testpass");
+
+        // Mock the behavior to throw SQLException
+        //Mockito.when(mockDatabaseConnector.getConnection()).thenReturn(mockConnection);
+        Mockito.when(mockConnection.prepareStatement(anyString(), eq(Statement.RETURN_GENERATED_KEYS)))
+                .thenReturn(mockPreparedStatement);
+        Mockito.when(mockPreparedStatement.getGeneratedKeys()).thenReturn(mockResultSet);
+        Mockito.when(mockResultSet.next()).thenReturn(false);
+
+        Optional<User> result = userDaoImp.createUser(newUser);
+
+        Assert.assertEquals(Optional.empty(), result);
+
+    }
+
 
     @Test
     public void findUserByUsernameUnitTest_Positive() throws SQLException {
@@ -165,6 +187,24 @@ public class UserDaoImpUnitTests {
         Assert.assertThrows(UserFail.class, () -> {
             userDaoImp.findUserByUsername(username);
         });
+
+
+    }
+
+    @Test
+    public void findUserByUsernameUnitTest_Negative_EmptyReturn() throws SQLException {
+        // Prepare the User object
+        String username = "testuser";
+
+        // Mock the behavior to throw SQLException
+        //Mockito.when(mockDatabaseConnector.getConnection()).thenReturn(mockConnection);
+        Mockito.when(mockConnection.prepareStatement(anyString())).thenReturn(mockPreparedStatement);
+        Mockito.when(mockPreparedStatement.executeQuery()).thenReturn(mockResultSet);
+        Mockito.when(mockResultSet.next()).thenReturn(false);
+
+        Optional<User> result = userDaoImp.findUserByUsername(username);
+
+        Assert.assertEquals(Optional.empty(), result);
 
     }
 
