@@ -1,5 +1,6 @@
 package com.revature.planetarium.unitTests.service;
 
+import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.planetarium.repository.planet.PlanetDao;
@@ -83,6 +84,8 @@ public class PlanetServiceImpUnitTests {
         PlanetFail planetFail = assertThrows(PlanetFail.class, () -> planetService.createPlanet(planet));
         assertEquals("Planet name must be unique", planetFail.getMessage());
     }
+
+
 
     @Test
     public void testCreatePlanet_CreationFailed_Negative(){

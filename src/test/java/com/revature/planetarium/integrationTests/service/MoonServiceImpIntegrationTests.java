@@ -2,9 +2,13 @@ package com.revature.planetarium.integrationTests.service;
 
 import com.revature.planetarium.Utility;
 import com.revature.planetarium.entities.Moon;
+import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
+import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.planetarium.repository.moon.MoonDaoImp;
+import com.revature.planetarium.repository.planet.PlanetDaoImp;
 import com.revature.planetarium.service.moon.MoonServiceImp;
+import com.revature.planetarium.service.planet.PlanetServiceImp;
 import org.junit.*;
 
 import java.io.Serializable;
@@ -68,6 +72,25 @@ public class MoonServiceImpIntegrationTests {
         Moon moon2 = new Moon();
         moon2.setMoonName("Phobos");
         moon2.setOwnerId(2);
+
+        MoonFail moonFail = assertThrows(MoonFail.class, () -> moonService.createMoon(moon2));
+        assertEquals("Moon name must be unique", moonFail.getMessage());
+    }
+
+    @Test
+    public void testCreateMoon_NonUniquePlanetName_Negative() {
+        Planet planet = new Planet();
+        planet.setPlanetName("Terra");
+        planet.setOwnerId(1);
+
+        Moon moon2 = new Moon();
+        moon2.setMoonName("Terra");
+        moon2.setOwnerId(1);
+
+
+        PlanetDaoImp planetDaoImp = new PlanetDaoImp();
+        PlanetServiceImp<Serializable> planetServiceImp = new PlanetServiceImp<>(planetDaoImp);
+        planetServiceImp.createPlanet(planet);
 
         MoonFail moonFail = assertThrows(MoonFail.class, () -> moonService.createMoon(moon2));
         assertEquals("Moon name must be unique", moonFail.getMessage());
