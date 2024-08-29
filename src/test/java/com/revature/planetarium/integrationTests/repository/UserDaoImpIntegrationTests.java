@@ -10,6 +10,7 @@ import com.revature.planetarium.utility.DatabaseConnector;
 import org.junit.*;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -229,7 +230,9 @@ public class UserDaoImpIntegrationTests {
 
         // Verify the result
         Assert.assertFalse(result.isPresent());
+        Assert.assertEquals(Optional.empty(), result);
 
 
     }
+
 }
