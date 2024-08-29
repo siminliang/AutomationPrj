@@ -31,9 +31,11 @@ public class ViewControllerIntegrationTests {
     public static void tearDown(){
 
     }
-
+/*
     @Test
     public void testExamplePlaceHolder(){
 
     }
+
+ */
 }

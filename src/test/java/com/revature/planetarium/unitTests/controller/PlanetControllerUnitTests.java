@@ -32,9 +32,11 @@ public class PlanetControllerUnitTests {
     public static void tearDown(){
 
     }
-
+/*
     @Test
     public void testExamplePlaceHolder(){
 
     }
+
+ */
 }
